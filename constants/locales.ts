@@ -5,7 +5,7 @@ export const LOCALE_MAPPING = {
 
   export type LocaleOptions = keyof typeof LOCALE_MAPPING;
 
-  export const DEFAULT_LANG: LocaleOptions = 'en';
+  export const DEFAULT_LOCALE: LocaleOptions = 'en';
 
   // If you need to access the full names:
   export const LOCALE_OPTIONS = Object.keys(LOCALE_MAPPING) as LocaleOptions[];

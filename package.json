@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "i18nexus pull && next dev",
-    "build": "i18nexus pull && next build",
-    "start": "i18nexus pull && next start",
-    "lint": "next lint"
+    "build": "next build",
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "i18next": "^24.1.0",
@@ -14,6 +14,7 @@
     "i18nexus-cli": "^3.5.0",
     "next": "15.1.0",
     "next-i18n-router": "^5.5.1",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.2.0"

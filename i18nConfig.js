@@ -1,8 +1,8 @@
-const { LOCALE_OPTIONS, DEFAULT_LANG } = require("./constants");
+const { LOCALE_OPTIONS, DEFAULT_LOCALE } = require("./constants");
 
 const i18nConfig = {
     locales: LOCALE_OPTIONS,
-    defaultLocale: DEFAULT_LANG
+    defaultLocale: DEFAULT_LOCALE
   };
   
   module.exports = i18nConfig;
