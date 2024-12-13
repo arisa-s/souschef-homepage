@@ -8,10 +8,11 @@ import { LocaleOptions } from "@/constants";
 const i18nNamespaces = ["home"];
 
 export default async function Home({
-  params: { locale },
+  params,
 }: {
-  params: { locale: LocaleOptions };
+  params: Promise<{ locale: LocaleOptions }>;
 }) {
+  const { locale } = await params;
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
   return (

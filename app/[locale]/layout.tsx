@@ -27,13 +27,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: LocaleOptions };
+  params: Promise<{ locale: LocaleOptions }>;
 }>) {
+  const locale = (await params).locale;
   return (
     <html lang={locale} dir={dir(locale)}>
       <body
