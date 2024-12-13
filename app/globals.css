@@ -2,20 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light theme colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fcfdfc;
+  --foreground: #141e12;
+  --brand-primary: #1c121e;
+  --brand-secondary: #24333c;
+
+  /* Neutral colors */
+  --neutral-0: #fcfdfc;
+  --neutral-50: #f8faf8;
+  --neutral-100: #f2f4f2;
+  --neutral-200: #ecefec;
+  --neutral-300: #e6e9e6;
+  --neutral-400: #e0e4e0;
+  --neutral-500: #c3c8c2;
+  --neutral-600: #8b918a;
+  --neutral-700: #818780;
+  --neutral-800: #6b716a;
+  --neutral-900: #141e12;
+
+  /* Text colors */
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-800);
+  --text-ternary: var(--neutral-500);
+  --text-invert: var(--neutral-100);
+  --text-error: #e02200;
+
+  /* Surface colors */
+  --surface-primary: var(--neutral-0);
+  --surface-secondary: var(--neutral-100);
+  --surface-component: var(--brand-primary);
+  --surface-component-secondary: var(--neutral-100);
 }
 
+/* Dark theme colors */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #262925;
+    --foreground: #eceeec;
+    --brand-primary: #eeecee;
+    --brand-secondary: #d1d6d1;
+
+    /* Neutral colors */
+    --neutral-0: #151715;
+    --neutral-50: #1a1d19;
+    --neutral-100: #4c514b;
+    --neutral-200: #262925;
+    --neutral-300: #2b2f2a;
+    --neutral-400: #e0e4e0;
+    --neutral-500: #4c514b;
+    --neutral-600: #687366;
+    --neutral-700: #778175;
+    --neutral-800: #9aa299;
+    --neutral-900: #eceeec;
+
+    /* Text colors */
+    --text-primary: var(--neutral-900);
+    --text-secondary: var(--neutral-800);
+    --text-ternary: var(--neutral-500);
+    --text-invert: var(--neutral-100);
+    --text-error: #a50000;
+
+    /* Surface colors */
+    --surface-primary: var(--neutral-200);
+    --surface-secondary: var(--neutral-100);
+    --surface-component: var(--brand-primary);
+    --surface-component-secondary: var(--neutral-500);
   }
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
