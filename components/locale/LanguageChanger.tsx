@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
 export default function LanguageChanger() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
@@ -41,7 +41,7 @@ export default function LanguageChanger() {
     <select onChange={handleChange} value={currentLocale}>
       {Object.entries(LOCALE_MAPPING).map(([key, value]) => (
         <option key={key} value={key}>
-          {value}
+          {value == "English" ? t("english") : t("japanese")}
         </option>
       ))}
     </select>

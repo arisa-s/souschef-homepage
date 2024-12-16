@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Noto_Sans_JP, Zen_Old_Mincho } from 'next/font/google'
 
 export const recoleta = localFont({
     src: [
@@ -33,8 +34,14 @@ export const recoleta = localFont({
         style: "normal",
       },
     ],
-    variable: "--font-recoleta",
+    variable: "--font-accent",
   });
+
+export const zenOldMincho = Zen_Old_Mincho({
+    variable: "--font-accent",
+    weight: ['400', '500', '600', '700', '900'],
+    subsets: ['latin'],
+})
 
 export  const basisGrotesque = localFont({
     src: [
@@ -99,5 +106,10 @@ export  const basisGrotesque = localFont({
         style: "italic",
       },
     ],
-    variable: "--font-basis-grotesque",
+    variable: "--font-base",
   });
+
+  export const notoSanJapanese = Noto_Sans_JP({
+    variable: "--font-base",
+    subsets: ['latin'],
+})

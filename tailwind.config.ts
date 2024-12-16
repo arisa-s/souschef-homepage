@@ -41,9 +41,8 @@ export default {
         'surface-component-secondary': 'var(--surface-component-secondary)',
       },
       fontFamily: {
-        recoleta: ['var(--font-recoleta)'],
-        grotesque: ['var(--font-basis-grotesque)'],
-        accent: ['var(--font-recoleta)'],
+        accent: ['var(--font-accent)'],
+        base: ['var(--font-base)'],
       }
     },
   },

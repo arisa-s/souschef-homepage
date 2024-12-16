@@ -5,7 +5,12 @@ import i18nConfig from "@/i18nConfig";
 import { LocaleOptions } from "@/constants";
 import { Navbar } from "@/components/layout";
 import initTranslations from "@/lib/i18n";
-import { basisGrotesque, recoleta } from "@/lib/fonts";
+import {
+  basisGrotesque,
+  notoSanJapanese,
+  recoleta,
+  zenOldMincho,
+} from "@/lib/fonts";
 
 import "../globals.css";
 import { setI18n } from "@/serverContexts";
@@ -24,7 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-const i18nNamespaces = ["layout"];
+const i18nNamespaces = ["layout", "common"];
 
 export default async function RootLayout({
   children,
@@ -40,7 +45,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)}>
       <body
-        className={`${basisGrotesque.variable} ${recoleta.variable} antialiased`}
+        className={
+          locale == "ja"
+            ? `${zenOldMincho.variable} ${notoSanJapanese.variable}`
+            : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
+        }
       >
         <TranslationsProvider
           namespaces={i18nNamespaces}

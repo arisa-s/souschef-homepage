@@ -14,7 +14,9 @@ export const Footer: FC = ({}) => {
           <SocialLink href={instagramProfileLink} label="Instagram" />
         </div>
         <div className="flex flex-col text-center">
-          <h1 className="font-recoleta font-black text-2xl">Souschef</h1>
+          <h1 className="font-accent font-black text-2xl">
+            {t("common:appName")}
+          </h1>
           <p className="text-sm text-text-secondary">© 2024 Nekonote LLC</p>
         </div>
         <div className="py-2">
@@ -38,7 +40,7 @@ export default Footer;
 
 const SocialLink: FC<{ href: string; label: string }> = ({ href, label }) => (
   <Link
-    className="text-lg font-recoleta underline font-medium"
+    className="text-lg font-accent underline font-medium"
     href={href}
     target="_blank"
   >
