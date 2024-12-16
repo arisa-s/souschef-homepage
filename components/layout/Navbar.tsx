@@ -3,6 +3,7 @@ import LanguageChanger from "../locale/LanguageChanger";
 import Form from "next/form";
 import { getI18n } from "@/serverContexts";
 import AppDowloadQR from "../shared/AppDownloadQR";
+import Link from "next/link";
 
 export const Navbar: FC = async ({}) => {
   const { t } = getI18n();
@@ -33,9 +34,13 @@ export const Navbar: FC = async ({}) => {
               </button>
             </Form>
             <div className="flex ml-auto divide-x">
-              <button className="px-4 hover:bg-surface-component hover:text-text-invert">
+              <Link
+                href="/blog"
+                className="px-4 hover:bg-surface-component hover:text-text-invert items-center flex"
+              >
                 {t("blog")}
-              </button>
+              </Link>
+
               <button className="px-4 hover:bg-surface-component hover:text-text-invert">
                 {t("about")}
               </button>
