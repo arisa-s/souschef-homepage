@@ -8,7 +8,9 @@ import initTranslations from "@/lib/i18n";
 import { basisGrotesque, recoleta } from "@/lib/fonts";
 
 import "../globals.css";
-import { setI18n } from "@/contexts";
+import { setI18n } from "@/serverContexts";
+import Footer from "@/components/layout/Footer";
+import TranslationsProvider from "@/components/locale/TranslationsProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,7 +34,7 @@ export default async function RootLayout({
   params: Promise<{ locale: LocaleOptions }>;
 }>) {
   const locale = (await params).locale;
-  const { i18n } = await initTranslations(locale, i18nNamespaces);
+  const { i18n, resources } = await initTranslations(locale, i18nNamespaces);
   setI18n(i18n);
 
   return (
@@ -40,8 +42,15 @@ export default async function RootLayout({
       <body
         className={`${basisGrotesque.variable} ${recoleta.variable} antialiased`}
       >
-        <Navbar />
-        {children}
+        <TranslationsProvider
+          namespaces={i18nNamespaces}
+          locale={locale}
+          resources={resources}
+        >
+          <Navbar />
+          {children}
+        </TranslationsProvider>
+        <Footer />
       </body>
     </html>
   );

@@ -1,7 +1,8 @@
 import { FC } from "react";
 import LanguageChanger from "../locale/LanguageChanger";
 import Form from "next/form";
-import { getI18n } from "@/contexts";
+import { getI18n } from "@/serverContexts";
+import AppDowloadQR from "../shared/AppDownloadQR";
 
 export const Navbar: FC = async ({}) => {
   const { t } = getI18n();
@@ -16,10 +17,7 @@ export const Navbar: FC = async ({}) => {
           </div>
           <div className="flex divide-x flex-grow">
             <div className="w-4" />
-            <Form
-              action="https://trysouschef.com/scrape/"
-              className="flex gap-4"
-            >
+            <Form action="https://trysouschef.com/scrape/" className="flex">
               <input
                 name="query"
                 placeholder={t("importRecipePlaceholder")}
@@ -38,12 +36,8 @@ export const Navbar: FC = async ({}) => {
             </div>
           </div>
         </div>
-        <div className="h-24 w-24">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Logo"
-            className="h-full w-full object-cover p-2"
-          />
+        <div className="pr-6 pl-2 py-2">
+          <AppDowloadQR />
         </div>
       </div>
     </nav>
