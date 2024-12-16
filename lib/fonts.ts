@@ -18,7 +18,7 @@ export const recoleta = localFont({
         style: "normal",
       },
       {
-        path: "../public/fonts/Recoleta/RecoletaSemibold.ttf",
+        path: "../public/fonts/Recoleta/RecoletaSemiBold.ttf",
         weight: "600",
         style: "normal",
       },
