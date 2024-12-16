@@ -38,7 +38,11 @@ export default function LanguageChanger() {
   };
 
   return (
-    <select onChange={handleChange} value={currentLocale}>
+    <select
+      className="text-sm focus:outline-0 cursor-pointer px-4 py-2"
+      onChange={handleChange}
+      value={currentLocale}
+    >
       {Object.entries(LOCALE_MAPPING).map(([key, value]) => (
         <option key={key} value={key}>
           {value == "English" ? t("english") : t("japanese")}

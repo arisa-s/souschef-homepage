@@ -23,18 +23,22 @@ export const Navbar: FC = async ({}) => {
               <input
                 name="query"
                 placeholder={t("importRecipePlaceholder")}
-                className="px-4 min-w-60"
+                className="px-4 py-2 min-w-60 placeholder:text-sm text-sm focus:outline-0"
               />
               <button
                 type="submit"
-                className="px-4 bg-surface-component text-text-invert"
+                className="px-4 bg-surface-component text-text-invert font-medium hover:opacity-80"
               >
                 {t("importRecipe")}
               </button>
             </Form>
             <div className="flex ml-auto divide-x">
-              <button className="px-4">{t("blog")}</button>
-              <button className="px-4">{t("about")}</button>
+              <button className="px-4 hover:bg-surface-component hover:text-text-invert">
+                {t("blog")}
+              </button>
+              <button className="px-4 hover:bg-surface-component hover:text-text-invert">
+                {t("about")}
+              </button>
             </div>
           </div>
         </div>

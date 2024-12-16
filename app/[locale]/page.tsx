@@ -17,7 +17,7 @@ export default async function Home({
       <main className="flex flex-col flex-grow gap-8 row-start-2 items-center sm:items-start">
         <div className="flex flex-col w-full divide-y">
           <div className="flex items-center p-6">
-            <h1 className="font-accent font-bold text-4xl">{t("header")}</h1>
+            <h1 className="font-accent font-bold text-3xl">{t("header")}</h1>
           </div>
           <div></div>
         </div>

@@ -76,6 +76,16 @@ export  const basisGrotesque = localFont({
         style: "italic",
       },
       {
+        path: "../public/fonts/BasisGrotesque/BasisGrotesqueMedium.ttf",
+        weight: "600",
+        style: "normal",
+      },
+      {
+        path: "../public/fonts/BasisGrotesque/BasisGrotesqueMediumItalic.ttf",
+        weight: "600",
+        style: "italic",
+      },
+      {
         path: "../public/fonts/BasisGrotesque/BasisGrotesqueBold.ttf",
         weight: "700",
         style: "normal",

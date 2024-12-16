@@ -8,7 +8,7 @@ export interface AppDowloadQRProps {
   width?: number;
 }
 
-export const AppDowloadQR: FC<AppDowloadQRProps> = ({ width = 80 }) => {
+export const AppDowloadQR: FC<AppDowloadQRProps> = ({ width = 90 }) => {
   const { Canvas } = useQRCode();
 
   return (
