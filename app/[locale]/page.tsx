@@ -1,4 +1,3 @@
-import TranslationsProvider from "@/components/locale/TranslationsProvider";
 import { LocaleOptions } from "@/constants";
 import initTranslations from "@/lib/i18n";
 
@@ -10,7 +9,7 @@ export default async function Home({
   params: Promise<{ locale: LocaleOptions }>;
 }) {
   const { locale } = await params;
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { t } = await initTranslations(locale, i18nNamespaces);
 
   return (
     <div className="max-w-7xl mx-auto flex min-h-screen">

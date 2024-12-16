@@ -1,6 +1,5 @@
 "use client";
-import { androidDownloadLink, iosDownloadLink, onelinkLink } from "@/constants";
-import { getMobileOperatingSystem } from "@/utils";
+import { onelinkLink } from "@/constants";
 import { useQRCode } from "next-qrcode";
 import { FC } from "react";
 
