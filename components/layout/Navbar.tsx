@@ -3,9 +3,7 @@ import LanguageChanger from "../locale/LanguageChanger";
 import Form from "next/form";
 import { getI18n } from "@/contexts";
 
-export interface NavbarProps {}
-
-export const Navbar: FC<NavbarProps> = async ({}) => {
+export const Navbar: FC = async ({}) => {
   const { t } = getI18n();
 
   return (
