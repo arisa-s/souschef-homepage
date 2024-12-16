@@ -32,7 +32,7 @@ export default async function RootLayout({
   params: Promise<{ locale: LocaleOptions }>;
 }>) {
   const locale = (await params).locale;
-  const i18n = await initTranslations(locale, i18nNamespaces);
+  const { i18n } = await initTranslations(locale, i18nNamespaces);
   setI18n(i18n);
 
   return (

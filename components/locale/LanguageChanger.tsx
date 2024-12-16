@@ -1,13 +1,14 @@
 "use client";
 
+import { LOCALE_MAPPING } from "@/constants";
+import i18nConfig from "@/i18nConfig";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import i18nConfig from "@/i18nConfig";
-import { LOCALE_MAPPING } from "@/constants";
-import { getI18n } from "@/contexts";
+import { useTranslation } from "react-i18next";
 
 export default function LanguageChanger() {
-  const currentLocale = getI18n().language;
+  const { i18n } = useTranslation();
+  const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
 
