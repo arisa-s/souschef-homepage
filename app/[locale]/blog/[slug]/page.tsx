@@ -6,11 +6,7 @@ import { getImageUrlFor } from "@/sanity/lib/image";
 
 type BlogpostParams = Promise<{ locale: LocaleOptions; slug: string }>;
 
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string; locale: LocaleOptions };
-}) {
+export default async function PostPage({ params }: { params: BlogpostParams }) {
   const { locale, slug } = await params;
   const post = await getPost(locale, slug);
   const postImageUrl = post.image
