@@ -1,8 +1,8 @@
 import { PortableText } from "next-sanity";
 import Link from "next/link";
-import { getImageUrlFor } from "@/lib/sanity";
 import { LocaleOptions } from "@/constants";
 import { getPost } from "@/repo/post";
+import { getImageUrlFor } from "@/sanity/lib/image";
 
 type BlogpostParams = Promise<{ locale: LocaleOptions; slug: string }>;
 
@@ -11,7 +11,8 @@ export default async function PostPage({
 }: {
   params: { slug: string; locale: LocaleOptions };
 }) {
-  const post = await getPost(params.locale, params.slug);
+  const { locale, slug } = await params;
+  const post = await getPost(locale, slug);
   const postImageUrl = post.image
     ? getImageUrlFor(post.image)?.width(550).height(310).url()
     : null;

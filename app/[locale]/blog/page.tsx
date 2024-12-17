@@ -1,10 +1,10 @@
 import { type SanityDocument } from "next-sanity";
-import { getImageUrlFor } from "@/lib/sanity";
 import { LocaleOptions } from "@/constants";
 import BlogGrid from "@/components/shared/BlogGrid";
 import initTranslations from "@/lib/i18n";
 import { setI18n } from "@/serverContexts";
 import { getPosts } from "@/repo/post";
+import { getImageUrlFor } from "@/sanity/lib/image";
 
 type BlogParams = Promise<{ locale: LocaleOptions }>;
 
