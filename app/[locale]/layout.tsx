@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { dir } from "i18next";
 
 import i18nConfig from "@/i18nConfig";
