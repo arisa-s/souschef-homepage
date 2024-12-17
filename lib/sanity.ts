@@ -9,6 +9,12 @@ export const sanityClient = createClient({
   useCdn: false,
 });
 
+export const sanityDefaultOptions = {
+    next: {
+        revalidate: 30,
+    },
+}
+
 const { projectId, dataset } = sanityClient.config();
 export const getImageUrlFor = (source: SanityImageSource) =>
   projectId && dataset

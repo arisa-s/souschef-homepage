@@ -1,22 +1,17 @@
-import { PortableText, type SanityDocument } from "next-sanity";
+import { PortableText } from "next-sanity";
 import Link from "next/link";
-import { getImageUrlFor, sanityClient } from "@/lib/sanity";
+import { getImageUrlFor } from "@/lib/sanity";
 import { LocaleOptions } from "@/constants";
+import { getPost } from "@/repo/post";
 
-const POST_QUERY = `*[_type == "blogpost" && slug.current == $slug && language == $locale][0]`;
-
-const options = { next: { revalidate: 30 } };
+type BlogpostParams = Promise<{ locale: LocaleOptions; slug: string }>;
 
 export default async function PostPage({
   params,
 }: {
   params: { slug: string; locale: LocaleOptions };
 }) {
-  const post = await sanityClient.fetch<SanityDocument>(
-    POST_QUERY,
-    params,
-    options
-  );
+  const post = await getPost(params.locale, params.slug);
   const postImageUrl = post.image
     ? getImageUrlFor(post.image)?.width(550).height(310).url()
     : null;
@@ -42,4 +37,18 @@ export default async function PostPage({
       </div>
     </main>
   );
+}
+
+export async function generateMetadata({ params }: { params: BlogpostParams }) {
+  const { locale, slug } = await params;
+  const post = await getPost(locale, slug);
+  const postImageUrl = post.image
+    ? getImageUrlFor(post.image)?.width(550).height(310).url()
+    : null;
+
+  return {
+    title: post.title,
+    description: post.description,
+    image: postImageUrl,
+  };
 }

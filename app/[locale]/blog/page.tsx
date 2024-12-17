@@ -1,30 +1,16 @@
 import { type SanityDocument } from "next-sanity";
-import { getImageUrlFor, sanityClient } from "@/lib/sanity";
+import { getImageUrlFor } from "@/lib/sanity";
 import { LocaleOptions } from "@/constants";
 import BlogGrid from "@/components/shared/BlogGrid";
 import initTranslations from "@/lib/i18n";
 import { setI18n } from "@/serverContexts";
+import { getPosts } from "@/repo/post";
 
-const POSTS_QUERY = `*[
-  _type == "blogpost" && language == $language
-  && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, image, tags}`;
+type BlogParams = Promise<{ locale: LocaleOptions }>;
 
-const options = { next: { revalidate: 30 } };
-
-export default async function Blog({
-  params,
-}: {
-  params: Promise<{ locale: LocaleOptions }>;
-}) {
+export default async function Blog({ params }: { params: BlogParams }) {
   const { locale } = await params;
-  const posts = await sanityClient.fetch<SanityDocument[]>(
-    POSTS_QUERY,
-    {
-      language: locale,
-    },
-    options
-  );
+  const posts = await getPosts(locale);
 
   const { i18n, t } = await initTranslations(locale, ["blog"]);
   setI18n(i18n);
@@ -48,4 +34,13 @@ export default async function Blog({
       </main>
     </div>
   );
+}
+
+export async function generateMetadata({ params }: { params: BlogParams }) {
+  const { locale } = await params;
+  const { t } = await initTranslations(locale, ["blog", "layout"]);
+  return {
+    title: t("blog:pageTitle"),
+    description: t("blog:pageDescription"),
+  };
 }

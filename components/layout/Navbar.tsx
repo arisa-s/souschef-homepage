@@ -13,9 +13,11 @@ export const Navbar: FC = async ({}) => {
       <div className="flex divide-x flex-grow">
         <div className="flex flex-col divide-y flex-grow">
           <div className="flex justify-between px-6 py-3">
-            <h1 className="font-accent font-black text-2xl">
-              {t("layout:appName")}
-            </h1>
+            <Link href="/">
+              <h1 className="font-accent font-black text-2xl">
+                {t("layout:appName")}
+              </h1>
+            </Link>
             <LanguageChanger />
           </div>
           <div className="flex divide-x flex-grow">
