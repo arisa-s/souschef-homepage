@@ -5,12 +5,15 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import i18nConfig from '@/i18nConfig';
 import { LocaleOptions } from '@/constants';
 
+const DEFAULT_NAMESPACES = ['common', 'layout'];
+
 export default async function initTranslations(
   locale: LocaleOptions,
-  namespaces: string[],
+  namespacesProps: string[],
   i18nInstance?: i18n,
   resources?: Resource
 ) {
+  const namespaces = [...namespacesProps, ...DEFAULT_NAMESPACES]
   i18nInstance = i18nInstance || createInstance();
 
   i18nInstance.use(initReactI18next);

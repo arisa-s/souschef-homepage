@@ -44,23 +44,23 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={dir(locale)}>
-      <body
-        className={
-          locale == "ja"
-            ? `${zenOldMincho.variable} ${notoSanJapanese.variable}`
-            : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
-        }
+      <TranslationsProvider
+        namespaces={i18nNamespaces}
+        locale={locale}
+        resources={resources}
       >
-        <TranslationsProvider
-          namespaces={i18nNamespaces}
-          locale={locale}
-          resources={resources}
+        <body
+          className={
+            locale == "ja"
+              ? `${zenOldMincho.variable} ${notoSanJapanese.variable}`
+              : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
+          }
         >
           <Navbar />
           {children}
-        </TranslationsProvider>
-        <Footer />
-      </body>
+          <Footer />
+        </body>
+      </TranslationsProvider>
     </html>
   );
 }

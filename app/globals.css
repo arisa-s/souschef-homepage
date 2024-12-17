@@ -30,10 +30,11 @@
   --text-error: #e02200;
 
   /* Surface colors */
-  --surface-primary: var(--neutral-200);
+  --surface-primary: var(--neutral-0);
   --surface-secondary: var(--neutral-100);
   --surface-component: var(--brand-primary);
   --surface-component-secondary: var(--neutral-100);
+  --surface-hover: var(--neutral-200);
 }
 
 /* Dark theme colors */
@@ -69,6 +70,7 @@
     --surface-secondary: var(--neutral-100);
     --surface-component: var(--brand-primary);
     --surface-component-secondary: var(--neutral-500);
+    --surface-hover: var(--neutral-300);
   }
 }
 

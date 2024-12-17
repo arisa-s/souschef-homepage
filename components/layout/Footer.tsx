@@ -15,7 +15,7 @@ export const Footer: FC = ({}) => {
         </div>
         <div className="flex flex-col text-center">
           <h1 className="font-accent font-black text-2xl">
-            {t("common:appName")}
+            {t("layout:appName")}
           </h1>
           <p className="text-sm text-text-secondary">© 2024 Nekonote LLC</p>
         </div>
@@ -25,11 +25,11 @@ export const Footer: FC = ({}) => {
       </div>
       <div className="text-sm flex items-center justify-between px-6 py-4">
         <div className="flex space-x-4">
-          <MiscLink href="/" label={t("toc")} />
-          <MiscLink href="/" label={t("privacy")} />
+          <MiscLink href="/" label={t("layout:toc")} />
+          <MiscLink href="/" label={t("layout:privacy")} />
         </div>
         <div>
-          <p className="text-xs">{t("footerSign")}</p>
+          <p className="text-xs">{t("layout:footerSign")}</p>
         </div>
       </div>
     </footer>

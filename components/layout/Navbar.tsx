@@ -14,7 +14,7 @@ export const Navbar: FC = async ({}) => {
         <div className="flex flex-col divide-y flex-grow">
           <div className="flex justify-between px-6 py-3">
             <h1 className="font-accent font-black text-2xl">
-              {t("common:appName")}
+              {t("layout:appName")}
             </h1>
             <LanguageChanger />
           </div>
@@ -23,26 +23,26 @@ export const Navbar: FC = async ({}) => {
             <Form action="https://trysouschef.com/scrape/" className="flex">
               <input
                 name="query"
-                placeholder={t("importRecipePlaceholder")}
+                placeholder={t("layout:importRecipePlaceholder")}
                 className="px-4 py-2 min-w-60 placeholder:text-sm text-sm focus:outline-0"
               />
               <button
                 type="submit"
                 className="px-4 bg-surface-component text-text-invert font-medium hover:opacity-80"
               >
-                {t("importRecipe")}
+                {t("layout:importRecipe")}
               </button>
             </Form>
             <div className="flex ml-auto divide-x">
               <Link
                 href="/blog"
-                className="px-4 hover:bg-surface-component hover:text-text-invert items-center flex"
+                className="px-4 hover:bg-surface-hover items-center flex"
               >
-                {t("blog")}
+                {t("layout:blog")}
               </Link>
 
-              <button className="px-4 hover:bg-surface-component hover:text-text-invert">
-                {t("about")}
+              <button className="px-4 hover:bg-surface-hover">
+                {t("layout:about")}
               </button>
             </div>
           </div>

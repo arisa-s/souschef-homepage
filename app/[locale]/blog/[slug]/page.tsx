@@ -1,17 +1,9 @@
 import { PortableText, type SanityDocument } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import Link from "next/link";
-import { sanityClient } from "@/lib/sanity";
+import { getImageUrlFor, sanityClient } from "@/lib/sanity";
 import { LocaleOptions } from "@/constants";
 
 const POST_QUERY = `*[_type == "blogpost" && slug.current == $slug && language == $locale][0]`;
-
-const { projectId, dataset } = sanityClient.config();
-const urlFor = (source: SanityImageSource) =>
-  projectId && dataset
-    ? imageUrlBuilder({ projectId, dataset }).image(source)
-    : null;
 
 const options = { next: { revalidate: 30 } };
 
@@ -26,7 +18,7 @@ export default async function PostPage({
     options
   );
   const postImageUrl = post.image
-    ? urlFor(post.image)?.width(550).height(310).url()
+    ? getImageUrlFor(post.image)?.width(550).height(310).url()
     : null;
 
   return (
