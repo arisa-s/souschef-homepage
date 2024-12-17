@@ -24,9 +24,8 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
           } border-gray-300`;
 
           return (
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/blog/${post.slug}`} key={index}>
               <div
-                key={index}
                 className={`p-6 space-y-4 hover:bg-surface-hover cursor-pointer ${borderClass}`}
               >
                 {post.tags?.map((tag: BlogType, index: number) => (
