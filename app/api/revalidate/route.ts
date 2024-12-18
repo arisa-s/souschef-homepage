@@ -1,23 +1,26 @@
 import i18nConfig from '@/i18nConfig'
 import { isValidSignature, SIGNATURE_HEADER_NAME } from '@sanity/webhook'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { revalidatePath } from 'next/cache'
+import { NextRequest, NextResponse } from 'next/server'
 
-type Data = {
-  message: string
+export const config = {
+  api: {
+    bodyParser: false,
+  },
 }
 
 const secret = process.env.SANITY_REVALIDATE_SECRET
 
-export default async function POST(req: NextApiRequest, res: NextApiResponse<Data>) {
+export async function POST(req: NextRequest) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method Not Allowed' })
+    return NextResponse.json({ message: 'Method Not Allowed' }, { status: 405 })
   }
 
-  const signature = req.headers[SIGNATURE_HEADER_NAME] as string | undefined
-  const body = await readBody(req)
+  const signature = req.headers.get(SIGNATURE_HEADER_NAME) ?? undefined
+  const body = await req.text()
 
   if (!signature || !isValidSignature(body, signature, secret!)) {
-    return res.status(401).json({ message: 'Invalid signature' })
+    return NextResponse.json({ message: 'Invalid signature' }, { status: 401 })
   }
 
   try {
@@ -33,27 +36,19 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse<Dat
       await Promise.all(
         urlsToRevalidate.map(async (url) => {
           try {
-            await res.revalidate(url)
+            await revalidatePath(url)
           } catch (err) {
             console.error(`Failed to revalidate ${url}:`, err)
           }
         })
       )
 
-      return res.json({ message: `Revalidated "${type}" with slug "${slug.current}"` })
+      return NextResponse.json({ message: `Revalidated "${type}" with slug "${slug.current}"` })
     }
 
-    return res.status(400).json({ message: 'Unsupported or missing type' })
+    return NextResponse.json({ message: 'Unsupported or missing type' }, { status: 400 })
   } catch (err) {
     console.error('Error revalidating:', err)
-    return res.status(500).json({ message: `Error revalidating: ${err}` })
+    return NextResponse.json({ message: `Error revalidating: ${err}` }, { status: 500 })
   }
-}
-
-async function readBody(req: NextApiRequest): Promise<string> {
-  const chunks: Uint8Array[] = []
-  for await (const chunk of req) {
-    chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk)
-  }
-  return Buffer.concat(chunks).toString('utf8')
 }
