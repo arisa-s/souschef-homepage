@@ -14,6 +14,7 @@ export const blogpostType = defineType({
           {title: 'Japanese', value: 'ja'}
         ],
       },
+      validation: (rule) => rule.required(),
       readOnly: true,
       hidden: true,
     }),

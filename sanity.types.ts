@@ -323,3 +323,19 @@ export type SanityAssistSchemaTypeField = {
 
 export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | TranslationMetadata | InternationalizedArrayReferenceValue | Blogpost | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | InternationalizedArrayReference | SanityAssistInstructionTask | SanityAssistTaskStatus | SanityAssistSchemaTypeAnnotations | SanityAssistOutputType | SanityAssistOutputField | SanityAssistInstructionContext | AssistInstructionContext | SanityAssistInstructionUserInput | SanityAssistInstructionPrompt | SanityAssistInstructionFieldRef | SanityAssistInstruction | SanityAssistSchemaTypeField;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ./sanity/lib/queries/blogpost.ts
+// Variable: POST_SLUGS_QUERY
+// Query: *[    _type == "blogpost" && defined(slug.current)  ]|order(publishedAt desc)[0...12]{_id, slug, language}
+export type POST_SLUGS_QUERYResult = Array<{
+  _id: string;
+  slug: Slug | null;
+  language: "en" | "ja" | null;
+}>;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    "*[\n    _type == \"blogpost\" && defined(slug.current)\n  ]|order(publishedAt desc)[0...12]{_id, slug, language}": POST_SLUGS_QUERYResult;
+  }
+}
