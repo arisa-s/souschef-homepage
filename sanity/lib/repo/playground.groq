@@ -1,0 +1,1 @@
+*[_type == 'blogpost' && slug.current == $slug && language == $locale] [0]

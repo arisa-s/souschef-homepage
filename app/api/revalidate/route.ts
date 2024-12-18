@@ -6,7 +6,7 @@ type Data = {
   message: string
 }
 
-// Next.js will by default parse the body, which can lead to invalid signatures
+// Disable automatic body parsing to prevent signature validation issues
 export const config = {
   api: {
     bodyParser: false,
@@ -15,45 +15,52 @@ export const config = {
 
 const secret = process.env.SANITY_REVALIDATE_SECRET
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const signature = req.headers[SIGNATURE_HEADER_NAME] as string
-  const body = await readBody(req) // Read the body into a string
-
+export default async function POST(req: NextApiRequest, res: NextApiResponse<Data>) {
   if (req.method !== 'POST') {
-    return res.status(401).json({ message: 'Must be a POST request' })
+    return res.status(405).json({ message: 'Method Not Allowed' })
   }
 
-  if (!isValidSignature(body, signature, secret!)) {
-    res.status(401).json({ message: 'Invalid signature' })
-    return
+  const signature = req.headers[SIGNATURE_HEADER_NAME] as string | undefined
+  const body = await readBody(req)
+
+  if (!signature || !isValidSignature(body, signature, secret!)) {
+    return res.status(401).json({ message: 'Invalid signature' })
   }
 
   try {
     const { _type: type, slug } = JSON.parse(body)
 
-    switch (type) {
-      case 'blogpost':
-        const urlsToRevalidate = i18nConfig.locales
-          .map((locale) => [`/${locale}/blog/${slug.current}`, `/${locale}/blog`, `/${locale}`])
-          .flat()
-        for (const url of urlsToRevalidate) {
-          await res.revalidate(url)
-        }
-        return res.json({ message: `Revalidated "${type}" with slug "${slug.current}"` })
+    if (type === 'blogpost' && slug?.current) {
+      const urlsToRevalidate = i18nConfig.locales.flatMap((locale) => [
+        `/${locale}/blog/${slug.current}`,
+        `/${locale}/blog`,
+        `/${locale}`,
+      ])
+
+      await Promise.all(
+        urlsToRevalidate.map(async (url) => {
+          try {
+            await res.revalidate(url)
+          } catch (err) {
+            console.error(`Failed to revalidate ${url}:`, err)
+          }
+        })
+      )
+
+      return res.json({ message: `Revalidated "${type}" with slug "${slug.current}"` })
     }
 
-    return res.json({ message: 'No managed type' })
+    return res.status(400).json({ message: 'Unsupported or missing type' })
   } catch (err) {
-    return res.status(500).send({ message: `Error revalidating: ${err}` })
+    console.error('Error revalidating:', err)
+    return res.status(500).json({ message: `Error revalidating: ${err}` })
   }
 }
 
-async function readBody(readable: NextApiRequest) {
-  const chunks = []
-  for await (const chunk of readable) {
+async function readBody(req: NextApiRequest): Promise<string> {
+  const chunks: Uint8Array[] = []
+  for await (const chunk of req) {
     chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk)
   }
   return Buffer.concat(chunks).toString('utf8')
 }
-
-export { handler as POST }
