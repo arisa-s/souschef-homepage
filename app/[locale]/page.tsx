@@ -3,11 +3,11 @@ import initTranslations from "@/lib/i18n";
 
 const i18nNamespaces = ["home", "common"];
 
-export default async function Home({
-  params,
-}: {
+type HomeProps = {
   params: Promise<{ locale: LocaleOptions }>;
-}) {
+};
+
+export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
   const { t } = await initTranslations(locale, i18nNamespaces);
 

@@ -30,3 +30,15 @@ export const getPost = async (language: LocaleOptions, slug: string) => {
       );
       return post
 };
+
+const POST_SLUGS_QUERY = `*[
+    _type == "blogpost" && defined(slug.current)
+  ]|order(publishedAt desc)[0...12]{_id, slug, language}`;
+
+
+export const getPostSlugs = async () => {
+    const slugs = await sanityClient.fetch<SanityDocument>(
+        POST_SLUGS_QUERY,
+      );
+      return slugs
+};

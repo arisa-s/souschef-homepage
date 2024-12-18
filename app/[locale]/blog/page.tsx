@@ -5,10 +5,15 @@ import initTranslations from "@/lib/i18n";
 import { setI18n } from "@/serverContexts";
 import { getPosts } from "@/repo/post";
 import { getImageUrlFor } from "@/sanity/lib/image";
+import i18nConfig from "@/i18nConfig";
 
-type BlogParams = Promise<{ locale: LocaleOptions }>;
+type BlogProps = { params: Promise<{ locale: LocaleOptions }> };
 
-export default async function Blog({ params }: { params: BlogParams }) {
+export async function generateStaticParams() {
+  return i18nConfig.locales.map((locale) => ({ locale }));
+}
+
+export default async function Blog({ params }: BlogProps) {
   const { locale } = await params;
   const posts = await getPosts(locale);
 
@@ -36,7 +41,7 @@ export default async function Blog({ params }: { params: BlogParams }) {
   );
 }
 
-export async function generateMetadata({ params }: { params: BlogParams }) {
+export async function generateMetadata({ params }: BlogProps) {
   const { locale } = await params;
   const { t } = await initTranslations(locale, ["blog", "layout"]);
   return {

@@ -1,12 +1,36 @@
-import { PortableText } from "next-sanity";
+import { PortableText, SanityDocument } from "next-sanity";
 import Link from "next/link";
 import { LocaleOptions } from "@/constants";
-import { getPost } from "@/repo/post";
+import { getPost, getPostSlugs } from "@/repo/post";
 import { getImageUrlFor } from "@/sanity/lib/image";
 
-type BlogpostParams = Promise<{ locale: LocaleOptions; slug: string }>;
+type BlogpostProps = {
+  params: Promise<{ locale: LocaleOptions; slug: string }>;
+};
 
-export default async function PostPage({ params }: { params: BlogpostParams }) {
+export async function generateStaticParams() {
+  const posts = await getPostSlugs();
+  return posts.map((post: SanityDocument) => ({
+    locale: post.language,
+    slug: post.slug.current,
+  }));
+}
+
+export async function generateMetadata({ params }: BlogpostProps) {
+  const { locale, slug } = await params;
+  const post = await getPost(locale, slug);
+  const postImageUrl = post.image
+    ? getImageUrlFor(post.image)?.width(550).height(310).url()
+    : null;
+
+  return {
+    title: post.title,
+    description: post.description,
+    image: postImageUrl,
+  };
+}
+
+export default async function PostPage({ params }: BlogpostProps) {
   const { locale, slug } = await params;
   const post = await getPost(locale, slug);
   const postImageUrl = post.image
@@ -34,18 +58,4 @@ export default async function PostPage({ params }: { params: BlogpostParams }) {
       </div>
     </main>
   );
-}
-
-export async function generateMetadata({ params }: { params: BlogpostParams }) {
-  const { locale, slug } = await params;
-  const post = await getPost(locale, slug);
-  const postImageUrl = post.image
-    ? getImageUrlFor(post.image)?.width(550).height(310).url()
-    : null;
-
-  return {
-    title: post.title,
-    description: post.description,
-    image: postImageUrl,
-  };
 }
