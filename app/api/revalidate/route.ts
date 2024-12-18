@@ -6,13 +6,6 @@ type Data = {
   message: string
 }
 
-// Disable automatic body parsing to prevent signature validation issues
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-}
-
 const secret = process.env.SANITY_REVALIDATE_SECRET
 
 export default async function POST(req: NextApiRequest, res: NextApiResponse<Data>) {
