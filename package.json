@@ -15,6 +15,7 @@
     "@sanity/icons": "^3.5.3",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.67.1",
+    "@sanity/webhook": "^4.0.4",
     "i18next": "^24.1.0",
     "i18next-resources-to-backend": "^1.2.1",
     "i18nexus-cli": "^3.5.0",
