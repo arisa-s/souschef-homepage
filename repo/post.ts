@@ -1,6 +1,6 @@
 import { LocaleOptions } from "@/constants";
 import { sanityClient } from "@/sanity/lib/client";
-import { SanityDocument } from "next-sanity";
+import { defineQuery, SanityDocument } from "next-sanity";
 
 const POSTS_QUERY = `*[
     _type == "blogpost" && language == $language
@@ -31,9 +31,9 @@ export const getPost = async (language: LocaleOptions, slug: string) => {
       return post
 };
 
-const POST_SLUGS_QUERY = `*[
+const POST_SLUGS_QUERY = defineQuery(`*[
     _type == "blogpost" && defined(slug.current)
-  ]|order(publishedAt desc)[0...12]{_id, slug, language}`;
+  ]|order(publishedAt desc)[0...12]{_id, slug, language}`);
 
 
 export const getPostSlugs = async () => {
