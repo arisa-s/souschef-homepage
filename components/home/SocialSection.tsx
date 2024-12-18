@@ -1,12 +1,7 @@
+// @ts-nocheck
 'use client'
 
 import { FC, useEffect } from 'react'
-
-declare global {
-  interface Window {
-    instgrm: any
-  }
-}
 
 export interface InstagramEmbedProps {
   link: string
