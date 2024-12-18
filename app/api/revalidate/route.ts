@@ -40,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     return res.json({ message: 'No managed type' })
   } catch (err) {
-    return res.status(500).send({ message: 'Error revalidating' })
+    return res.status(500).send({ message: `Error revalidating: ${err}` })
   }
 }
 
