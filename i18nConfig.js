@@ -4,5 +4,5 @@ const i18nConfig = {
     locales: LOCALE_OPTIONS,
     defaultLocale: DEFAULT_LOCALE
   };
-  
-  module.exports = i18nConfig;
+
+module.exports = i18nConfig;

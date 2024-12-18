@@ -1,3 +1,4 @@
+import i18nConfig from '@/i18nConfig'
 import { isValidSignature, SIGNATURE_HEADER_NAME } from '@sanity/webhook'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
@@ -32,9 +33,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     switch (type) {
       case 'blogpost':
-        await res.revalidate(`/blog/${slug.current}`) // The particular project
-        await res.revalidate(`/blog`) // The Projects page
-        await res.revalidate(`/`) // The landing page featured projects
+        const urlsToRevalidate = i18nConfig.locales
+          .map((locale) => [`/${locale}/blog/${slug.current}`, `/${locale}/blog`, `/${locale}`])
+          .flat()
+        for (const url of urlsToRevalidate) {
+          await res.revalidate(url)
+        }
         return res.json({ message: `Revalidated "${type}" with slug "${slug.current}"` })
     }
 
@@ -51,3 +55,5 @@ async function readBody(readable: NextApiRequest) {
   }
   return Buffer.concat(chunks).toString('utf8')
 }
+
+export { handler as POST }
