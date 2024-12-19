@@ -7,11 +7,11 @@ import initTranslations from '@/lib/i18n'
 import { basisGrotesque, notoSanJapanese, recoleta, zenOldMincho } from '@/lib/fonts'
 
 import '../globals.css'
-import { setI18n } from '@/serverContexts'
+import { setI18n, setLocale } from '@/serverContexts'
 import Footer from '@/components/layout/Footer'
 import TranslationsProvider from '@/components/locale/TranslationsProvider'
 
-const i18nNamespaces = ['layout', 'common']
+const i18nNamespaces = ['home', 'layout', 'common']
 
 export default async function RootLayout({
   children,
@@ -23,6 +23,7 @@ export default async function RootLayout({
   const locale = (await params).locale
   const { i18n, resources } = await initTranslations(locale, i18nNamespaces)
   setI18n(i18n)
+  setLocale(locale)
 
   return (
     <html lang={locale} dir={dir(locale)}>

@@ -3,6 +3,8 @@
 'use client'
 
 import { FC, useEffect } from 'react'
+import SectionTitle from './SectionTitle'
+import { useTranslation } from 'react-i18next'
 
 export interface InstagramEmbedProps {
   link: string
@@ -65,17 +67,21 @@ export const SocialSection: FC = () => {
       url: 'https://www.instagram.com/reel/C30JnMrrcFy',
     },
   ]
+  const { t } = useTranslation()
 
   return (
-    <div>
-      <div className="mx-24 border-x">
+    <div className="w-full items-center divide-y sm:items-start">
+      <SectionTitle>{t('socialSectionTitle')}</SectionTitle>
+      <div>
         <div className="mx-24 border-x">
-          <div className="flex divide-x">
-            {slidePosts.map((post, index) => (
-              <div className="w-1/2 p-6" key={index}>
-                <InstagramEmbed link={post.url} />
-              </div>
-            ))}
+          <div className="mx-24 border-x">
+            <div className="flex divide-x">
+              {slidePosts.map((post, index) => (
+                <div className="w-1/2 p-6" key={index}>
+                  <InstagramEmbed link={post.url} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

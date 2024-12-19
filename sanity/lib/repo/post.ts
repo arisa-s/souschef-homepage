@@ -7,7 +7,7 @@ const POSTS_QUERY = defineQuery(`*[
   && language == $language
   && defined(slug.current)
 ] | order(publishedAt desc) [0...12] {
-  _id, title, slug, publishedAt, image, tags
+  _id, title, slug, publishedAt, image, tags, description
 }`)
 
 export const getPosts = async (language: LocaleOptions) => {
