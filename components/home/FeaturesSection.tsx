@@ -1,8 +1,9 @@
 'use client'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { LiaFastForwardSolid, LiaStepBackwardSolid } from 'react-icons/lia'
 
 export interface FeaturesSectionProps {}
 
@@ -14,9 +15,29 @@ const FEATURES = [
   { key: 'discover', imagePath: '/images/home/discover.gif' },
   { key: 'convertYoutube', imagePath: '/images/home/convertYoutube.png' },
 ]
-
 export const FeaturesSection: FC<FeaturesSectionProps> = () => {
   const [selectedFeature, setSelectedFeature] = useState(FEATURES[0])
+  const [manualSelection, setManualSelection] = useState(false)
+
+  useEffect(() => {
+    if (manualSelection) return
+
+    const interval = setInterval(() => {
+      setSelectedFeature((prevFeature) => {
+        const currentIndex = FEATURES.findIndex((f) => f.key === prevFeature.key)
+        const nextIndex = (currentIndex + 1) % FEATURES.length
+        return FEATURES[nextIndex]
+      })
+    }, 5000) // Change every 10 seconds
+
+    return () => clearInterval(interval)
+  }, [manualSelection])
+
+  const handleFeatureClick = (feature: (typeof FEATURES)[number]) => {
+    setManualSelection(true)
+    setSelectedFeature(feature)
+  }
+
   return (
     <div>
       <div className="mx-auto flex h-full max-w-6xl flex-col items-stretch divide-x border-x sm:flex-row sm:items-start">
@@ -26,12 +47,22 @@ export const FeaturesSection: FC<FeaturesSectionProps> = () => {
               featureKey={f.key}
               key={f.key}
               selected={f.key === selectedFeature.key}
-              onClick={() => setSelectedFeature(f)}
+              onClick={() => handleFeatureClick(f)}
             />
           ))}
         </div>
         <div className="flex h-full w-full items-center justify-center sm:w-1/2">
-          <FeatureGraphic feature={selectedFeature} />
+          <div className="flex-col divide-y">
+            <FeatureGraphic feature={selectedFeature} />
+            <div className="w-full divide-x text-lg">
+              <button className="w-1/2 border-b py-4 hover:bg-surface-hover">
+                <LiaStepBackwardSolid className="mx-auto" />
+              </button>
+              <button className="w-1/2 border-b py-4 hover:bg-surface-hover">
+                <LiaFastForwardSolid className="mx-auto" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -52,11 +83,18 @@ export const FeatureDescription = ({
     <motion.div
       layout
       onClick={onClick}
-      className={`cursor-pointer bg-surface-primary ${selected ? 'space-y-6 p-12 py-12' : 'space-y-2 px-6 py-4'}`}
-      whileHover={{ scale: 1.04, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }}
+      className={`cursor-pointer bg-surface-primary ${
+        selected ? 'scale-105 space-y-6 border p-12 py-12' : 'space-y-2 px-6 py-4'
+      }`}
+      whileHover={{ scale: 1.05, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }}
+      animate={
+        selected
+          ? { scale: 1.05, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }
+          : { scale: 1, borderRightWidth: 0, borderLeftWidth: 0, borderBottomWidth: 0 }
+      }
       transition={{ duration: 0.3 }}
     >
-      <h1 className={`${selected ? 'text-4xl' : 'text-xl'}`}>{t(`feature.${featureKey}`)}</h1>
+      <h2 className={`${selected ? 'text-3xl' : 'text-xl'}`}>{t(`feature.${featureKey}`)}</h2>
       {selected && (
         <motion.p
           key={`${featureKey}-desc`}
@@ -93,7 +131,7 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
         alt={`${feature.key} head image`}
         width={1000}
         height={500}
-        className="my-auto"
+        className="h-96 w-full object-cover"
       />
     </motion.div>
   )
