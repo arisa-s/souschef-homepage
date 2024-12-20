@@ -78,7 +78,7 @@ export const BlogSection: FC<BlogSectionProps> = async ({}) => {
         <div className="w-full flex-col divide-y sm:w-1/2">
           <SectionTitle>{t('blogSectionTitle')}</SectionTitle>
           {otherPosts.map((post) => (
-            <BlogListItem post={post} />
+            <BlogListItem post={post} key={post._id} />
           ))}
           <div className="flex flex-col items-center space-y-6 p-6 text-center">
             <Link href="/blog">
