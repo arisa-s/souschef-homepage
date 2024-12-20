@@ -8,6 +8,7 @@ import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
 import { BlogType } from '@/types/post'
 import Image from 'next/image'
 import AppDowloadQR from '../shared/AppDownloadQR'
+import Marquee from 'react-fast-marquee'
 
 export interface BlogSectionProps {}
 
@@ -31,11 +32,14 @@ export const BlogSection: FC<BlogSectionProps> = async ({}) => {
 
   return (
     <>
-      <div className="w-full bg-surface-component py-2 text-lg font-medium text-text-invert">
-        <p>
+      <Marquee
+        autoFill
+        className="w-full bg-surface-component py-2 text-lg font-medium text-text-invert"
+      >
+        <p className="px-6">
           {t('newFeatureSectionTitle')}: {newFeaturePost.title}
         </p>
-      </div>
+      </Marquee>
       <div className="flex divide-x">
         <div className="w-full flex-col divide-y sm:w-1/2">
           <SectionTitle>{t('newFeatureSectionTitle')}</SectionTitle>
