@@ -10,9 +10,7 @@ import Image from 'next/image'
 import AppDowloadQR from '../shared/AppDownloadQR'
 import Marquee from 'react-fast-marquee'
 
-export interface BlogSectionProps {}
-
-export const BlogSection: FC<BlogSectionProps> = async ({}) => {
+export const BlogSection = async ({}) => {
   const { t } = getI18n()
   const locale = getLocale()
   const posts = await getPosts(locale)

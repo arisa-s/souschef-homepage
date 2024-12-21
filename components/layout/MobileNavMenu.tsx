@@ -6,9 +6,7 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { emailLink, instagramProfileLink, onelinkLink } from '@/constants'
 
-export interface MobileNavMenuProps {}
-
-export const MobileNavMenu: FC<MobileNavMenuProps> = ({}) => {
+export const MobileNavMenu = ({}) => {
   const [isOpen, setIsOpen] = useState(false)
   const { t } = useTranslation()
   return (

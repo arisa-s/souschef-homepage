@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { LiaFastForwardSolid, LiaStepBackwardSolid } from 'react-icons/lia'
 
-export interface FeaturesSectionProps {}
-
 const FEATURES = [
   { key: 'importRecipe', imagePath: '/images/home/importRecipe.gif' },
   { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.gif' },
@@ -15,7 +13,7 @@ const FEATURES = [
   { key: 'discover', imagePath: '/images/home/discover.gif' },
   { key: 'convertYoutube', imagePath: '/images/home/convertYoutube.png' },
 ]
-export const FeaturesSection: FC<FeaturesSectionProps> = () => {
+export const FeaturesSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(FEATURES[0])
   const [manualSelection, setManualSelection] = useState(false)
   const { t } = useTranslation()
