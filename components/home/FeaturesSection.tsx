@@ -18,6 +18,7 @@ const FEATURES = [
 export const FeaturesSection: FC<FeaturesSectionProps> = () => {
   const [selectedFeature, setSelectedFeature] = useState(FEATURES[0])
   const [manualSelection, setManualSelection] = useState(false)
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (manualSelection) return
@@ -41,7 +42,7 @@ export const FeaturesSection: FC<FeaturesSectionProps> = () => {
   return (
     <div>
       <div className="mx-auto flex h-full max-w-6xl flex-col items-stretch divide-x border-x sm:flex-row sm:items-start">
-        <div className="my-12 flex w-full flex-col divide-y border-y sm:w-1/2">
+        <div className="my-12 hidden w-full flex-col divide-y border-y sm:flex sm:w-1/2">
           {FEATURES.map((f) => (
             <FeatureDescription
               featureKey={f.key}
@@ -54,6 +55,10 @@ export const FeaturesSection: FC<FeaturesSectionProps> = () => {
         <div className="flex h-full w-full items-center justify-center sm:w-1/2">
           <div className="flex-col divide-y">
             <FeatureGraphic feature={selectedFeature} />
+            <div className="space-y-2 p-4 sm:hidden">
+              <h2 className="text-xl font-bold">{t(`feature.${selectedFeature.key}`)}</h2>
+              <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
+            </div>
             <div className="w-full divide-x text-lg">
               <button className="w-1/2 border-b py-4 hover:bg-surface-hover">
                 <LiaStepBackwardSolid className="mx-auto" />
@@ -84,7 +89,7 @@ export const FeatureDescription = ({
       layout
       onClick={onClick}
       className={`cursor-pointer bg-surface-primary ${
-        selected ? 'scale-105 space-y-6 border p-12 py-12' : 'space-y-2 px-6 py-4'
+        selected ? 'space-y-6 border p-12 py-12 sm:scale-105' : 'hidden space-y-2 px-6 py-4 sm:flex'
       }`}
       whileHover={{ scale: 1.05, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }}
       animate={
@@ -124,14 +129,14 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
         damping: 25,
         duration: 0.7,
       }}
-      className="my-auto"
+      className="mx-12 my-auto"
     >
       <Image
         src={feature.imagePath}
         alt={`${feature.key} head image`}
         width={1000}
         height={500}
-        className="h-96 w-full object-cover"
+        className="object-cover sm:h-96 sm:w-full"
       />
     </motion.div>
   )

@@ -34,7 +34,7 @@ export default function LanguageChanger() {
 
   return (
     <select
-      className="cursor-pointer px-4 py-2 text-sm focus:outline-0"
+      className="cursor-pointer bg-surface-primary px-4 py-2 text-sm text-text-primary focus:outline-0"
       onChange={handleChange}
       value={currentLocale}
     >
