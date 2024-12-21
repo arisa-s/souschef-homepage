@@ -1,5 +1,5 @@
 'use client'
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
 import LanguageChanger from '../locale/LanguageChanger'
 import Link from 'next/link'

@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import SectionTitle from './SectionTitle'
 import Link from 'next/link'
 import { getPosts } from '@/sanity/lib/repo/post'
