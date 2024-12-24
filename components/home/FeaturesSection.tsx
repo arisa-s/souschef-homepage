@@ -37,6 +37,22 @@ export const FeaturesSection = () => {
     setSelectedFeature(feature)
   }
 
+  const handleNextFeature = () => {
+    setSelectedFeature((prevFeature) => {
+      const currentIndex = FEATURES.findIndex((f) => f.key === prevFeature.key)
+      const nextIndex = (currentIndex + 1) % FEATURES.length
+      return FEATURES[nextIndex]
+    })
+  }
+
+  const handlePreviousFeature = () => {
+    setSelectedFeature((prevFeature) => {
+      const currentIndex = FEATURES.findIndex((f) => f.key === prevFeature.key)
+      const nextIndex = (currentIndex - 1 + FEATURES.length) % FEATURES.length
+      return FEATURES[nextIndex]
+    })
+  }
+
   return (
     <div>
       <div className="mx-auto flex h-full max-w-6xl flex-col items-stretch divide-x border-x sm:flex-row sm:items-start">
@@ -53,15 +69,21 @@ export const FeaturesSection = () => {
         <div className="flex h-full w-full items-center justify-center sm:w-1/2">
           <div className="flex-col divide-y">
             <FeatureGraphic feature={selectedFeature} />
-            <div className="space-y-2 p-4 sm:hidden">
+            <div className="h-52 space-y-2 p-4 sm:hidden">
               <h2 className="text-xl font-bold">{t(`feature.${selectedFeature.key}`)}</h2>
               <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
             </div>
             <div className="w-full divide-x text-lg">
-              <button className="w-1/2 border-b py-4 hover:bg-surface-hover">
+              <button
+                className="w-1/2 border-b py-4 hover:bg-surface-hover"
+                onClick={handlePreviousFeature}
+              >
                 <LiaStepBackwardSolid className="mx-auto" />
               </button>
-              <button className="w-1/2 border-b py-4 hover:bg-surface-hover">
+              <button
+                className="w-1/2 border-b py-4 hover:bg-surface-hover"
+                onClick={handleNextFeature}
+              >
                 <LiaFastForwardSolid className="mx-auto" />
               </button>
             </div>
@@ -134,7 +156,7 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
         alt={`${feature.key} head image`}
         width={1000}
         height={500}
-        className="object-cover sm:h-96 sm:w-full"
+        className="h-56 object-cover sm:h-96 sm:w-full"
       />
     </motion.div>
   )
