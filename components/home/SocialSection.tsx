@@ -75,7 +75,7 @@ export const SocialSection: FC = () => {
       <div>
         <div className="sm:mx-24 sm:border-x">
           <div className="sm:mx-24 sm:border-x">
-            <div className="flex flex-col divide-x sm:flex-row">
+            <div className="flex flex-col sm:flex-row sm:divide-x">
               {slidePosts.map((post, index) => (
                 <div className="w-1/2 p-6" key={index}>
                   <InstagramEmbed link={post.url} />

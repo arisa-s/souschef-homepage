@@ -1,4 +1,5 @@
 import BlogSection from '@/components/home/BlogSection'
+import DownloadAppModal from '@/components/home/DownloadAppModal'
 import FeaturesSection from '@/components/home/FeaturesSection'
 import SectionTitle from '@/components/home/SectionTitle'
 import SocialSection from '@/components/home/SocialSection'
@@ -24,6 +25,7 @@ export default async function Home({ params }: HomeProps) {
           <BlogSection />
           <SocialSection />
         </div>
+        <DownloadAppModal />
       </main>
     </div>
   )

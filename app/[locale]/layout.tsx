@@ -35,6 +35,7 @@ export default async function RootLayout({
               : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
           }
         >
+          <div id="modal-root"></div>
           <Navbar />
           {children}
           <Footer />

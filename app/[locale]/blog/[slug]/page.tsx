@@ -39,7 +39,10 @@ export default async function PostPage({ params }: BlogpostProps) {
   return (
     <div className="mx-auto min-h-screen max-w-7xl">
       <div className="flex items-center p-6">
-        <Link href="/blog" className="flex items-center space-x-4 text-3xl hover:underline">
+        <Link
+          href="/blog"
+          className="flex items-center space-x-4 text-xl hover:underline sm:text-3xl"
+        >
           <FiArrowLeft />
           <h1 className="font-accent font-medium">{t('backToBlog')}</h1>
         </Link>

@@ -8,6 +8,7 @@ import { BlogType } from '@/types/post'
 import Image from 'next/image'
 import AppDowloadQR from '../shared/AppDownloadQR'
 import Marquee from 'react-fast-marquee'
+import { onelinkLink } from '@/constants'
 
 export const BlogSection = async ({}) => {
   const { t } = getI18n()
@@ -68,9 +69,11 @@ export const BlogSection = async ({}) => {
           <div className="px-20">
             <div className="flex flex-col items-center justify-center space-y-12 border-x py-20">
               <AppDowloadQR width={160} />
-              <button className="bg-surface-component px-6 py-2 text-lg font-bold text-text-invert">
-                {t('downloadNow')}
-              </button>
+              <Link href={onelinkLink}>
+                <button className="bg-surface-component px-6 py-2 text-lg font-bold text-text-invert">
+                  {t('downloadNow')}
+                </button>
+              </Link>
             </div>
           </div>
         </div>
