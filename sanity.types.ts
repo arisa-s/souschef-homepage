@@ -84,12 +84,116 @@ export type TranslationMetadata = {
 
 export type InternationalizedArrayReferenceValue = {
   _type: 'internationalizedArrayReferenceValue'
-  value?: {
-    _ref: string
-    _type: 'reference'
-    _weak?: boolean
-    [internalGroqTypeReferenceTo]?: 'blogpost'
-  }
+  value?:
+    | {
+        _ref: string
+        _type: 'reference'
+        _weak?: boolean
+        [internalGroqTypeReferenceTo]?: 'blogpost'
+      }
+    | {
+        _ref: string
+        _type: 'reference'
+        _weak?: boolean
+        [internalGroqTypeReferenceTo]?: 'privacy'
+      }
+    | {
+        _ref: string
+        _type: 'reference'
+        _weak?: boolean
+        [internalGroqTypeReferenceTo]?: 'faq'
+      }
+    | {
+        _ref: string
+        _type: 'reference'
+        _weak?: boolean
+        [internalGroqTypeReferenceTo]?: 'toc'
+      }
+}
+
+export type Toc = {
+  _id: string
+  _type: 'toc'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  language: 'en' | 'ja'
+  publishedAt: string
+  body?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+}
+
+export type Faq = {
+  _id: string
+  _type: 'faq'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  language: 'en' | 'ja'
+  question: string
+  answer?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+  publishedAt: string
+}
+
+export type Privacy = {
+  _id: string
+  _type: 'privacy'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  language: 'en' | 'ja'
+  publishedAt: string
+  body?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
 }
 
 export type Blogpost = {
@@ -98,10 +202,10 @@ export type Blogpost = {
   _createdAt: string
   _updatedAt: string
   _rev: string
-  language?: 'en' | 'ja'
-  title?: string
-  slug?: Slug
-  image?: {
+  language: 'en' | 'ja'
+  title: string
+  slug: Slug
+  image: {
     asset?: {
       _ref: string
       _type: 'reference'
@@ -112,7 +216,7 @@ export type Blogpost = {
     crop?: SanityImageCrop
     _type: 'image'
   }
-  description?: string
+  description: string
   body?: Array<{
     children?: Array<{
       marks?: Array<string>
@@ -132,7 +236,7 @@ export type Blogpost = {
     _key: string
   }>
   tags?: Array<'howTo' | 'newFeature'>
-  publishedAt?: string
+  publishedAt: string
 }
 
 export type SanityImageCrop = {
@@ -194,7 +298,7 @@ export type SanityImageMetadata = {
 
 export type Slug = {
   _type: 'slug'
-  current?: string
+  current: string
   source?: string
 }
 
@@ -244,7 +348,7 @@ export type SanityAssistOutputField = {
 
 export type SanityAssistInstructionContext = {
   _type: 'sanity.assist.instruction.context'
-  reference?: {
+  reference: {
     _ref: string
     _type: 'reference'
     _weak?: boolean
@@ -277,7 +381,7 @@ export type AssistInstructionContext = {
 
 export type SanityAssistInstructionUserInput = {
   _type: 'sanity.assist.instruction.userInput'
-  message?: string
+  message: string
   description?: string
 }
 
@@ -347,6 +451,9 @@ export type AllSanitySchemaTypes =
   | Geopoint
   | TranslationMetadata
   | InternationalizedArrayReferenceValue
+  | Toc
+  | Faq
+  | Privacy
   | Blogpost
   | SanityImageCrop
   | SanityImageHotspot
@@ -368,14 +475,40 @@ export type AllSanitySchemaTypes =
   | SanityAssistInstruction
   | SanityAssistSchemaTypeField
 export declare const internalGroqTypeReferenceTo: unique symbol
+// Source: ./sanity/lib/repo/faq.ts
+// Variable: FAQS_QUERY
+// Query: *[        _type == 'faq'        && language == $language        && defined(question)        && defined(answer)    ] | order(order asc) {        _id, question, answer    }
+export type FAQS_QUERYResult = Array<{
+  _id: string
+  question: string
+  answer: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }> | null
+}>
+
 // Source: ./sanity/lib/repo/post.ts
 // Variable: POSTS_QUERY
-// Query: *[  _type == 'blogpost'  && language == $language  && defined(slug.current)] | order(publishedAt desc) [0...12] {  _id, title, slug, publishedAt, image, tags}
+// Query: *[  _type == 'blogpost'  && language == $language  && defined(slug.current)] | order(publishedAt desc) [0...12] {  _id, title, slug, publishedAt, image, tags, description}
 export type POSTS_QUERYResult = Array<{
   _id: string
-  title: string | null
-  slug: Slug | null
-  publishedAt: string | null
+  title: string
+  slug: Slug
+  publishedAt: string
   image: {
     asset?: {
       _ref: string
@@ -386,8 +519,9 @@ export type POSTS_QUERYResult = Array<{
     hotspot?: SanityImageHotspot
     crop?: SanityImageCrop
     _type: 'image'
-  } | null
+  }
   tags: Array<'howTo' | 'newFeature'> | null
+  description: string
 }>
 // Variable: POST_QUERY
 // Query: *[_type == 'blogpost' && slug.current == $slug && language == $locale] [0]
@@ -397,10 +531,10 @@ export type POST_QUERYResult = {
   _createdAt: string
   _updatedAt: string
   _rev: string
-  language?: 'en' | 'ja'
-  title?: string
-  slug?: Slug
-  image?: {
+  language: 'en' | 'ja'
+  title: string
+  slug: Slug
+  image: {
     asset?: {
       _ref: string
       _type: 'reference'
@@ -411,7 +545,7 @@ export type POST_QUERYResult = {
     crop?: SanityImageCrop
     _type: 'image'
   }
-  description?: string
+  description: string
   body?: Array<{
     children?: Array<{
       marks?: Array<string>
@@ -431,22 +565,87 @@ export type POST_QUERYResult = {
     _key: string
   }>
   tags?: Array<'howTo' | 'newFeature'>
-  publishedAt?: string
+  publishedAt: string
 } | null
 // Variable: POST_SLUGS_QUERY
 // Query: *[    _type == "blogpost" && defined(slug.current)  ]|order(publishedAt desc)[0...12]{_id, slug, language}
 export type POST_SLUGS_QUERYResult = Array<{
   _id: string
-  slug: Slug | null
-  language: 'en' | 'ja' | null
+  slug: Slug
+  language: 'en' | 'ja'
 }>
+
+// Source: ./sanity/lib/repo/privacy.ts
+// Variable: LATEST_PRIVACY_QUERY
+// Query: *[_type == 'privacy' && language == $language] | order(_publishedAt desc) [0]
+export type LATEST_PRIVACY_QUERYResult = {
+  _id: string
+  _type: 'privacy'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  language: 'en' | 'ja'
+  publishedAt: string
+  body?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+} | null
+
+// Source: ./sanity/lib/repo/toc.ts
+// Variable: LATEST_TOC_QUERY
+// Query: *[_type == 'toc' && language == $language] | order(_publishedAt desc) [0]
+export type LATEST_TOC_QUERYResult = {
+  _id: string
+  _type: 'toc'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  language: 'en' | 'ja'
+  publishedAt: string
+  body?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+} | null
 
 // Query TypeMap
 import '@sanity/client'
 declare module '@sanity/client' {
   interface SanityQueries {
-    "*[\n  _type == 'blogpost'\n  && language == $language\n  && defined(slug.current)\n] | order(publishedAt desc) [0...12] {\n  _id, title, slug, publishedAt, image, tags\n}": POSTS_QUERYResult
+    "*[\n        _type == 'faq'\n        && language == $language\n        && defined(question)\n        && defined(answer)\n    ] | order(order asc) {\n        _id, question, answer\n    }": FAQS_QUERYResult
+    "*[\n  _type == 'blogpost'\n  && language == $language\n  && defined(slug.current)\n] | order(publishedAt desc) [0...12] {\n  _id, title, slug, publishedAt, image, tags, description\n}": POSTS_QUERYResult
     "*[_type == 'blogpost' && slug.current == $slug && language == $locale] [0]": POST_QUERYResult
     '*[\n    _type == "blogpost" && defined(slug.current)\n  ]|order(publishedAt desc)[0...12]{_id, slug, language}': POST_SLUGS_QUERYResult
+    "*[_type == 'privacy' && language == $language] | order(_publishedAt desc) [0]": LATEST_PRIVACY_QUERYResult
+    "*[_type == 'toc' && language == $language] | order(_publishedAt desc) [0]": LATEST_TOC_QUERYResult
   }
 }

@@ -1,4 +1,4 @@
-import {defineField, defineType, SlugValidationContext} from 'sanity'
+import { defineField, defineType, SlugValidationContext } from 'sanity'
 
 export const blogpostType = defineType({
   name: 'blogpost',
@@ -6,12 +6,12 @@ export const blogpostType = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: "language",
-      type: "string",
+      name: 'language',
+      type: 'string',
       options: {
         list: [
-          {title: 'English', value: 'en'},
-          {title: 'Japanese', value: 'ja'}
+          { title: 'English', value: 'en' },
+          { title: 'Japanese', value: 'ja' },
         ],
       },
       validation: (rule) => rule.required(),
@@ -27,12 +27,14 @@ export const blogpostType = defineType({
       name: 'slug',
       type: 'slug',
       options: {
-        isUnique: isUniqueOtherThanLanguage
+        isUnique: isUniqueOtherThanLanguage,
       },
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'image',
       type: 'image',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
@@ -43,20 +45,22 @@ export const blogpostType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{ type: 'block' }],
     }),
     defineField({
       name: 'tags',
       type: 'array',
-      of: [{
-        type: 'string',
-        options: {
-          list: [
-            {title: 'How To', value: 'howTo'},
-            {title: 'New Feature', value: 'newFeature'}
-          ],
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: [
+              { title: 'How To', value: 'howTo' },
+              { title: 'New Feature', value: 'newFeature' },
+            ],
+          },
         },
-      }],
+      ],
     }),
     defineField({
       name: 'publishedAt',
@@ -68,11 +72,11 @@ export const blogpostType = defineType({
 })
 
 export async function isUniqueOtherThanLanguage(slug: string, context: SlugValidationContext) {
-  const {document, getClient} = context
+  const { document, getClient } = context
   if (!document?.language) {
     return true
   }
-  const client = getClient({apiVersion: '2023-04-24'})
+  const client = getClient({ apiVersion: '2023-04-24' })
   const id = document._id.replace(/^drafts\./, '')
   const params = {
     draft: `drafts.${id}`,

@@ -1,13 +1,3 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { POSTS_QUERYResult } from '@/sanity.types'
 
-export interface BlogPostCard {
-    title: string;
-    image: string | StaticImport;
-    slug: string;
-    tags?: BlogType[];
-}
-
-export enum BlogType {
-    HOW_TO = "howTo",
-    NEW_FEATURE = "newFeature",
-}
+export type BlogPostCard = Pick<POSTS_QUERYResult[number], 'title' | 'image' | 'slug' | 'tags'>
