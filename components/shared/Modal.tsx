@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { MouseEventHandler, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { FiX } from 'react-icons/fi'
 
@@ -16,7 +16,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
     setShowModal(false)
   }
 
-  const handleOutsideClick = (event: any) => {
+  const handleOutsideClick: MouseEventHandler<HTMLDivElement> = (event) => {
     if (event.target === event.currentTarget) {
       handleClose()
     }

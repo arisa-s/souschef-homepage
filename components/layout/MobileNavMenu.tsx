@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { FiChevronRight, FiMenu } from 'react-icons/fi'
+import { FiMenu } from 'react-icons/fi'
 import LanguageChanger from '../locale/LanguageChanger'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'

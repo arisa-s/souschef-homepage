@@ -1,4 +1,4 @@
-import { PortableText, SanityDocument } from 'next-sanity'
+import { PortableText } from 'next-sanity'
 import Link from 'next/link'
 import { LocaleOptions } from '@/constants'
 import { getPost, getPostSlugs } from '@/sanity/lib/repo/post'
