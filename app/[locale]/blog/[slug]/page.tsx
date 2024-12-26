@@ -12,7 +12,7 @@ type BlogpostProps = {
 
 export async function generateStaticParams() {
   const posts = await getPostSlugs()
-  return posts.map((post: SanityDocument) => ({
+  return posts.map((post) => ({
     locale: post.language,
     slug: post.slug.current,
   }))
@@ -21,6 +21,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogpostProps) {
   const { locale, slug } = await params
   const post = await getPost(locale, slug)
+
+  if (!post) {
+    // todo: redirect to 404
+    return null
+  }
   const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(550).height(310).url() : null
 
   return {
@@ -34,6 +39,11 @@ export default async function PostPage({ params }: BlogpostProps) {
   const { locale, slug } = await params
   const { t } = await initTranslations(locale, ['blog'])
   const post = await getPost(locale, slug)
+
+  if (!post) {
+    // todo: redirect to 404
+    return null
+  }
   const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(550).height(310).url() : null
 
   return (

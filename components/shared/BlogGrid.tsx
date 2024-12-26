@@ -1,5 +1,6 @@
+import { getImageUrlFor } from '@/sanity/lib/image'
 import { getI18n } from '@/serverContexts'
-import { BlogPostCard, BlogType } from '@/types/post'
+import { BlogPostCard } from '@/types/post'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -23,13 +24,16 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
             isLastRow ? '' : 'sm:border-b'
           }`
 
+          const imageUrl =
+            getImageUrlFor(post.image)?.width(500).height(500).url() || '/images/blog-fallback.png'
+
           return (
-            <Link href={`/blog/${post.slug}`} key={index}>
+            <Link href={`/blog/${post.slug.current}`} key={index}>
               <div
                 className={`flex cursor-pointer flex-row p-4 hover:bg-surface-hover sm:flex-col sm:space-x-0 sm:space-x-4 sm:space-y-4 sm:p-6 ${borderClass}`}
               >
                 <div className="hidden sm:block">
-                  {post.tags?.map((tag: BlogType, index: number) => (
+                  {post.tags?.map((tag, index) => (
                     <p className="text-secondary font-accent uppercase" key={index}>
                       {t(`${tag}Tag`)}
                     </p>
@@ -38,7 +42,7 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
 
                 <div className="mr-6 w-1/3 sm:mr-0 sm:w-auto">
                   <Image
-                    src={post.image || '/images/blog-fallback.png'}
+                    src={imageUrl}
                     alt={`${post.title} head image`}
                     width={500}
                     height={500}
@@ -48,7 +52,7 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
 
                 <div className="flex flex-col justify-center">
                   <div className="sm:hidden">
-                    {post.tags?.map((tag: BlogType, index: number) => (
+                    {post.tags?.map((tag, index) => (
                       <p className="text-secondary font-accent uppercase" key={index}>
                         {t(`${tag}Tag`)}
                       </p>

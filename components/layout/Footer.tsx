@@ -26,8 +26,8 @@ export const Footer: FC = ({}) => {
       </div>
       <div className="flex flex-col items-center justify-between space-y-4 px-2 py-4 text-xs sm:flex-row sm:space-y-0 sm:px-6 sm:text-sm">
         <div className="flex space-x-4">
-          <MiscLink href="/" label={t('layout:toc')} />
-          <MiscLink href="/" label={t('layout:privacy')} />
+          <MiscLink href="/toc" label={t('layout:toc')} />
+          <MiscLink href="/privacy" label={t('layout:privacy')} />
         </div>
         <div>
           <p className="text-xs text-text-secondary">{t('layout:footerSign')}</p>

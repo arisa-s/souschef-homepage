@@ -44,7 +44,9 @@ export const Navbar: FC = async ({}) => {
                 {t('layout:blog')}
               </Link>
 
-              <button className="px-4 hover:bg-surface-hover">{t('layout:faq')}</button>
+              <Link href="/faq" className="flex items-center px-4 hover:bg-surface-hover">
+                {t('layout:faq')}
+              </Link>
             </div>
           </div>
         </div>

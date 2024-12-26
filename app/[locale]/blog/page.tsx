@@ -1,11 +1,10 @@
-import { type SanityDocument } from 'next-sanity'
 import { LocaleOptions } from '@/constants'
 import BlogGrid from '@/components/shared/BlogGrid'
 import initTranslations from '@/lib/i18n'
 import { setI18n } from '@/serverContexts'
 import { getPosts } from '@/sanity/lib/repo/post'
-import { getImageUrlFor } from '@/sanity/lib/image'
 import i18nConfig from '@/i18nConfig'
+import { POSTS_QUERYResult } from '@/sanity.types'
 
 type BlogProps = { params: Promise<{ locale: LocaleOptions }> }
 
@@ -20,10 +19,10 @@ export default async function Blog({ params }: BlogProps) {
   const { i18n, t } = await initTranslations(locale, ['blog'])
   setI18n(i18n)
 
-  const stripBlogpostData = (post: SanityDocument) => ({
+  const stripBlogpostData = (post: POSTS_QUERYResult[number]) => ({
     title: post.title,
-    slug: post.slug.current,
-    image: getImageUrlFor(post.image)?.width(500).height(500).url() || '/images/blog-fallback.png',
+    slug: post.slug,
+    image: post.image,
     tags: post.tags,
   })
 

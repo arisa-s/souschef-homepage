@@ -2,24 +2,23 @@ import SectionTitle from './SectionTitle'
 import Link from 'next/link'
 import { getPosts } from '@/sanity/lib/repo/post'
 import { getI18n, getLocale } from '@/serverContexts'
-import { SanityDocument } from 'next-sanity'
 import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
-import { BlogType } from '@/types/post'
 import Image from 'next/image'
 import AppDowloadQR from '../shared/AppDownloadQR'
 import Marquee from 'react-fast-marquee'
 import { onelinkLink } from '@/constants'
+import { POSTS_QUERYResult } from '@/sanity.types'
 
 export const BlogSection = async ({}) => {
   const { t } = getI18n()
   const locale = getLocale()
   const posts = await getPosts(locale)
-  const newFeaturePost = posts.filter((post) => post.tags.includes('newFeature'))[0]
+  const newFeaturePost = posts.filter((post) => post.tags?.includes('newFeature'))[0]
   const otherPosts = posts.filter((post) => post._id !== newFeaturePost._id)
 
   const {
     dimensions: { height: newFeaturePostImageHeight, width: newFeaturePostImageWidth },
-  } = decodeAssetId(newFeaturePost.image.asset._ref)
+  } = decodeAssetId(newFeaturePost.image.asset!._ref)
 
   const newFeaturePostImage = getImageUrlFor(newFeaturePost.image)
     ?.width(newFeaturePostImageWidth)
@@ -96,10 +95,10 @@ export const BlogSection = async ({}) => {
   )
 }
 
-const BlogListItem = ({ post }: { post: SanityDocument }) => {
+const BlogListItem = ({ post }: { post: POSTS_QUERYResult[number] }) => {
   const {
     dimensions: { height, width },
-  } = decodeAssetId(post.image.asset._ref)
+  } = decodeAssetId(post.image.asset!._ref)
   const { t } = getI18n()
 
   const imgUrl = getImageUrlFor(post.image)?.width(width).height(height).url()
@@ -116,7 +115,7 @@ const BlogListItem = ({ post }: { post: SanityDocument }) => {
             className="w-24"
           />
           <div className="my-auto">
-            {post.tags?.map((tag: BlogType, index: number) => (
+            {post.tags?.map((tag, index) => (
               <p className="text-secondary font-accent uppercase" key={index}>
                 {t(`blog:${tag}Tag`)}
               </p>
