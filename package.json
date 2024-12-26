@@ -7,7 +7,7 @@
     "build": "next build",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "typegen": "sanity schema extract && sanity typegen generate"
+    "typegen": "sanity schema extract --enforce-required-fields && sanity typegen generate"
   },
   "dependencies": {
     "@sanity/assist": "^3.0.9",
