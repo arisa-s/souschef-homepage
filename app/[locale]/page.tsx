@@ -5,6 +5,7 @@ import SectionTitle from '@/components/home/SectionTitle'
 import SocialSection from '@/components/home/SocialSection'
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
+import { setI18n, setLocale } from '@/serverContexts'
 
 const i18nNamespaces = ['home', 'common', 'blog']
 
@@ -14,7 +15,9 @@ type HomeProps = {
 
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params
-  const { t } = await initTranslations(locale, i18nNamespaces)
+  const { i18n, t } = await initTranslations(locale, i18nNamespaces)
+  setI18n(i18n)
+  setLocale(locale)
 
   return (
     <div className="mx-auto flex min-h-screen max-w-7xl">
