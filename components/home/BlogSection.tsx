@@ -25,19 +25,17 @@ export const BlogSection = async ({}) => {
     .height(newFeaturePostImageHeight)
     .url()
 
-  console.log({ newFeaturePost })
-
   return (
     <div className="flex-col">
       <Marquee
         autoFill
         className="w-full bg-surface-component py-2 text-lg font-medium text-text-invert"
       >
-        <p className="text-sm sm:text-base">
+        <p className="px-4 text-sm sm:text-2xl">
           {t('newFeatureSectionTitle')}: {newFeaturePost.title}
         </p>
       </Marquee>
-      <div className="flex flex-col divide-y sm:flex-row sm:divide-x sm:divide-y-0">
+      <div className="mx-auto flex max-w-7xl flex-col divide-y sm:flex-row sm:divide-x sm:divide-y-0 sm:border-x">
         <div className="w-full flex-col divide-y sm:w-1/2">
           <SectionTitle>{t('newFeatureSectionTitle')}</SectionTitle>
           <div className="space-y-6">

@@ -2,9 +2,13 @@ import { PortableText } from 'next-sanity'
 import Link from 'next/link'
 import { LocaleOptions } from '@/constants'
 import { getPost, getPostSlugs } from '@/sanity/lib/repo/post'
-import { getImageUrlFor } from '@/sanity/lib/image'
+import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
 import initTranslations from '@/lib/i18n'
 import { FiArrowLeft } from 'react-icons/fi'
+import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
+import BackButton from '@/components/layout/BackButton'
+import { HiArrowLongLeft } from 'react-icons/hi2'
+import Image from 'next/image'
 
 type BlogpostProps = {
   params: Promise<{ locale: LocaleOptions; slug: string }>
@@ -44,35 +48,54 @@ export default async function PostPage({ params }: BlogpostProps) {
     // todo: redirect to 404
     return null
   }
-  const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(550).height(310).url() : null
+
+  const {
+    dimensions: { height, width },
+  } = decodeAssetId(post.image.asset!._ref)
+  const postImageUrl = post.image
+    ? getImageUrlFor(post.image)?.width(width).height(height).url()
+    : null
 
   return (
-    <div className="mx-auto min-h-screen max-w-7xl">
-      <div className="flex items-center p-6">
-        <Link
-          href="/blog"
-          className="flex items-center space-x-4 text-xl hover:underline sm:text-3xl"
-        >
-          <FiArrowLeft />
-          <h1 className="font-accent font-medium">{t('backToBlog')}</h1>
-        </Link>
-      </div>
-      <main className="container mx-auto flex min-h-screen max-w-3xl flex-col gap-4 p-8">
-        {postImageUrl && (
-          <img
-            src={postImageUrl}
-            alt={post.title}
-            className="aspect-video rounded-xl"
-            width="550"
-            height="310"
-          />
-        )}
-        <h1 className="mb-8 text-4xl font-bold">{post.title}</h1>
-        <div className="prose">
-          <p>
-            {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
-          </p>
-          {Array.isArray(post.body) && <PortableText value={post.body} />}
+    <div className="max-w-8xl mx-auto min-h-screen">
+      <main className="w-full md:divide-y">
+        {/* hero */}
+        <div className="flex flex-col-reverse p-6 md:w-full md:flex-row md:divide-x">
+          <div className="md:mx-auto md:flex md:w-1/2 md:px-12">
+            <div className="space-between flex max-w-md flex-col items-stretch md:mx-auto">
+              <BackButton className="hidden md:block md:text-5xl">
+                <HiArrowLongLeft />
+              </BackButton>
+              <div className="mt-6 space-y-4 md:mt-auto">
+                <h1 className="-rotate-6 pb-6 font-accent text-4xl font-bold">{post.title}</h1>
+                <p>
+                  {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
+                </p>
+                <p>{post.description}</p>
+              </div>
+            </div>
+          </div>
+          <div className="m-auto flex w-full md:m-0 md:w-1/2">
+            {postImageUrl && (
+              <Image
+                src={postImageUrl}
+                alt={post.title}
+                className="w-full md:h-96 md:w-96"
+                width={width}
+                height={height}
+              />
+            )}
+          </div>
+          <BackButton className="text-4xl md:hidden">
+            <HiArrowLongLeft />
+          </BackButton>
+        </div>
+        <div className="w-full">
+          <article className="mx-auto max-w-3xl p-12 md:border-x">
+            {Array.isArray(post.body) && (
+              <PortableText value={post.body} components={SanityComponents} />
+            )}
+          </article>
         </div>
       </main>
     </div>

@@ -7,8 +7,8 @@ import AppDowloadQR from '../shared/AppDownloadQR'
 export const Footer: FC = ({}) => {
   const { t } = getI18n()
   return (
-    <footer className="mx-auto flex max-w-7xl flex-col divide-y border-t">
-      <div className="my-auto flex items-center justify-between px-2 py-6 sm:px-6 sm:py-0">
+    <footer className="max-w-8xl mx-auto flex flex-col divide-y border-t">
+      <div className="my-auto flex items-center justify-between px-6 py-6 sm:px-6 sm:py-0">
         <div className="flex flex-col">
           <SocialLink href={emailLink} label="Email" />
           <SocialLink href={instagramProfileLink} label="Instagram" />

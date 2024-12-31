@@ -1,4 +1,4 @@
-import { getImageUrlFor } from '@/sanity/lib/image'
+import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
 import { getI18n } from '@/serverContexts'
 import { BlogPostCard } from '@/types/post'
 import Image from 'next/image'
@@ -23,7 +23,6 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
           const borderClass = `${isFirstColumn ? 'sm:border-l' : ''} sm:border-r ${
             isLastRow ? '' : 'sm:border-b'
           }`
-
           const imageUrl =
             getImageUrlFor(post.image)?.width(500).height(500).url() || '/images/blog-fallback.png'
 
@@ -34,7 +33,7 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
               >
                 <div className="hidden sm:block">
                   {post.tags?.map((tag, index) => (
-                    <p className="text-secondary font-accent uppercase" key={index}>
+                    <p className="text-secondary font-accent uppercase sm:text-lg" key={index}>
                       {t(`${tag}Tag`)}
                     </p>
                   ))}
@@ -59,9 +58,7 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
                     ))}
                   </div>
 
-                  <label className="text-lg font-medium capitalize sm:text-base">
-                    {post.title}
-                  </label>
+                  <label className="text-lg font-medium capitalize sm:text-xl">{post.title}</label>
                 </div>
               </div>
             </Link>

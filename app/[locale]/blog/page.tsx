@@ -5,6 +5,7 @@ import { setI18n } from '@/serverContexts'
 import { getPosts } from '@/sanity/lib/repo/post'
 import i18nConfig from '@/i18nConfig'
 import { POSTS_QUERYResult } from '@/sanity.types'
+import PageLayout from '@/components/layout/PageLayout'
 
 type BlogProps = { params: Promise<{ locale: LocaleOptions }> }
 
@@ -27,14 +28,9 @@ export default async function Blog({ params }: BlogProps) {
   })
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-7xl">
-      <main className="w-full items-center divide-y sm:items-start">
-        <div className="flex items-center p-6">
-          <h1 className="font-accent text-3xl font-medium">{t('pageTitle')}</h1>
-        </div>
-        <BlogGrid posts={posts.map((p) => stripBlogpostData(p))} />
-      </main>
-    </div>
+    <PageLayout title={t('pageTitle')}>
+      <BlogGrid posts={posts.map((p) => stripBlogpostData(p))} />
+    </PageLayout>
   )
 }
 

@@ -10,7 +10,7 @@ export const Navbar: FC = async ({}) => {
   const { t } = getI18n()
 
   return (
-    <nav className="mx-auto flex max-w-7xl items-center justify-between border-b">
+    <nav className="max-w-8xl mx-auto flex items-center justify-between border-b">
       <div className="flex flex-grow divide-x">
         <div className="flex flex-grow flex-col divide-y">
           <div className="flex justify-between px-4 py-3 md:px-6">

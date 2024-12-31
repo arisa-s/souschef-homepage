@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { FiMenu } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
 import LanguageChanger from '../locale/LanguageChanger'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -18,9 +18,7 @@ export const MobileNavMenu = ({}) => {
 
   return (
     <>
-      <button onClick={() => setIsOpen(!isOpen)}>
-        <FiMenu />
-      </button>
+      <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? <FiX /> : <FiMenu />}</button>
       {isOpen ? (
         <motion.div
           initial="closed"

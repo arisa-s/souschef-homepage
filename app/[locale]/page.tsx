@@ -20,7 +20,7 @@ export default async function Home({ params }: HomeProps) {
   setLocale(locale)
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-7xl">
+    <div className="max-w-8xl mx-auto flex min-h-screen">
       <main className="row-start-2 flex flex-grow flex-col items-center gap-8 sm:items-start">
         <div className="flex w-full flex-col divide-y">
           <SectionTitle>{t('header')}</SectionTitle>

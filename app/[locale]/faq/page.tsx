@@ -19,7 +19,7 @@ export default async function Faq({ params }: FaqProps) {
   setI18n(i18n)
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-7xl">
+    <div className="max-w-8xl mx-auto flex min-h-screen">
       <main className="w-full items-center divide-y sm:items-start">
         <div className="flex flex-col p-6">
           <h1 className="font-accent text-3xl font-medium">{t('pageTitle')}</h1>

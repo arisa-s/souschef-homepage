@@ -9,7 +9,7 @@ const FEATURES = [
   { key: 'importRecipe', imagePath: '/images/home/importRecipe.gif' },
   { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.gif' },
   { key: 'shoppingList', imagePath: '/images/home/shoppingList.gif' },
-  { key: 'timers', imagePath: '/images/home/timers.gif' },
+  { key: 'bookmark', imagePath: '/images/home/timers.gif' },
   { key: 'discover', imagePath: '/images/home/discover.gif' },
   { key: 'convertYoutube', imagePath: '/images/home/convertYoutube.png' },
 ]
@@ -119,7 +119,9 @@ export const FeatureDescription = ({
       }
       transition={{ duration: 0.3 }}
     >
-      <h2 className={`${selected ? 'text-3xl' : 'text-xl'}`}>{t(`feature.${featureKey}`)}</h2>
+      <h2 className={`${selected ? 'text-3xl font-bold' : 'text-xl'}`}>
+        {t(`feature.${featureKey}`)}
+      </h2>
       {selected && (
         <motion.p
           key={`${featureKey}-desc`}
