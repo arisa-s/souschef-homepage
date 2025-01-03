@@ -1,4 +1,4 @@
-import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
+import { getImageUrlFor } from '@/sanity/lib/image'
 import { getI18n } from '@/serverContexts'
 import { BlogPostCard } from '@/types/post'
 import Image from 'next/image'
