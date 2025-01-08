@@ -39,6 +39,7 @@ export default {
         'surface-secondary': 'var(--surface-secondary)',
         'surface-component': 'var(--surface-component)',
         'surface-component-secondary': 'var(--surface-component-secondary)',
+        'surface-component-hover': 'var(--surface-component-hover)',
         'surface-hover': 'var(--surface-hover)',
       },
       fontFamily: {

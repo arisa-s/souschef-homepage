@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import LanguageChanger from '../locale/LanguageChanger'
-import Form from 'next/form'
 import { getI18n } from '@/serverContexts'
 import AppDowloadQR from '../shared/AppDownloadQR'
 import Link from 'next/link'
 import MobileNavMenu from './MobileNavMenu'
+import ImportRecipeForm from './ImportRecipeForm'
 
 export const Navbar: FC = async ({}) => {
   const { t } = getI18n()
@@ -26,19 +26,7 @@ export const Navbar: FC = async ({}) => {
           </div>
           <div className="flex flex-grow divide-x">
             <div className="w-4" />
-            <Form action="https://trysouschef.com/scrape/" className="flex">
-              <input
-                name="query"
-                placeholder={t('layout:importRecipePlaceholder')}
-                className="px-4 py-2 text-sm placeholder:text-sm focus:outline-0 sm:min-w-60"
-              />
-              <button
-                type="submit"
-                className="bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 sm:text-base"
-              >
-                {t('layout:importRecipe')}
-              </button>
-            </Form>
+            <ImportRecipeForm />
             <div className="ml-auto hidden divide-x sm:flex">
               <Link href="/blog" className="flex items-center px-4 hover:bg-surface-hover">
                 {t('layout:blog')}

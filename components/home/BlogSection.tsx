@@ -31,7 +31,7 @@ export const BlogSection = async ({}) => {
         autoFill
         className="w-full bg-surface-component py-2 text-lg font-medium text-text-invert"
       >
-        <p className="px-4 text-sm sm:text-2xl">
+        <p className="px-4 text-sm sm:text-lg">
           {t('newFeatureSectionTitle')}: {newFeaturePost.title}
         </p>
       </Marquee>
@@ -56,7 +56,7 @@ export const BlogSection = async ({}) => {
               <p className="sm:text-lg">{newFeaturePost.description}</p>
               <Link
                 href={`/blog/${newFeaturePost.slug.current}`}
-                className="ml-auto text-lg underline"
+                className="ml-auto text-lg underline hover:opacity-60"
               >
                 {t('common:learnMore')}
               </Link>
@@ -67,7 +67,7 @@ export const BlogSection = async ({}) => {
             <div className="flex flex-col items-center justify-center space-y-12 border-x py-20">
               <AppDowloadQR width={160} />
               <Link href={onelinkLink}>
-                <button className="bg-surface-component px-6 py-2 text-lg font-bold text-text-invert">
+                <button className="bg-surface-component px-6 py-2 text-lg font-bold text-text-invert hover:opacity-60">
                   {t('downloadNow')}
                 </button>
               </Link>
@@ -102,7 +102,7 @@ const BlogListItem = ({ post }: { post: POSTS_QUERYResult[number] }) => {
   const imgUrl = getImageUrlFor(post.image)?.width(width).height(height).url()
 
   return (
-    <div>
+    <div className="hover:bg-surface-hover">
       <Link href={`/blog/${post.slug.current}`}>
         <div className={`flex space-x-6 p-6 sm:space-x-12`}>
           <Image
