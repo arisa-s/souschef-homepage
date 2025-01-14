@@ -163,9 +163,9 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
       exit={{ rotateY: -90, opacity: 0 }}
       transition={{
         type: 'spring',
-        stiffness: 400,
-        damping: 25,
-        duration: 0.7,
+        stiffness: 300, // Reduced stiffness might make the transition smoother
+        damping: 30, // Slightly increased damping for a quicker stabilization
+        duration: 0.5, // Shorter duration for a faster transition
       }}
       className="mx-4 my-auto sm:mx-12"
     >
