@@ -8,11 +8,11 @@ import { androidDownloadLink, iosDownloadLink } from '@/constants'
 import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
 
 const FEATURES = [
-  { key: 'importRecipe', imagePath: '/images/home/importRecipe.gif' },
-  { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.gif' },
-  { key: 'shoppingList', imagePath: '/images/home/shoppingList.gif' },
-  { key: 'bookmark', imagePath: '/images/home/timers.gif' },
-  { key: 'discover', imagePath: '/images/home/discover.gif' },
+  { key: 'importRecipe', imagePath: '/images/home/importRecipe.png' },
+  { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.png' },
+  { key: 'shoppingList', imagePath: '/images/home/shoppingList.png' },
+  { key: 'bookmark', imagePath: '/images/home/bookmark.png' },
+  { key: 'discover', imagePath: '/images/home/discover.png' },
   { key: 'convertYoutube', imagePath: '/images/home/convertYoutube.png' },
 ]
 export const FeaturesSection = () => {
@@ -84,7 +84,7 @@ export const FeaturesSection = () => {
               <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
             </div>
             <div className="flex w-full justify-center space-x-6 p-6 text-lg sm:space-x-12">
-              <Link href={iosDownloadLink} className="max-w-48" target="_blank">
+              <Link href={iosDownloadLink} className="max-w-40" target="_blank">
                 <Image
                   src="/images/app-store-download-light.png"
                   alt="adjustIngredients"
@@ -92,7 +92,7 @@ export const FeaturesSection = () => {
                   height={500}
                 />
               </Link>
-              <Link href={androidDownloadLink} className="max-w-48" target="_blank">
+              <Link href={androidDownloadLink} className="max-w-40" target="_blank">
                 <Image
                   src="/images/google-play-download-light.png"
                   alt="adjustIngredients"
@@ -174,7 +174,7 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
         alt={`${feature.key} head image`}
         width={1000}
         height={500}
-        className="h-56 object-cover sm:h-96 sm:w-full"
+        className="object-cover sm:h-auto sm:w-full"
       />
     </motion.div>
   )
