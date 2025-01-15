@@ -34,7 +34,7 @@ export const DownloadAppModal = () => {
         </div>
         <Link href={onelinkLink}>
           <button
-            className="bg-surface-component px-4 py-2 font-medium text-white hover:opacity-80"
+            className="bg-surface-component px-4 py-2 font-medium text-text-invert text-white hover:opacity-80"
             onClick={() => {
               localStorage.setItem('modalShown', 'true')
               setShowModal(false)
