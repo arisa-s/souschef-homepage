@@ -4,7 +4,7 @@ import { getI18n } from '@/serverContexts'
 import AppDowloadQR from '../shared/AppDownloadQR'
 import Link from 'next/link'
 import MobileNavMenu from './MobileNavMenu'
-import ImportRecipeForm from './ImportRecipeForm'
+// import ImportRecipeForm from './ImportRecipeForm'
 
 export const Navbar: FC = async ({}) => {
   const { t } = getI18n()
