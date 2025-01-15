@@ -26,7 +26,7 @@ export const Navbar: FC = async ({}) => {
           </div>
           <div className="flex flex-grow divide-x">
             <div className="w-4" />
-            <ImportRecipeForm />
+            {/* <ImportRecipeForm /> */}
             <div className="ml-auto hidden divide-x sm:flex">
               <Link href="/blog" className="flex items-center px-4 hover:bg-surface-hover">
                 {t('layout:blog')}
