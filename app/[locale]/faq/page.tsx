@@ -4,6 +4,8 @@ import { setI18n } from '@/serverContexts'
 import i18nConfig from '@/i18nConfig'
 import { getFaqs } from '@/sanity/lib/repo/faq'
 import { PortableText } from 'next-sanity'
+import PageLayout from '@/components/layout/PageLayout'
+import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
 
 type FaqProps = { params: Promise<{ locale: LocaleOptions }> }
 
@@ -19,19 +21,20 @@ export default async function Faq({ params }: FaqProps) {
   setI18n(i18n)
 
   return (
-    <div className="max-w-8xl mx-auto flex min-h-screen">
-      <main className="w-full items-center divide-y sm:items-start">
-        <div className="flex flex-col p-6">
-          <h1 className="font-accent text-3xl font-medium">{t('pageTitle')}</h1>
+    <PageLayout title={t('pageTitle')}>
+      <div className="w-full">
+        <div className="container mx-auto flex min-h-screen max-w-4xl flex-col gap-4 p-6 sm:border-x sm:p-12">
           {faqs.map((faq) => (
-            <div key={faq._id} className="flex flex-col p-6">
-              <h2 className="text-xl font-bold">{faq.question}</h2>
-              {Array.isArray(faq.answer) && <PortableText value={faq.answer} />}
+            <div key={faq._id} className="flex flex-col space-y-4 p-6">
+              <h2 className="text-lg font-medium md:text-2xl">{faq.question}</h2>
+              {Array.isArray(faq.answer) && (
+                <PortableText value={faq.answer} components={SanityComponents} />
+              )}
             </div>
           ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </PageLayout>
   )
 }
 

@@ -8,12 +8,12 @@ import { androidDownloadLink, iosDownloadLink } from '@/constants'
 import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
 
 const FEATURES = [
-  { key: 'importRecipe', imagePath: '/images/home/importRecipe.png' },
-  { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.png' },
-  { key: 'shoppingList', imagePath: '/images/home/shoppingList.png' },
   { key: 'bookmark', imagePath: '/images/home/bookmark.png' },
-  { key: 'discover', imagePath: '/images/home/discover.png' },
+  { key: 'importRecipe', imagePath: '/images/home/recipeViewer.png' },
   { key: 'convertYoutube', imagePath: '/images/home/convertYoutube.png' },
+  { key: 'shoppingList', imagePath: '/images/home/shoppingList.png' },
+  { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.png' },
+  { key: 'discover', imagePath: '/images/home/discover.png' },
 ]
 export const FeaturesSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(FEATURES[0])
@@ -57,7 +57,7 @@ export const FeaturesSection = () => {
 
   return (
     <div>
-      <div className="mx-auto flex h-full max-w-6xl flex-col items-stretch sm:flex-row sm:items-start sm:divide-x sm:border-x">
+      <div className="mx-auto flex h-full max-w-7xl flex-col items-stretch sm:flex-row sm:items-start sm:divide-x sm:border-x">
         <div className="my-12 hidden w-full flex-col divide-y border-y sm:flex sm:w-1/2">
           {FEATURES.map((f) => (
             <FeatureDescription
@@ -155,22 +155,23 @@ export const FeatureDescription = ({
 }
 
 export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath: string } }) => {
+  const {
+    i18n: { language },
+  } = useTranslation()
+  console.log(language)
+
+  const imageUrl =
+    language == 'en' ? feature.imagePath : feature.imagePath.replace('.png', `-${language}.png`)
   return (
     <motion.div
       key={feature.key}
       initial={{ rotateY: 90, opacity: 0 }}
       animate={{ rotateY: 0, opacity: 1 }}
       exit={{ rotateY: -90, opacity: 0 }}
-      transition={{
-        type: 'spring',
-        stiffness: 300, // Reduced stiffness might make the transition smoother
-        damping: 30, // Slightly increased damping for a quicker stabilization
-        duration: 0.5, // Shorter duration for a faster transition
-      }}
       className="mx-4 my-auto sm:mx-12"
     >
       <Image
-        src={feature.imagePath}
+        src={imageUrl}
         alt={`${feature.key} head image`}
         width={1000}
         height={500}

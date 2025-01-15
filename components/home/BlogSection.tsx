@@ -85,7 +85,14 @@ export const BlogSection = async ({}) => {
                 {t('showMoreBlog')}
               </button>
             </Link>
-            <p className="text-secondary sm:text-lg">{t('welcomeNewFeatureIdea')}</p>
+            <p className="text-secondary sm:text-lg">
+              {t('welcomeNewFeatureIdea')}
+              <br />
+              {t('dropUsLine')}{' '}
+              <a className="font-medium text-blue-500" href="mailto:team@nekonote.co">
+                team@nekonote.co
+              </a>
+            </p>
           </div>
         </div>
       </div>

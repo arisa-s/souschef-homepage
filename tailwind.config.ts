@@ -42,6 +42,9 @@ export default {
         'surface-component-hover': 'var(--surface-component-hover)',
         'surface-hover': 'var(--surface-hover)',
       },
+      borderColor: {
+        DEFAULT: 'var(--border-primary)',
+      },
       fontFamily: {
         accent: ['var(--font-accent)'],
         base: ['var(--font-base)'],

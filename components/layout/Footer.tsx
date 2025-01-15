@@ -15,7 +15,7 @@ export const Footer: FC = ({}) => {
         </div>
         <div className="flex flex-col text-center">
           <h1 className="font-accent text-xl font-black sm:text-2xl">{t('layout:appName')}</h1>
-          <p className="text-xs text-text-secondary sm:text-sm">© 2024 Nekonote LLC</p>
+          <p className="text-xs text-text-secondary sm:text-sm">© 2025 Nekonote LLC</p>
         </div>
         <div className="hidden py-2 sm:flex">
           <AppDowloadQR />

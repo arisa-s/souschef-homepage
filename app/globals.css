@@ -36,6 +36,9 @@
   --surface-component-secondary: var(--neutral-100);
   --surface-component-hover: var(--neutral-50);
   --surface-hover: var(--neutral-200);
+
+  /* Border colors */
+  --border-primary: var(--neutral-600);
 }
 
 /* Dark theme colors */
@@ -73,6 +76,9 @@
     --surface-component-secondary: var(--neutral-500);
     --surface-component-hover: var(--neutral-800);
     --surface-hover: var(--neutral-300);
+
+    /* Border colors */
+    --border-primary: var(--neutral-300);
   }
 }
 
@@ -80,6 +86,7 @@ body {
   color: var(--text-primary);
   background: var(--background);
   font-family: var(--font-base);
+  border-color: var(--border-primary);
 }
 
 input {
