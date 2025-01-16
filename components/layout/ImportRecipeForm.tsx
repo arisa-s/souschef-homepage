@@ -63,7 +63,12 @@ const ImportRecipeForm: FC = () => {
         className="bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
         disabled={isLoading}
       >
-        {/* {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')} */}
+        {isLoading ? (
+          <Spinner size="sm" />
+        ) : (
+          // t('layout:importRecipe')
+          'hi'
+        )}
       </button>
     </form>
   )
