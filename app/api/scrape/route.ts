@@ -18,11 +18,9 @@ export async function POST(request: Request) {
     // Mock a successful scrape:
     const { recipe } = await res.json()
 
-    console.log(recipe)
-
     // Return the recipeId in the JSON response
     return NextResponse.json({ recipeId: recipe.id }, { status: 200 })
-  } catch (error) {
+  } catch {
     return NextResponse.json({ message: 'Scrape failed' }, { status: 500 })
   }
 }

@@ -37,8 +37,8 @@ const ImportRecipeForm: FC = () => {
       } else {
         throw new Error(t('layout:scrapeErrorMessage'))
       }
-    } catch (error: any) {
-      setErrorMsg(error.message || t('common:genericErrorMessage'))
+    } catch {
+      setErrorMsg(t('common:genericErrorMessage'))
     } finally {
       setIsLoading(false)
     }
