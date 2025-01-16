@@ -39,7 +39,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
               exit={{ scale: 0 }}
               transition={{ duration: 0.5 }}
               onClick={(e) => e.stopPropagation()} // Prevents click inside the modal from closing it
-              className="relative rounded-lg bg-surface-primary p-6"
+              className="relative m-6 rounded-lg bg-surface-primary p-6"
             >
               <button className="absolute right-6 top-6 z-50 text-2xl" onClick={handleClose}>
                 <FiX />
