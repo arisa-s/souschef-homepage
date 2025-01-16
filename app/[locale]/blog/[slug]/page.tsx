@@ -65,11 +65,13 @@ export default async function PostPage({ params }: BlogpostProps) {
                 <HiArrowLongLeft />
               </BackButton>
               <div className="mt-6 space-y-4 md:mt-auto">
-                <h1 className="-rotate-6 pb-6 font-accent text-4xl font-bold">{post.title}</h1>
-                <p>
+                <h1 className="font-accent text-2xl font-bold md:-rotate-6 md:pb-6 md:text-4xl">
+                  {post.title}
+                </h1>
+                <p className="hidden md:block md:text-lg">{post.summary}</p>
+                <p className="text-text-secondary">
                   {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
                 </p>
-                <p>{post.summary}</p>
               </div>
             </div>
           </div>
@@ -84,12 +86,12 @@ export default async function PostPage({ params }: BlogpostProps) {
               />
             )}
           </div>
-          <BackButton className="text-4xl md:hidden">
+          <BackButton className="mb-2 text-5xl md:hidden">
             <HiArrowLongLeft />
           </BackButton>
         </div>
         <div className="w-full">
-          <article className="mx-auto max-w-3xl p-12 md:border-x">
+          <article className="mx-auto max-w-3xl p-6 md:border-x md:p-12">
             {Array.isArray(post.body) && (
               <PortableText value={post.body} components={SanityComponents} />
             )}

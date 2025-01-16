@@ -53,7 +53,7 @@ export const BlogSection = async ({}) => {
               <h2 className="flex items-center text-xl font-bold sm:text-3xl">
                 {newFeaturePost.title}
               </h2>
-              <p className="sm:text-lg">{newFeaturePost.description}</p>
+              <p className="sm:text-lg">{newFeaturePost.summary}</p>
               <Link
                 href={`/blog/${newFeaturePost.slug.current}`}
                 className="ml-auto text-lg underline hover:opacity-60"

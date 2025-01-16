@@ -10,7 +10,7 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
     ),
   },
   block: {
-    normal: ({ children }) => <p className="md:text-xl">{children}</p>,
+    normal: ({ children }) => <p className="text-lg md:text-xl">{children}</p>,
     h1: ({ children }) => <h1 className="font-accent text-3xl md:text-5xl">{children}</h1>,
     h2: ({ children }) => <h2 className="font-accent text-2xl md:text-4xl">{children}</h2>,
     h3: ({ children }) => <h3 className="font-accent text-xl md:text-3xl">{children}</h3>,
