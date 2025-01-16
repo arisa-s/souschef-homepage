@@ -158,7 +158,6 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
   const {
     i18n: { language },
   } = useTranslation()
-  console.log(language)
 
   const imageUrl =
     language == 'en' ? feature.imagePath : feature.imagePath.replace('.png', `-${language}.png`)
