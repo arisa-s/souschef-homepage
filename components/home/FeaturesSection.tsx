@@ -127,7 +127,14 @@ export const FeatureDescription = ({
           ? 'items-center justify-center space-y-6 border sm:scale-105 sm:p-12'
           : 'hidden space-y-2 px-6 py-4 sm:flex'
       }`}
-      whileHover={{ scale: 1.05, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }}
+      whileHover={{
+        scale: 1.05,
+        borderRightWidth: 1,
+        borderLeftWidth: 1,
+        borderBottomWidth: 1,
+        borderTopWidth: 1,
+        borderColor: '--border-primary',
+      }}
       animate={
         selected
           ? { scale: 1.05, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }
