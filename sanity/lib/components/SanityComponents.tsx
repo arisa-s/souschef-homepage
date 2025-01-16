@@ -14,7 +14,7 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
       children == '' ? (
         <br />
       ) : (
-        <p className="mb-3 leading-9 tracking-wider md:text-xl">{children}</p>
+        <p className="mb-3 leading-8 tracking-wide md:text-xl">{children}</p>
       ),
     h1: ({ children }) =>
       children == '' ? <br /> : <h1 className="text-3xl md:text-5xl">{children}</h1>,
