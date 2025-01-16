@@ -24,7 +24,7 @@ export const Navbar: FC = async ({}) => {
               <MobileNavMenu />
             </div>
           </div>
-          <div className="flex flex-grow divide-x">
+          <div className="flex divide-x md:flex-grow">
             <div className="w-4" />
             <ImportRecipeForm />
             <div className="ml-auto hidden divide-x lg:flex">
