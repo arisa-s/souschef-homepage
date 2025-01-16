@@ -217,6 +217,7 @@ export type Blogpost = {
     _type: 'image'
   }
   description: string
+  summary?: string
   body?: Array<{
     children?: Array<{
       marks?: Array<string>
@@ -546,6 +547,7 @@ export type POST_QUERYResult = {
     _type: 'image'
   }
   description: string
+  summary?: string
   body?: Array<{
     children?: Array<{
       marks?: Array<string>

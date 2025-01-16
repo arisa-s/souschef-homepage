@@ -69,7 +69,7 @@ export default async function PostPage({ params }: BlogpostProps) {
                 <p>
                   {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
                 </p>
-                <p>{post.description}</p>
+                <p>{post.summary}</p>
               </div>
             </div>
           </div>
