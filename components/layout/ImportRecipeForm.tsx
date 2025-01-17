@@ -56,9 +56,13 @@ const ImportRecipeForm: FC = () => {
 
       {errorMsg && <p className="absolute -bottom-6 mt-2 text-sm text-text-error">{errorMsg}</p>}
 
-      <div className="block text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base">
+      <button
+        type="submit"
+        className="flex flex-nowrap whitespace-nowrap text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
+        disabled={isLoading}
+      >
         {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')}
-      </div>
+      </button>
     </form>
   )
 }
