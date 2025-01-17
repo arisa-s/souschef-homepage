@@ -49,7 +49,7 @@ const ImportRecipeForm: FC = () => {
       <input
         name="query"
         placeholder={t('layout:importRecipePlaceholder')}
-        className={`w-30 px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 sm:min-w-80`}
+        className={`px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 sm:min-w-80`}
         value={inputValue}
         onChange={handleInputChange}
       />
@@ -58,7 +58,7 @@ const ImportRecipeForm: FC = () => {
 
       <button
         type="submit"
-        className="text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
+        className="block text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
         disabled={isLoading}
       >
         {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')}
