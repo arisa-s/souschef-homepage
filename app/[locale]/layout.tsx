@@ -56,10 +56,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     title: t('layout:appName'),
     description: t('layout:appDescription'),
     alternates: {
-      canonical: 'https://www.trysouschef.co',
+      canonical: 'https://www.trysouschef.com',
       languages: {
-        en: 'https://www.trysouschef.co/en',
-        ja: 'https://www.trysouschef.co/ja',
+        en: 'https://www.trysouschef.com/en',
+        ja: 'https://www.trysouschef.com/ja',
       },
     },
   }
