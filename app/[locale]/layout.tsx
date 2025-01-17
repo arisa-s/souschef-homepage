@@ -36,9 +36,9 @@ export default async function RootLayout({
           }
         >
           <div id="modal-root"></div>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </body>
       </TranslationsProvider>
     </html>
