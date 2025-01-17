@@ -8,6 +8,8 @@ import { basisGrotesque, notoSanJapanese, recoleta, zenOldMincho } from '@/lib/f
 import '../globals.css'
 import { setI18n, setLocale } from '@/serverContexts'
 import TranslationsProvider from '@/components/locale/TranslationsProvider'
+import { Navbar } from '@/components/layout'
+import Footer from '@/components/layout/Footer'
 
 const i18nNamespaces = ['home', 'layout', 'common']
 
@@ -34,9 +36,9 @@ export default async function RootLayout({
           }
         >
           <div id="modal-root"></div>
-          {/* <Navbar /> */}
+          <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </body>
       </TranslationsProvider>
     </html>
