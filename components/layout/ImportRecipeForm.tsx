@@ -54,6 +54,7 @@ const ImportRecipeForm: FC = () => {
         value={inputValue}
         onChange={handleInputChange}
       /> */}
+      <div>{t('layout:importRecipePlaceholder')}</div>
 
       {errorMsg && <p className="absolute -bottom-6 mt-2 text-sm text-text-error">{errorMsg}</p>}
 
