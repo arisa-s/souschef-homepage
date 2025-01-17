@@ -3,6 +3,7 @@
 import { FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Spinner from '../shared/Spinner'
+import { CiImport } from 'react-icons/ci'
 
 const ImportRecipeForm: FC = () => {
   const { t } = useTranslation()
@@ -55,13 +56,14 @@ const ImportRecipeForm: FC = () => {
       />
 
       {errorMsg && <p className="absolute -bottom-6 mt-2 text-sm text-text-error">{errorMsg}</p>}
-
       <button
         type="submit"
-        className="flex flex-nowrap whitespace-nowrap text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
+        className="flex appearance-none flex-nowrap whitespace-nowrap text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
         disabled={isLoading}
       >
-        {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')}
+        {isLoading ? <Spinner size="sm" /> : null}
+        <p className="hidden sm:flex">{t('layout:importRecipe')}</p>
+        <CiImport className="sm:hidden" />
       </button>
     </form>
   )
