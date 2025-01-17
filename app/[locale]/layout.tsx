@@ -2,13 +2,11 @@ import { dir } from 'i18next'
 
 import i18nConfig from '@/i18nConfig'
 import { LocaleOptions } from '@/constants'
-import { Navbar } from '@/components/layout'
 import initTranslations from '@/lib/i18n'
 import { basisGrotesque, notoSanJapanese, recoleta, zenOldMincho } from '@/lib/fonts'
 
 import '../globals.css'
 import { setI18n, setLocale } from '@/serverContexts'
-import Footer from '@/components/layout/Footer'
 import TranslationsProvider from '@/components/locale/TranslationsProvider'
 
 const i18nNamespaces = ['home', 'layout', 'common']
