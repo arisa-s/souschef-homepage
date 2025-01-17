@@ -45,25 +45,23 @@ const ImportRecipeForm: FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex">
-      <div className="relative flex flex-col">
-        <input
-          name="query"
-          placeholder={t('layout:importRecipePlaceholder')}
-          className={`px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 sm:min-w-80`}
-          value={inputValue}
-          onChange={handleInputChange}
-        />
+    <form onSubmit={handleSubmit} className="relative flex">
+      <input
+        name="query"
+        placeholder={t('layout:importRecipePlaceholder')}
+        className={`w-30 px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 sm:min-w-80`}
+        value={inputValue}
+        onChange={handleInputChange}
+      />
 
-        {errorMsg && <p className="absolute -bottom-6 mt-2 text-sm text-text-error">{errorMsg}</p>}
-      </div>
+      {errorMsg && <p className="absolute -bottom-6 mt-2 text-sm text-text-error">{errorMsg}</p>}
 
       <button
         type="submit"
         className="text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
         disabled={isLoading}
       >
-        {isLoading ? <Spinner size="sm" /> : 'import'}
+        {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')}
       </button>
     </form>
   )
