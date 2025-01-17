@@ -21,12 +21,12 @@ export default async function Home({ params }: HomeProps) {
 
   return (
     <div className="max-w-8xl mx-auto flex min-h-screen">
-      <main className="flex w-full flex-col divide-y">
+      <div className="flex w-full flex-col divide-y">
         <SectionTitle>{t('header')}</SectionTitle>
         <FeaturesSection />
         <BlogSection />
         <SocialSection />
-      </main>
+      </div>
       <DownloadAppModal />
     </div>
   )
