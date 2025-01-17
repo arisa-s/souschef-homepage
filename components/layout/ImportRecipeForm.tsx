@@ -6,14 +6,13 @@ import Spinner from '../shared/Spinner'
 
 const ImportRecipeForm: FC = () => {
   const { t } = useTranslation()
-  // const [inputValue, setInputValue] = useState('')
-  const inputValue = ''
+  const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
-  // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setInputValue(e.target.value)
-  // }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value)
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -47,14 +46,13 @@ const ImportRecipeForm: FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="relative flex">
-      {/* <input
+      <input
         name="query"
         placeholder={t('layout:importRecipePlaceholder')}
-        className={`px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 sm:min-w-80`}
+        // className={`px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 sm:min-w-80`}
         value={inputValue}
         onChange={handleInputChange}
-      /> */}
-      <div>{t('layout:importRecipePlaceholder')}</div>
+      />
 
       {errorMsg && <p className="absolute -bottom-6 mt-2 text-sm text-text-error">{errorMsg}</p>}
 
