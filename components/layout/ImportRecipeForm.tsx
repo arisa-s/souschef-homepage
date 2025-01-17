@@ -49,7 +49,7 @@ const ImportRecipeForm: FC = () => {
       <input
         name="query"
         placeholder={t('layout:importRecipePlaceholder')}
-        className={`w-52 appearance-none px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 md:min-w-80`}
+        className={`w-full max-w-52 appearance-none px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 md:min-w-80 md:max-w-full`}
         value={inputValue}
         onChange={handleInputChange}
       />

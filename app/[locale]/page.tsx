@@ -1,7 +1,7 @@
 import BlogSection from '@/components/home/BlogSection'
 import DownloadAppModal from '@/components/home/DownloadAppModal'
 import FeaturesSection from '@/components/home/FeaturesSection'
-import RecipeImportSection from '@/components/home/RecipeImportSection'
+// import RecipeImportSection from '@/components/home/RecipeImportSection'
 import SectionTitle from '@/components/home/SectionTitle'
 import SocialSection from '@/components/home/SocialSection'
 import { LocaleOptions } from '@/constants'
@@ -23,7 +23,7 @@ export default async function Home({ params }: HomeProps) {
   return (
     <div className="max-w-8xl mx-auto flex min-h-screen">
       <div className="flex w-full flex-col divide-y">
-        <RecipeImportSection />
+        {/* <RecipeImportSection /> */}
         <SectionTitle>{t('header')}</SectionTitle>
         <FeaturesSection />
         <BlogSection />
