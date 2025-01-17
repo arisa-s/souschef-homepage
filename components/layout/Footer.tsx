@@ -20,7 +20,7 @@ export const Footer: FC = ({}) => {
         <div className="hidden py-2 sm:flex">
           <AppDowloadQR />
         </div>
-        <div className="sm:hidden">
+        <div className="text-nowrap sm:hidden">
           <SocialLink href={onelinkLink} label={t('home:downloadNow')} />
         </div>
       </div>
@@ -50,7 +50,7 @@ const SocialLink: FC<{ href: string; label: string }> = ({ href, label }) => (
 )
 
 const MiscLink: FC<{ href: string; label: string }> = ({ href, label }) => (
-  <Link className="underline" href={href}>
+  <Link className="text-nowrap underline" href={href}>
     {label}
   </Link>
 )
