@@ -62,5 +62,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
         ja: 'https://www.trysouschef.com/ja',
       },
     },
+    itunes: {
+      appId: 6468939420,
+    },
   }
 }
