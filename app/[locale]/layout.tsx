@@ -3,7 +3,7 @@ import { dir } from 'i18next'
 import i18nConfig from '@/i18nConfig'
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
-import { basisGrotesque, notoSanJapanese, recoleta, zenOldMincho } from '@/lib/fonts'
+import { basisGrotesque, brand, notoSanJapanese, recoleta, zenOldMincho } from '@/lib/fonts'
 
 import '../globals.css'
 import { setI18n, setLocale } from '@/serverContexts'
@@ -29,11 +29,11 @@ export default async function RootLayout({
     <html lang={locale} dir={dir(locale)}>
       <TranslationsProvider namespaces={i18nNamespaces} locale={locale} resources={resources}>
         <body
-          className={
+          className={`${
             locale == 'ja'
               ? `${zenOldMincho.variable} ${notoSanJapanese.variable}`
               : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
-          }
+          } ${brand.variable}`}
         >
           <div id="modal-root"></div>
           <Navbar />

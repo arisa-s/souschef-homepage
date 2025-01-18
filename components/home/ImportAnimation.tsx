@@ -102,7 +102,7 @@ const ImportAnimation: React.FC = () => {
         initial="initial"
         animate={allIconsHidden ? 'final' : 'initial'}
       >
-        <p className="font-accent text-5xl font-bold text-text-primary sm:text-6xl">S</p>
+        <p className="font-brand text-5xl font-bold text-text-primary sm:text-6xl">S</p>
         {showStars && (
           <motion.img
             src="/images/stars.svg"

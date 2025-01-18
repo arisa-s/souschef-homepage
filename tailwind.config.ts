@@ -49,6 +49,7 @@ export default {
       fontFamily: {
         accent: ['var(--font-accent)'],
         base: ['var(--font-base)'],
+        brand: ['var(--font-brand)'],
       },
     },
   },

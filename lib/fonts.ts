@@ -37,6 +37,42 @@ export const recoleta = localFont({
   variable: '--font-accent',
 })
 
+export const brand = localFont({
+  src: [
+    {
+      path: '../public/fonts/Recoleta/RecoletaLight.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Recoleta/RecoletaRegular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Recoleta/RecoletaMedium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Recoleta/RecoletaSemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Recoleta/RecoletaBold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Recoleta/RecoletaBlack.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-brand',
+})
+
 export const zenOldMincho = Zen_Old_Mincho({
   variable: '--font-accent',
   weight: ['400', '500', '600', '700', '900'],
