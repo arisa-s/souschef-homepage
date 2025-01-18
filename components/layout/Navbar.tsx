@@ -1,8 +1,9 @@
 import { FC } from 'react'
-import LanguageChanger from '../locale/LanguageChanger'
-import { getI18n } from '@/serverContexts'
-import AppDowloadQR from '../shared/AppDownloadQR'
 import Link from 'next/link'
+import { getI18n } from '@/serverContexts'
+
+import LanguageChanger from '../locale/LanguageChanger'
+import AppDowloadQR from '../shared/AppDownloadQR'
 import MobileNavMenu from './MobileNavMenu'
 import ImportRecipeForm from './ImportRecipeForm'
 
@@ -25,7 +26,7 @@ export const Navbar: FC = async ({}) => {
             </div>
           </div>
           <div className="flex flex-grow divide-x">
-            <div className="w-4" />
+            <div className="ml-4">
               <ImportRecipeForm />
             </div>
 

@@ -45,11 +45,11 @@ const ImportRecipeForm: FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex">
+    <form onSubmit={handleSubmit} className="relative flex divide-x border-x">
       <input
         name="query"
         placeholder={t('layout:importRecipePlaceholder')}
-        className={`w-full max-w-52 appearance-none px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 md:min-w-80 md:max-w-full`}
+        className={`w-full appearance-none px-4 py-2 text-lg placeholder:text-sm focus:bg-surface-primary focus:outline-0 md:min-w-80 md:max-w-full`}
         value={inputValue}
         onChange={handleInputChange}
       />
@@ -58,7 +58,7 @@ const ImportRecipeForm: FC = () => {
 
       <button
         type="submit"
-        className="flex flex-nowrap items-center text-nowrap bg-surface-component px-4 text-sm font-medium text-text-invert hover:opacity-80 disabled:opacity-50 sm:text-base"
+        className="flex flex-nowrap items-center text-nowrap bg-surface-component-secondary px-4 text-sm font-medium text-text-primary hover:opacity-80 disabled:opacity-50 sm:text-base"
         disabled={isLoading}
       >
         {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')}
