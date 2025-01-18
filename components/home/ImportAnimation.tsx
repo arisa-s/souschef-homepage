@@ -5,16 +5,15 @@ import { motion, Variants } from 'framer-motion'
 interface SocialIcon {
   id: number
   imageSrc: string
-  color: string
   x: number
 }
 
 const socialIcons: SocialIcon[] = [
-  { id: 1, imageSrc: '/images/instagram.png', color: '#1877F2', x: -200 },
-  { id: 2, imageSrc: '/images/pinterest.png', color: '#E4405F', x: -100 },
-  { id: 3, imageSrc: '/images/safari.png', color: '#00D3F9', x: 0 },
-  { id: 4, imageSrc: '/images/youtube.png', color: '#FF0000', x: 100 },
-  { id: 5, imageSrc: '/images/chrome.png', color: '#000000', x: 200 },
+  { id: 1, imageSrc: '/images/instagram.png', x: -200 },
+  { id: 2, imageSrc: '/images/pinterest.png', x: -100 },
+  { id: 3, imageSrc: '/images/safari.png', x: 0 },
+  { id: 4, imageSrc: '/images/youtube.png', x: 100 },
+  { id: 5, imageSrc: '/images/chrome.png', x: 200 },
 ]
 
 const containerVariants: Variants = {
@@ -82,7 +81,7 @@ const ImportAnimation: React.FC = () => {
         initial="hidden"
         animate="visible"
       >
-        {socialIcons.map(({ id, imageSrc, color }, index) => (
+        {socialIcons.map(({ id, imageSrc }, index) => (
           <motion.div
             key={id}
             className="h-12 w-12 rounded-full sm:h-16 sm:w-16"
