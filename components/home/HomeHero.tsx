@@ -7,12 +7,12 @@ export const HomeHero = ({}) => {
   const { t } = getI18n()
   return (
     <div className="w-full items-center justify-center">
-      <div className="mx-auto flex max-w-6xl flex-col px-4 py-8 sm:p-12 xl:border-x">
+      <div className="mx-auto flex max-w-6xl flex-col px-4 py-12 sm:p-20 xl:border-x">
         <div className="items-center justify-center space-y-4 text-center sm:space-y-8">
-          <h1 className="font-accent text-4xl font-medium [word-spacing:0.16rem] sm:text-5xl">
+          <h1 className="font-accent text-4xl font-medium [word-spacing:0.16rem] sm:text-6xl">
             {t('recipeToTable')}
           </h1>
-          <p className="text-xl text-text-secondary sm:text-3xl">{t('header')}</p>
+          <p className="text-2xl text-text-secondary sm:text-3xl">{t('header')}</p>
         </div>
         <ImportAnimation />
         <div className="mx-auto mb-12 hidden w-full max-w-xl border-y sm:block">
