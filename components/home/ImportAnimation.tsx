@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { motion, Variants } from 'framer-motion'
+import { onelinkLink } from '@/constants'
 
 interface SocialIcon {
   id: number
@@ -65,7 +66,7 @@ const ImportAnimation: React.FC = () => {
     const timeout = setTimeout(() => setAllIconsHidden(true), socialIcons.length * 0.3 * 1000 + 500)
     const starsTimeout = setTimeout(
       () => setShowStars(true),
-      socialIcons.length * 0.3 * 1000 + 500 + 2500
+      socialIcons.length * 0.3 * 1000 + 500 + 2400
     )
     return () => {
       clearTimeout(timeout)
@@ -92,24 +93,26 @@ const ImportAnimation: React.FC = () => {
           </motion.div>
         ))}
       </motion.div>
-      <motion.div
-        className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-lg border bg-surface-primary sm:h-28 sm:w-28"
-        variants={appVariants}
-        initial="initial"
-        animate={allIconsHidden ? 'final' : 'initial'}
-      >
-        <p className="font-brand text-5xl font-bold text-text-primary sm:text-6xl">S</p>
-        {showStars && (
-          <motion.img
-            src="/images/stars.svg"
-            alt="Stars"
-            className="absolute -right-6 -top-2 h-12 w-12 sm:-right-8 sm:-top-4 sm:h-16 sm:w-16"
-            variants={starsVariants}
-            initial="hidden"
-            animate="visible"
-          />
-        )}
-      </motion.div>
+      <a href={onelinkLink} target="_blank">
+        <motion.div
+          className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-lg border bg-surface-primary sm:h-28 sm:w-28"
+          variants={appVariants}
+          initial="initial"
+          animate={allIconsHidden ? 'final' : 'initial'}
+        >
+          <p className="font-brand text-5xl font-bold text-text-primary sm:text-6xl">S</p>
+          {showStars && (
+            <motion.img
+              src="/images/stars.svg"
+              alt="Stars"
+              className="absolute -right-6 -top-2 h-12 w-12 sm:-right-8 sm:-top-4 sm:h-16 sm:w-16"
+              variants={starsVariants}
+              initial="hidden"
+              animate="visible"
+            />
+          )}
+        </motion.div>
+      </a>
     </div>
   )
 }
