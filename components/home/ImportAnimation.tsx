@@ -1,22 +1,20 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { motion, Variants } from 'framer-motion'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaTiktok } from 'react-icons/fa'
-import { IconType } from 'react-icons/lib'
 
 interface SocialIcon {
   id: number
-  Icon: IconType
+  imageSrc: string
   color: string
   x: number
 }
 
 const socialIcons: SocialIcon[] = [
-  { id: 1, Icon: FaFacebook, color: '#1877F2', x: -200 },
-  { id: 2, Icon: FaInstagram, color: '#E4405F', x: -100 },
-  { id: 3, Icon: FaTwitter, color: '#1DA1F2', x: 0 },
-  { id: 4, Icon: FaYoutube, color: '#FF0000', x: 100 },
-  { id: 5, Icon: FaTiktok, color: '#000000', x: 200 },
+  { id: 1, imageSrc: '/images/instagram.png', color: '#1877F2', x: -200 },
+  { id: 2, imageSrc: '/images/pinterest.png', color: '#E4405F', x: -100 },
+  { id: 3, imageSrc: '/images/safari.png', color: '#00D3F9', x: 0 },
+  { id: 4, imageSrc: '/images/youtube.png', color: '#FF0000', x: 100 },
+  { id: 5, imageSrc: '/images/chrome.png', color: '#000000', x: 200 },
 ]
 
 const containerVariants: Variants = {
@@ -84,15 +82,14 @@ const ImportAnimation: React.FC = () => {
         initial="hidden"
         animate="visible"
       >
-        {socialIcons.map(({ id, Icon, color }, index) => (
+        {socialIcons.map(({ id, imageSrc, color }, index) => (
           <motion.div
             key={id}
-            className="flex h-12 w-12 items-center justify-center rounded-lg sm:h-16 sm:w-16"
-            style={{ backgroundColor: color }}
+            className="h-12 w-12 rounded-full sm:h-16 sm:w-16"
             variants={itemVariants}
             custom={index}
           >
-            <Icon size={30} color="white" />
+            <img src={imageSrc} alt="social-icon" className="h-full w-full" />
           </motion.div>
         ))}
       </motion.div>

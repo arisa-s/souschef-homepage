@@ -58,7 +58,7 @@ const ImportRecipeForm: FC = () => {
 
       <button
         type="submit"
-        className="flex min-w-40 flex-nowrap items-center text-nowrap bg-surface-component-secondary px-4 text-sm font-medium text-text-primary hover:opacity-80 disabled:opacity-50 sm:text-base"
+        className="flex min-w-40 flex-nowrap items-center text-nowrap bg-surface-component-secondary px-4 text-center text-sm font-medium text-text-primary hover:opacity-80 disabled:opacity-50 sm:text-base"
         disabled={isLoading}
       >
         {isLoading ? <Spinner size="sm" /> : t('layout:importRecipe')}
