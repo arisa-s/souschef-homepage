@@ -7,8 +7,8 @@ export const HomeHero = ({}) => {
   const { t } = getI18n()
   return (
     <div className="w-full items-center justify-center">
-      <div className="mx-auto flex max-w-6xl flex-col px-4 py-12 sm:p-20 xl:border-x">
-        <div className="items-center justify-center space-y-4 text-center sm:space-y-8">
+      <div className="mx-auto flex max-w-6xl flex-col py-12 sm:p-20 xl:border-x">
+        <div className="items-center justify-center space-y-4 px-4 text-center sm:space-y-8">
           <h1 className="font-accent text-4xl font-medium [word-spacing:0.16rem] sm:text-6xl">
             {t('recipeToTable')}
           </h1>

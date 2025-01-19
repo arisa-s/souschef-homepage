@@ -66,7 +66,7 @@ const ImportAnimation: React.FC = () => {
     const timeout = setTimeout(() => setAllIconsHidden(true), socialIcons.length * 0.3 * 1000 + 500)
     const starsTimeout = setTimeout(
       () => setShowStars(true),
-      socialIcons.length * 0.3 * 1000 + 500 + 2400
+      socialIcons.length * 0.3 * 1000 + 500 + 2600
     )
     return () => {
       clearTimeout(timeout)
