@@ -16,7 +16,9 @@ export const DownloadAppModal = () => {
   useEffect(() => {
     const modalShown = localStorage.getItem('modalShown')
     if (!modalShown) {
-      setShowModal(true)
+      setTimeout(() => {
+        setShowModal(true)
+      }, 8000)
     }
   }, [])
 
