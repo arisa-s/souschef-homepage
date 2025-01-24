@@ -83,24 +83,6 @@ export const FeaturesSection = () => {
               <h2 className="text-xl font-bold">{t(`feature.${selectedFeature.key}`)}</h2>
               <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
             </div>
-            <div className="flex w-full justify-center space-x-6 p-6 text-lg sm:space-x-12">
-              <Link href={iosDownloadLink} className="max-w-40" target="_blank">
-                <Image
-                  src="/images/app-store-download-light.png"
-                  alt="adjustIngredients"
-                  width={1000}
-                  height={500}
-                />
-              </Link>
-              <Link href={androidDownloadLink} className="max-w-40" target="_blank">
-                <Image
-                  src="/images/google-play-download-light.png"
-                  alt="adjustIngredients"
-                  width={1000}
-                  height={500}
-                />
-              </Link>
-            </div>
           </div>
         </div>
       </div>
