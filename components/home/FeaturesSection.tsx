@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
-import { androidDownloadLink, iosDownloadLink } from '@/constants'
 import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
 
 const FEATURES = [
