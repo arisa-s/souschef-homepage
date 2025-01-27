@@ -154,14 +154,14 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
       initial={{ rotateY: 90, opacity: 0 }}
       animate={{ rotateY: 0, opacity: 1 }}
       exit={{ rotateY: -90, opacity: 0 }}
-      className="mx-4 my-auto sm:mx-12"
+      className="m-auto sm:mx-12"
     >
       <Image
         src={imageUrl}
         alt={`${feature.key} head image`}
-        width={1000}
-        height={500}
-        className="object-cover sm:h-auto sm:w-full"
+        width={3500}
+        height={3000}
+        className="m-auto h-auto w-full object-cover"
       />
     </motion.div>
   )
