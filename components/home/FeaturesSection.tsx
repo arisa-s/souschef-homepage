@@ -68,7 +68,7 @@ export const FeaturesSection = () => {
         </div>
         <div className="flex h-full w-full items-center justify-center sm:w-1/2">
           <div className="flex-col divide-y">
-            <div className="flex items-center sm:border-t">
+            <div className="flex items-center sm:border-y">
               <button className="h-56 text-3xl sm:hidden" onClick={handlePreviousFeature}>
                 <HiArrowLongLeft />
               </button>

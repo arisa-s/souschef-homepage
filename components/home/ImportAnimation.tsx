@@ -12,7 +12,7 @@ interface SocialIcon {
 const socialIcons: SocialIcon[] = [
   { id: 1, imageSrc: '/images/instagram.png', x: -200 },
   { id: 2, imageSrc: '/images/pinterest.png', x: -100 },
-  { id: 3, imageSrc: '/images/safari.png', x: 0 },
+  { id: 3, imageSrc: '/images/tiktok.png', x: 0 },
   { id: 4, imageSrc: '/images/youtube.png', x: 100 },
   { id: 5, imageSrc: '/images/chrome.png', x: 200 },
 ]
