@@ -7,7 +7,7 @@ import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
 
 const FEATURES = [
   { key: 'bookmark', imagePath: '/images/home/bookmark.png' },
-  { key: 'importRecipe', imagePath: '/images/home/recipeViewer.png' },
+  { key: 'importRecipe', imagePath: '/images/home/importRecipe.png' },
   { key: 'convertYoutube', imagePath: '/images/home/convertYoutube.png' },
   { key: 'shoppingList', imagePath: '/images/home/shoppingList.png' },
   { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.png' },
@@ -150,24 +150,14 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
     language == 'en' ? feature.imagePath : feature.imagePath.replace('.png', `-${language}.png`)
 
   return (
-    <motion.div
-      key={feature.key}
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      style={{ willChange: 'transform, opacity' }} // Improves Safari animation rendering
-      className="m-auto sm:mx-12"
-    >
-      <Image
-        src={imageUrl}
-        alt={`${feature.key} head image`}
-        width={3500}
-        height={3000}
-        className="m-auto h-auto w-full object-cover"
-        style={{ transform: 'translateZ(0)' }} // Force hardware acceleration
-      />
-    </motion.div>
+    <Image
+      src={imageUrl}
+      alt={`${feature.key} head image`}
+      width={3500}
+      height={3000}
+      className="m-auto h-auto w-full object-cover sm:mx-12"
+      style={{ transform: 'translateZ(0)' }} // Force hardware acceleration
+    />
   )
 }
 
