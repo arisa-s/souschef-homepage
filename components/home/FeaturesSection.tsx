@@ -148,12 +148,15 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
 
   const imageUrl =
     language == 'en' ? feature.imagePath : feature.imagePath.replace('.png', `-${language}.png`)
+
   return (
     <motion.div
       key={feature.key}
-      initial={{ rotateY: 90, opacity: 0 }}
-      animate={{ rotateY: 0, opacity: 1 }}
-      exit={{ rotateY: -90, opacity: 0 }}
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.8, opacity: 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      style={{ willChange: 'transform, opacity' }} // Improves Safari animation rendering
       className="m-auto sm:mx-12"
     >
       <Image
@@ -162,6 +165,7 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
         width={3500}
         height={3000}
         className="m-auto h-auto w-full object-cover"
+        style={{ transform: 'translateZ(0)' }} // Force hardware acceleration
       />
     </motion.div>
   )
