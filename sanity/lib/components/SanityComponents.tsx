@@ -1,6 +1,7 @@
 import { InstagramPreview } from '@/sanity/schemas/previews'
 import { PortableTextReactComponents } from 'next-sanity'
 import Link from 'next/link'
+import { getImageUrlFor } from '../image'
 
 export const SanityComponents: Partial<PortableTextReactComponents> = {
   marks: {
@@ -62,5 +63,9 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
   // Add the 'types' property to handle custom object types like 'instagram'
   types: {
     instagramPost: ({ value }) => <InstagramPreview value={value} />,
+    image: ({ value }) => {
+      const imageUrl = getImageUrlFor(value)?.url()
+      return <img src={imageUrl} />
+    },
   },
 }

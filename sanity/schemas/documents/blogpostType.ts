@@ -49,7 +49,7 @@ export const blogpostType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'instagramPost' }],
+      of: [{ type: 'block' }, { type: 'instagramPost' }, { type: 'image' }],
     }),
     defineField({
       name: 'tags',
