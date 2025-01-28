@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
+import { LiaFastForwardSolid, LiaStepBackwardSolid } from 'react-icons/lia'
 
 const FEATURES = [
   { key: 'bookmark', imagePath: '/images/home/bookmark.png' },
@@ -56,7 +57,7 @@ export const FeaturesSection = () => {
   return (
     <div>
       <div className="mx-auto flex h-full max-w-7xl flex-col items-stretch sm:flex-row sm:items-start sm:divide-x sm:border-x">
-        <div className="my-12 hidden w-full flex-col divide-y border-y sm:flex sm:w-1/2">
+        <div className="z-10 my-12 hidden w-full flex-col divide-y border-y sm:flex sm:w-1/2">
           {FEATURES.map((f) => (
             <FeatureDescription
               featureKey={f.key}
@@ -67,19 +68,27 @@ export const FeaturesSection = () => {
           ))}
         </div>
         <div className="flex h-full w-full items-center justify-center sm:w-1/2">
-          <div className="flex-col divide-y">
-            <div className="flex items-center sm:border-y">
-              <button className="h-56 text-3xl sm:hidden" onClick={handlePreviousFeature}>
-                <HiArrowLongLeft />
-              </button>
+          <div className="flex-col divide-y sm:my-12 sm:border-t">
+            <div className="flex items-center">
               <FeatureGraphic feature={selectedFeature} />
-              <button className="h-56 text-3xl sm:hidden" onClick={handleNextFeature}>
-                <HiArrowLongRight />
-              </button>
             </div>
             <div className="h-44 space-y-2 p-4 sm:hidden sm:h-52">
               <h2 className="text-xl font-bold">{t(`feature.${selectedFeature.key}`)}</h2>
               <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
+            </div>
+            <div className="w-full divide-x text-lg">
+              <button
+                className="w-1/2 border-b py-4 hover:bg-surface-hover"
+                onClick={handlePreviousFeature}
+              >
+                <LiaStepBackwardSolid className="mx-auto" />
+              </button>
+              <button
+                className="w-1/2 border-b py-4 hover:bg-surface-hover"
+                onClick={handleNextFeature}
+              >
+                <LiaFastForwardSolid className="mx-auto" />
+              </button>
             </div>
           </div>
         </div>
@@ -155,8 +164,7 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
       alt={`${feature.key} head image`}
       width={3500}
       height={3000}
-      className="m-auto h-auto w-full object-cover sm:mx-12"
-      style={{ transform: 'translateZ(0)' }} // Force hardware acceleration
+      style={{ transform: 'translateZ(0)' }}
     />
   )
 }
