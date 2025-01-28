@@ -58,7 +58,7 @@ export default async function PostPage({ params }: BlogpostProps) {
     <div className="max-w-8xl mx-auto min-h-screen">
       <main className="w-full md:divide-y">
         {/* hero */}
-        <div className="flex flex-col-reverse md:w-full md:flex-row md:divide-x md:p-6">
+        <div className="flex flex-col-reverse md:w-full md:flex-row md:p-6">
           <div className="md:mx-auto md:flex md:w-1/2 md:px-12">
             <div className="space-between flex max-w-md flex-col items-stretch space-y-6 md:mx-auto">
               <BackButton className="hidden md:block md:text-5xl">
@@ -88,7 +88,7 @@ export default async function PostPage({ params }: BlogpostProps) {
           </div>
         </div>
         <div className="w-full">
-          <article className="mx-auto mb-12 max-w-3xl p-4 md:border-x md:p-12">
+          <article className="mx-auto max-w-3xl p-4 md:border-x md:p-12">
             {Array.isArray(post.body) && (
               <PortableText value={post.body} components={SanityComponents} />
             )}
