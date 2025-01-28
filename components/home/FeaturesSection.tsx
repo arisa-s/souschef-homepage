@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
 import { LiaFastForwardSolid, LiaStepBackwardSolid } from 'react-icons/lia'
 
 const FEATURES = [
