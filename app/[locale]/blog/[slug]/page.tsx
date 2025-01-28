@@ -75,12 +75,12 @@ export default async function PostPage({ params }: BlogpostProps) {
               </div>
             </div>
           </div>
-          <div className="m-auto flex w-full md:m-0 md:w-1/2">
+          <div className="m-auto flex w-full border-b md:m-0 md:w-1/2 md:border-b-0">
             {postImageUrl && (
               <Image
                 src={postImageUrl}
                 alt={post.title}
-                className="h-48 w-full object-cover md:flex md:h-96 md:w-96"
+                className="mx-auto h-48 w-48 border-x object-cover md:flex md:h-96 md:w-96 md:border-x-0"
                 width={width}
                 height={height}
               />
