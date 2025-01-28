@@ -40,7 +40,7 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
       children == '' ? (
         <br />
       ) : (
-        <h4 className="text-primary mb-2 text-lg font-medium md:mb-3 md:text-2xl">{children}</h4>
+        <h4 className="text-primary mb-4 text-lg font-medium md:mb-3 md:text-2xl">{children}</h4>
       ),
     h5: ({ children }) =>
       children == '' ? <br /> : <h5 className="text-primary font-medium md:text-xl">{children}</h5>,
