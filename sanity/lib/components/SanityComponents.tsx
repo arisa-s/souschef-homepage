@@ -37,5 +37,6 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
   },
   listItem: {
     bullet: ({ children }) => <li className="list md:text-xl">{children}</li>,
+    number: ({ children }) => <li className="list md:text-xl">{children}</li>,
   },
 }
