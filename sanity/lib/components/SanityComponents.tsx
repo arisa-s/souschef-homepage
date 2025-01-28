@@ -50,9 +50,9 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
   },
   list: {
     // Ex. 1: customizing common list types
-    bullet: ({ children }) => <ul className="list-inside list-disc space-y-4">{children}</ul>,
+    bullet: ({ children }) => <ul className="list-inside list-disc space-y-4 pb-4">{children}</ul>,
     number: ({ children }) => (
-      <ol className="ml-4 list-outside list-decimal space-y-4">{children}</ol>
+      <ol className="ml-4 list-outside list-decimal space-y-4 pb-4">{children}</ol>
     ),
   },
   listItem: {
