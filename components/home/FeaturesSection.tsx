@@ -140,7 +140,7 @@ export const FeatureDescription = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -5 }}
           transition={{ duration: 0.2 }}
-          className="m-auto"
+          className="m-auto leading-8 tracking-wide md:mb-6 md:text-xl md:leading-9"
         >
           {t(`feature.${featureKey}Desc`)}
         </motion.p>

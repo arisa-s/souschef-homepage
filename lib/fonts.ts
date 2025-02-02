@@ -1,5 +1,5 @@
 import localFont from 'next/font/local'
-import { Noto_Sans_JP, Zen_Old_Mincho } from 'next/font/google'
+import { Zen_Kaku_Gothic_New, Zen_Old_Mincho } from 'next/font/google'
 
 export const recoleta = localFont({
   src: [
@@ -155,7 +155,8 @@ export const basisGrotesque = localFont({
   variable: '--font-base',
 })
 
-export const notoSanJapanese = Noto_Sans_JP({
+export const notoSanJapanese = Zen_Kaku_Gothic_New({
   variable: '--font-base',
+  weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
 })

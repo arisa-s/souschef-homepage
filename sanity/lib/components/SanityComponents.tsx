@@ -16,7 +16,9 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
       children == '' ? (
         <br />
       ) : (
-        <p className="text-primary mb-3 leading-8 tracking-wide md:text-xl">{children}</p>
+        <p className="text-primary mb-5 leading-8 tracking-wide md:mb-6 md:text-xl md:leading-9">
+          {children}
+        </p>
       ),
     h1: ({ children }) =>
       children == '' ? (
@@ -40,10 +42,14 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
       children == '' ? (
         <br />
       ) : (
-        <h4 className="text-primary mb-4 text-lg font-medium md:mb-3 md:text-2xl">{children}</h4>
+        <h4 className="text-primary mb-3 text-lg font-medium md:mb-4 md:text-2xl">{children}</h4>
       ),
     h5: ({ children }) =>
-      children == '' ? <br /> : <h5 className="text-primary font-medium md:text-xl">{children}</h5>,
+      children == '' ? (
+        <br />
+      ) : (
+        <h5 className="text-primary mb-2 font-medium md:mb-3 md:text-xl">{children}</h5>
+      ),
     h6: ({ children }) =>
       children == '' ? <br /> : <h6 className="text-primary text-sm md:text-lg">{children}</h6>,
     blockquote: ({ children }) =>
@@ -57,8 +63,12 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
     ),
   },
   listItem: {
-    bullet: ({ children }) => <li className="list md:text-xl">{children}</li>,
-    number: ({ children }) => <li className="list pl-2 md:pl-4 md:text-xl">{children}</li>,
+    bullet: ({ children }) => (
+      <li className="list leading-8 md:text-xl md:leading-9">{children}</li>
+    ),
+    number: ({ children }) => (
+      <li className="list pl-2 leading-8 md:pl-4 md:text-xl md:leading-9">{children}</li>
+    ),
   },
   // Add the 'types' property to handle custom object types like 'instagram'
   types: {

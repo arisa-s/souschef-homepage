@@ -27,7 +27,7 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
             getImageUrlFor(post.image)?.width(500).height(500).url() || '/images/blog-fallback.png'
 
           return (
-            <Link href={`/blog/${post.slug.current}`} key={index}>
+            <Link href={`/blog/${post.slug.current}`} key={index} className="flex self-stretch">
               <div
                 className={`flex cursor-pointer flex-row p-4 hover:bg-surface-hover sm:flex-col sm:space-x-0 sm:space-y-4 sm:p-6 ${borderClass}`}
               >
