@@ -72,6 +72,10 @@ export const blogpostType = defineType({
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'instagramPostId',
+      type: 'string',
+    }),
   ],
 })
 

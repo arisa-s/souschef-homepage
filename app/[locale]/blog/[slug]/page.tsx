@@ -7,6 +7,7 @@ import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
 import BackButton from '@/components/layout/BackButton'
 import { HiArrowLongLeft } from 'react-icons/hi2'
 import Image from 'next/image'
+import ActionButtonGroup from '@/components/blog/ActionButtonGroup'
 
 type BlogpostProps = {
   params: Promise<{ locale: LocaleOptions; slug: string }>
@@ -69,9 +70,21 @@ export default async function PostPage({ params }: BlogpostProps) {
                   {post.title}
                 </h1>
                 <p className="hidden md:block md:text-lg">{post.summary}</p>
-                <p className="text-text-secondary">
-                  {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
-                </p>
+                <div className="flex items-center space-x-4 py-2">
+                  <div className="flex items-center space-x-2">
+                    <Image
+                      src="/arisashiraishi.png"
+                      alt="author"
+                      className="h-12 w-12 rounded-full"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                  <div className="text-text-secondary">
+                    <p className="text-text-secondary">{t('author')} </p>
+                    {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -87,6 +100,7 @@ export default async function PostPage({ params }: BlogpostProps) {
             )}
           </div>
         </div>
+
         <div className="w-full">
           <article className="mx-auto max-w-3xl p-4 md:border-x md:p-12">
             {Array.isArray(post.body) && (
@@ -94,6 +108,7 @@ export default async function PostPage({ params }: BlogpostProps) {
             )}
           </article>
         </div>
+        <ActionButtonGroup instagramPostId={post.instagramPostId} />
       </main>
     </div>
   )

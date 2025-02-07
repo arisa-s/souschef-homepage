@@ -29,7 +29,7 @@ export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
           return (
             <Link href={`/blog/${post.slug.current}`} key={index} className="flex self-stretch">
               <div
-                className={`flex cursor-pointer flex-row p-4 hover:bg-surface-hover sm:flex-col sm:space-x-0 sm:space-y-4 sm:p-6 ${borderClass}`}
+                className={`flex w-full cursor-pointer flex-row p-4 hover:bg-surface-hover sm:flex-col sm:space-x-0 sm:space-y-4 sm:p-6 md:p-12 ${borderClass}`}
               >
                 <div className="hidden sm:block">
                   {post.tags?.map((tag, index) => (
