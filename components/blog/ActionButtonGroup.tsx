@@ -36,7 +36,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId 
       >
         <div className="flex space-x-4">
           <PiInstagramLogoFill />
-          <span className="md:text-lg">Follow us for updates!</span>
+          <span className="text-sm md:text-lg">Follow us for updates!</span>
         </div>
       </button>
     </div>
