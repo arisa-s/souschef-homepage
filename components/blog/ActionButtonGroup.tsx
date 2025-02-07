@@ -11,7 +11,7 @@ export interface ActionButtonGroupProps {
 
 export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId }) => {
   return (
-    <div className="mx-auto grid w-full max-w-3xl grid-cols-6 divide-x border-x border-y text-2xl">
+    <div className="mx-auto grid w-full max-w-3xl grid-cols-6 divide-x border-x border-t text-2xl">
       {instagramPostId ? (
         <>
           <button
@@ -36,7 +36,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId 
       >
         <div className="flex space-x-4">
           <PiInstagramLogoFill />
-          <span className="text-lg">Follow us on instagram for updates!</span>
+          <span className="text-lg">Follow us for updates!</span>
         </div>
       </button>
     </div>
