@@ -1,6 +1,6 @@
 'use client'
 import { INSTAGRAM_SOUSCHEF_HANDLE } from '@/constants/instagram'
-import { openInstagramLink } from '@/utils/instagramLink'
+import { openInstagramPost, openInstagramUser } from '@/utils/instagramLink'
 import { FC } from 'react'
 import { GoComment, GoHeart } from 'react-icons/go'
 import { PiInstagramLogoFill } from 'react-icons/pi'
@@ -16,13 +16,13 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId 
         <>
           <button
             className="col-span-1 place-items-center px-6 py-4 hover:opacity-80"
-            onClick={() => openInstagramLink(`/p/${instagramPostId}`)}
+            onClick={() => openInstagramPost(instagramPostId)}
           >
             <GoHeart />
           </button>
           <button
             className="col-span-1 place-items-center px-6 py-4 hover:opacity-80"
-            onClick={() => openInstagramLink(`/p/${instagramPostId}`)}
+            onClick={() => openInstagramPost(instagramPostId)}
           >
             <GoComment />
           </button>
@@ -32,11 +32,11 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId 
       )}
       <button
         className="col-span-4 place-items-center bg-surface-component-secondary px-2 py-4 font-medium text-text-primary hover:opacity-80"
-        onClick={() => openInstagramLink(`/${INSTAGRAM_SOUSCHEF_HANDLE}`)}
+        onClick={() => openInstagramUser(INSTAGRAM_SOUSCHEF_HANDLE)}
       >
         <div className="flex space-x-4">
           <PiInstagramLogoFill />
-          <span className="text-lg">Follow us for updates!</span>
+          <span className="md:text-lg">Follow us for updates!</span>
         </div>
       </button>
     </div>
