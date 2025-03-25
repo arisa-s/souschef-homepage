@@ -76,9 +76,13 @@ export const BlogSection = async ({}) => {
         </div>
         <div className="w-full flex-col divide-y sm:w-1/2">
           <SectionTitle>{t('blogSectionTitle')}</SectionTitle>
-          {otherPosts.map((post) => (
-            <BlogListItem post={post} key={post._id} />
-          ))}
+          {otherPosts.slice(0, 6).map(
+            (
+              post // Limit to the first 6 posts
+            ) => (
+              <BlogListItem post={post} key={post._id} />
+            )
+          )}
           <div className="flex flex-col items-center space-y-6 p-6 text-center">
             <Link href="/blog">
               <button className="font-accent text-xl underline hover:opacity-60 sm:text-3xl">
