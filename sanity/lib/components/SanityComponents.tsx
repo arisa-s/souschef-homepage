@@ -76,7 +76,12 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
     image: ({ value }) => {
       const imageUrl = getImageUrlFor(value)?.url()
       const maxWidth = value.maxWidth
-      return <img src={imageUrl} className={`${maxWidth ? `max-w-[${maxWidth}px] mx-auto` : ''}`} />
+      return (
+        <img
+          src={imageUrl}
+          className={`${maxWidth ? `max-w-[${maxWidth.toString()}px] mx-auto` : ''}`}
+        />
+      )
     },
   },
 }
