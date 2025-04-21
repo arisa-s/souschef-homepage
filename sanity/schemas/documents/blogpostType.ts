@@ -49,7 +49,25 @@ export const blogpostType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'instagramPost' }, { type: 'image' }],
+      of: [
+        { type: 'block' },
+        { type: 'instagramPost' },
+        {
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            { name: 'alt', title: 'Alt Description', type: 'string' },
+            {
+              name: 'maxWidth',
+              title: 'Max Width',
+              description: 'The maximum width of the image in pixels',
+              type: 'number',
+            },
+          ],
+        },
+      ],
     }),
     defineField({
       name: 'tags',

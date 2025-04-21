@@ -75,7 +75,8 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
     instagramPost: ({ value }) => <InstagramPreview value={value} />,
     image: ({ value }) => {
       const imageUrl = getImageUrlFor(value)?.url()
-      return <img src={imageUrl} />
+      const maxWidth = value.maxWidth
+      return <img src={imageUrl} className={`${maxWidth ? `max-w-[${maxWidth}px] mx-auto` : ''}`} />
     },
   },
 }
