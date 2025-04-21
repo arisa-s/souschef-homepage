@@ -76,7 +76,16 @@ export const SanityComponents: Partial<PortableTextReactComponents> = {
     image: ({ value }) => {
       const imageUrl = getImageUrlFor(value)?.url()
       const maxWidth = value.maxWidth
-      return <img src={imageUrl} style={{ maxWidth: maxWidth ? `${maxWidth}px` : '100%' }} />
+      return (
+        <img
+          src={imageUrl}
+          style={{
+            maxWidth: maxWidth ? `${maxWidth}px` : '100%',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        />
+      )
     },
   },
 }
