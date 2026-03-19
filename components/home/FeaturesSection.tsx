@@ -1,7 +1,7 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import { LiaFastForwardSolid, LiaStepBackwardSolid } from 'react-icons/lia'
 
@@ -13,67 +13,68 @@ const FEATURES = [
   { key: 'adjustIngredients', imagePath: '/images/home/adjustIngredients.png' },
   { key: 'discover', imagePath: '/images/home/discover.png' },
 ]
+
 export const FeaturesSection = () => {
-  const [selectedFeature, setSelectedFeature] = useState(FEATURES[0])
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const [manualSelection, setManualSelection] = useState(false)
   const { t } = useTranslation()
+
+  const selectedFeature = FEATURES[selectedIndex]
 
   useEffect(() => {
     if (manualSelection) return
 
     const interval = setInterval(() => {
-      setSelectedFeature((prevFeature) => {
-        const currentIndex = FEATURES.findIndex((f) => f.key === prevFeature.key)
-        const nextIndex = (currentIndex + 1) % FEATURES.length
-        return FEATURES[nextIndex]
-      })
-    }, 5000) // Change every 10 seconds
+      setSelectedIndex((prev) => (prev + 1) % FEATURES.length)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [manualSelection])
 
-  const handleFeatureClick = (feature: (typeof FEATURES)[number]) => {
+  const handleFeatureClick = useCallback((index: number) => {
     setManualSelection(true)
-    setSelectedFeature(feature)
-  }
+    setSelectedIndex(index)
+  }, [])
 
-  const handleNextFeature = () => {
-    setSelectedFeature((prevFeature) => {
-      const currentIndex = FEATURES.findIndex((f) => f.key === prevFeature.key)
-      const nextIndex = (currentIndex + 1) % FEATURES.length
-      return FEATURES[nextIndex]
-    })
-  }
+  const handleNextFeature = useCallback(() => {
+    setSelectedIndex((prev) => (prev + 1) % FEATURES.length)
+  }, [])
 
-  const handlePreviousFeature = () => {
-    setSelectedFeature((prevFeature) => {
-      const currentIndex = FEATURES.findIndex((f) => f.key === prevFeature.key)
-      const nextIndex = (currentIndex - 1 + FEATURES.length) % FEATURES.length
-      return FEATURES[nextIndex]
-    })
-  }
+  const handlePreviousFeature = useCallback(() => {
+    setSelectedIndex((prev) => (prev - 1 + FEATURES.length) % FEATURES.length)
+  }, [])
 
   return (
     <div>
       <div className="mx-auto flex h-full max-w-7xl flex-col items-stretch sm:flex-row sm:items-start sm:divide-x sm:border-x">
         <div className="z-10 my-12 hidden w-full flex-col divide-y border-y sm:flex sm:w-1/2">
-          {FEATURES.map((f) => (
+          {FEATURES.map((f, i) => (
             <FeatureDescription
               featureKey={f.key}
               key={f.key}
-              selected={f.key === selectedFeature.key}
-              onClick={() => handleFeatureClick(f)}
+              selected={i === selectedIndex}
+              onClick={() => handleFeatureClick(i)}
             />
           ))}
         </div>
         <div className="flex h-full w-full items-center justify-center sm:w-1/2">
           <div className="flex-col divide-y sm:my-12 sm:border-t">
-            <div className="flex items-center">
+            <div className="relative flex items-center overflow-hidden">
               <FeatureGraphic feature={selectedFeature} />
             </div>
             <div className="h-44 space-y-2 p-4 sm:hidden sm:h-52">
-              <h2 className="text-xl font-bold">{t(`feature.${selectedFeature.key}`)}</h2>
-              <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedFeature.key}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <h2 className="text-xl font-bold">{t(`feature.${selectedFeature.key}`)}</h2>
+                  <p>{t(`feature.${selectedFeature.key}Desc`)}</p>
+                </motion.div>
+              </AnimatePresence>
             </div>
             <div className="w-full divide-x text-lg">
               <button
@@ -108,43 +109,40 @@ export const FeatureDescription = ({
   const { t } = useTranslation()
   return (
     <motion.div
-      layout
       onClick={onClick}
-      className={`cursor-pointer bg-surface-primary ${
+      className={`cursor-pointer bg-surface-primary will-change-transform ${
         selected
-          ? 'items-center justify-center space-y-6 border sm:scale-105 sm:p-12'
+          ? 'items-center justify-center space-y-6 sm:p-12'
           : 'hidden space-y-2 px-6 py-4 sm:flex'
       }`}
       whileHover={{
         scale: 1.05,
-        borderRightWidth: 1,
-        borderLeftWidth: 1,
-        borderBottomWidth: 1,
-        borderTopWidth: 1,
-        borderColor: '--border-primary',
+        boxShadow: 'inset 0 0 0 1px var(--border-primary, #e5e7eb)',
       }}
       animate={
         selected
-          ? { scale: 1.05, borderRightWidth: 1, borderLeftWidth: 1, borderBottomWidth: 1 }
-          : { scale: 1, borderRightWidth: 0, borderLeftWidth: 0, borderBottomWidth: 0 }
+          ? { scale: 1.05, boxShadow: 'inset 0 0 0 1px var(--border-primary, #e5e7eb)' }
+          : { scale: 1, boxShadow: 'inset 0 0 0 0px transparent' }
       }
-      transition={{ duration: 0.3 }}
+      transition={{ type: 'tween', duration: 0.25 }}
     >
       <h2 className={`${selected ? 'text-3xl font-semibold' : 'text-xl'}`}>
         {t(`feature.${featureKey}`)}
       </h2>
-      {selected && (
-        <motion.p
-          key={`${featureKey}-desc`}
-          initial={{ opacity: 0, y: -5 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -5 }}
-          transition={{ duration: 0.2 }}
-          className="m-auto leading-8 tracking-wide md:mb-6 md:text-xl md:leading-9"
-        >
-          {t(`feature.${featureKey}Desc`)}
-        </motion.p>
-      )}
+      <AnimatePresence>
+        {selected && (
+          <motion.p
+            key={`${featureKey}-desc`}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="m-auto overflow-hidden leading-8 tracking-wide md:mb-6 md:text-xl md:leading-9"
+          >
+            {t(`feature.${featureKey}Desc`)}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </motion.div>
   )
 }
@@ -154,17 +152,33 @@ export const FeatureGraphic = ({ feature }: { feature: { key: string; imagePath:
     i18n: { language },
   } = useTranslation()
 
-  const imageUrl =
-    language == 'en' ? feature.imagePath : feature.imagePath.replace('.png', `-${language}.png`)
+  const imageUrl = useMemo(
+    () =>
+      language === 'en'
+        ? feature.imagePath
+        : feature.imagePath.replace('.png', `-${language}.png`),
+    [language, feature.imagePath],
+  )
 
   return (
-    <Image
-      src={imageUrl}
-      alt={`${feature.key} head image`}
-      width={3500}
-      height={3000}
-      style={{ transform: 'translateZ(0)' }}
-    />
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={feature.key}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        <Image
+          src={imageUrl}
+          alt={`${feature.key} head image`}
+          width={3500}
+          height={3000}
+          style={{ transform: 'translateZ(0)' }}
+          priority
+        />
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
