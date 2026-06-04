@@ -1,1 +1,81 @@
-{"pageTitle":"Privacy Policy for Souschef"}
+{
+  "pageTitle": "Privacy Policy for Souschef",
+  "lastUpdated": "2026-06-05",
+  "intro": "Welcome to Souschef, the AI-powered cooking assistant app (\"Souschef\", \"we\", \"us\", or \"our\"). Souschef is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application.",
+  "sections": [
+    {
+      "title": "1. Information We Collect",
+      "paragraphs": [
+        "We collect personal information that you voluntarily provide to us when you register and use our app. This information includes:"
+      ],
+      "listItems": ["First and Last Name", "Email Address"]
+    },
+    {
+      "title": "2. Purpose of Data Collection",
+      "paragraphs": [
+        "Your data is collected to enhance your experience with Souschef. We use this information to:"
+      ],
+      "listItems": [
+        "Personalize and improve the services offered by Souschef.",
+        "Enable user login and authentication.",
+        "Send optional email communications you choose to receive, as described in Section 3."
+      ]
+    },
+    {
+      "title": "3. Email Communications",
+      "paragraphs": [
+        "If you opt in during sign-up or later in the app under Email preferences, we may send you:",
+        "You can change these preferences at any time in the app or through unsubscribe links in our emails. Transactional emails such as account or security messages may still be sent when needed."
+      ],
+      "listItems": [
+        "Survey emails: occasional user research questions that help us improve Souschef.",
+        "Marketing emails: product news, announcements, and updates about the app."
+      ]
+    },
+    {
+      "title": "4. Data Storage and Security",
+      "paragraphs": [
+        "We store your data securely using Supabase, which provides robust security measures including:"
+      ],
+      "listItems": [
+        "Encryption of data at rest.",
+        "Compliance with SOC2 Type 2 standards.",
+        "Isolated storage on private servers, typically AWS EC2 instances.",
+        "Data may be stored on servers located in the United States or other countries."
+      ]
+    },
+    {
+      "title": "5. Data Sharing and Disclosure",
+      "paragraphs": [
+        "We do not sell your personal data. We do not share your personal data with third parties except as needed to operate the app, deliver emails you have opted into, comply with law, or protect our rights."
+      ]
+    },
+    {
+      "title": "6. User Rights and Choices",
+      "paragraphs": [
+        "As a user of Souschef, you have the right to access, update, or delete your personal information. You can manage your data directly within the app or contact us for assistance.",
+        "You can also manage survey and marketing email preferences in the app at any time."
+      ]
+    },
+    {
+      "title": "7. Cookies and Tracking Technologies",
+      "paragraphs": ["Souschef does not use cookies or similar tracking technologies."]
+    },
+    {
+      "title": "8. Changes to This Privacy Policy",
+      "paragraphs": [
+        "We may update this Privacy Policy from time to time. Users will be notified of any significant changes as needed."
+      ]
+    },
+    {
+      "title": "9. Contact Us",
+      "paragraphs": [
+        "If you have any questions or concerns about this Privacy Policy or your data privacy, please contact us at compliance@nekonote.co."
+      ]
+    },
+    {
+      "title": "10. Compliance with Legal Standards",
+      "paragraphs": ["Souschef adheres to the General Data Protection Regulation (GDPR) standards."]
+    }
+  ]
+}
