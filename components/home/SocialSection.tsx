@@ -10,6 +10,8 @@ export interface InstagramEmbedProps {
   link: string
 }
 
+const EMBED_MAX_WIDTH = 260
+
 const InstagramEmbed: FC<InstagramEmbedProps> = ({ link }) => {
   useEffect(() => {
     const script = document.createElement('script')
@@ -35,16 +37,17 @@ const InstagramEmbed: FC<InstagramEmbedProps> = ({ link }) => {
       className="instagram-media"
       data-instgrm-permalink={`${link}/?utm_source=ig_embed&amp;utm_campaign=loading`}
       data-instgrm-version="14"
+      data-width={EMBED_MAX_WIDTH}
       style={{
         background: '#FFF',
         border: '0',
         borderRadius: '3px',
         boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
-        margin: '1px',
-        maxWidth: '540px',
-        minWidth: '326px',
+        margin: '0 auto',
+        maxWidth: '100%',
+        minWidth: 0,
         padding: '0',
-        width: 'calc(100% - 2px)',
+        width: EMBED_MAX_WIDTH,
       }}
     >
       <a
@@ -77,8 +80,13 @@ export const SocialSection: FC = () => {
           <div className="sm:mx-24 sm:border-x">
             <div className="flex flex-col sm:flex-row sm:divide-x">
               {slidePosts.map((post, index) => (
-                <div className="w-1/2 p-6" key={index}>
-                  <InstagramEmbed link={post.url} />
+                <div
+                  className="flex w-full min-w-0 justify-center p-4 sm:w-1/2 sm:p-6"
+                  key={index}
+                >
+                  <div className="min-w-0 overflow-hidden [&_.instagram-media]:!min-w-0 [&_.instagram-media]:!max-w-full [&_iframe]:!max-w-full">
+                    <InstagramEmbed link={post.url} />
+                  </div>
                 </div>
               ))}
             </div>

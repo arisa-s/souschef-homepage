@@ -3,6 +3,7 @@ import DownloadAppModal from '@/components/home/DownloadAppModal'
 import FeaturesSection from '@/components/home/FeaturesSection'
 import HomeHero from '@/components/home/HomeHero'
 import SectionTitle from '@/components/home/SectionTitle'
+import SocialSection from '@/components/home/SocialSection'
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
 import { setI18n, setLocale } from '@/serverContexts'
@@ -26,7 +27,7 @@ export default async function Home({ params }: HomeProps) {
         <SectionTitle>{t('featureSectionTitle')}</SectionTitle>
         <FeaturesSection />
         <BlogSection />
-        {/* <SocialSection /> */}
+        <SocialSection />
       </div>
       <DownloadAppModal />
     </div>

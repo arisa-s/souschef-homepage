@@ -1,0 +1,1741 @@
+{
+	"knownSymbols": {
+		"nextConfig": [
+			{
+				"name": "nextConfig",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/next.config.ts",
+				"isDefault": true
+			}
+		],
+		"type { NextConfig": [
+			{
+				"name": "type { NextConfig",
+				"module": "next",
+				"isDefault": true
+			}
+		],
+		"SanityImagePaletteSwatch": [
+			{
+				"name": "SanityImagePaletteSwatch",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityImagePalette": [
+			{
+				"name": "SanityImagePalette",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityImageDimensions": [
+			{
+				"name": "SanityImageDimensions",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityFileAsset": [
+			{
+				"name": "SanityFileAsset",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"Geopoint": [
+			{
+				"name": "Geopoint",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"InstagramPost": [
+			{
+				"name": "InstagramPost",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"TranslationMetadata": [
+			{
+				"name": "TranslationMetadata",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"InternationalizedArrayReferenceValue": [
+			{
+				"name": "InternationalizedArrayReferenceValue",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"Toc": [
+			{
+				"name": "Toc",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"Faq": [
+			{
+				"name": "Faq",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"Privacy": [
+			{
+				"name": "Privacy",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"Blogpost": [
+			{
+				"name": "Blogpost",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityImageCrop": [
+			{
+				"name": "SanityImageCrop",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityImageHotspot": [
+			{
+				"name": "SanityImageHotspot",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityImageAsset": [
+			{
+				"name": "SanityImageAsset",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssetSourceData": [
+			{
+				"name": "SanityAssetSourceData",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityImageMetadata": [
+			{
+				"name": "SanityImageMetadata",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"Slug": [
+			{
+				"name": "Slug",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"InternationalizedArrayReference": [
+			{
+				"name": "InternationalizedArrayReference",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistInstructionTask": [
+			{
+				"name": "SanityAssistInstructionTask",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistTaskStatus": [
+			{
+				"name": "SanityAssistTaskStatus",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistSchemaTypeAnnotations": [
+			{
+				"name": "SanityAssistSchemaTypeAnnotations",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistOutputType": [
+			{
+				"name": "SanityAssistOutputType",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistOutputField": [
+			{
+				"name": "SanityAssistOutputField",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistInstructionContext": [
+			{
+				"name": "SanityAssistInstructionContext",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"AssistInstructionContext": [
+			{
+				"name": "AssistInstructionContext",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistInstructionUserInput": [
+			{
+				"name": "SanityAssistInstructionUserInput",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistInstructionPrompt": [
+			{
+				"name": "SanityAssistInstructionPrompt",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistInstructionFieldRef": [
+			{
+				"name": "SanityAssistInstructionFieldRef",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistInstruction": [
+			{
+				"name": "SanityAssistInstruction",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"SanityAssistSchemaTypeField": [
+			{
+				"name": "SanityAssistSchemaTypeField",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"AllSanitySchemaTypes": [
+			{
+				"name": "AllSanitySchemaTypes",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"declare": [
+			{
+				"name": "declare",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"isDefault": false
+			}
+		],
+		"FAQS_QUERYResult": [
+			{
+				"name": "FAQS_QUERYResult",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"POSTS_QUERYResult": [
+			{
+				"name": "POSTS_QUERYResult",
+				"module": "@/sanity.types",
+				"isDefault": false
+			},
+			{
+				"name": "POSTS_QUERYResult",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"POST_QUERYResult": [
+			{
+				"name": "POST_QUERYResult",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"POST_SLUGS_QUERYResult": [
+			{
+				"name": "POST_SLUGS_QUERYResult",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"LATEST_PRIVACY_QUERYResult": [
+			{
+				"name": "LATEST_PRIVACY_QUERYResult",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"LATEST_TOC_QUERYResult": [
+			{
+				"name": "LATEST_TOC_QUERYResult",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.types.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"async": [
+			{
+				"name": "async",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/[locale]/privacy/page.tsx",
+				"isDefault": true
+			}
+		],
+		"createInstance": [
+			{
+				"name": "createInstance",
+				"module": "i18next",
+				"isDefault": false
+			}
+		],
+		"i18n": [
+			{
+				"name": "i18n",
+				"module": "i18next",
+				"isDefault": false
+			}
+		],
+		"initReactI18next": [
+			{
+				"name": "initReactI18next",
+				"module": "react-i18next/initReactI18next",
+				"isDefault": false
+			}
+		],
+		"resourcesToBackend": [
+			{
+				"name": "resourcesToBackend",
+				"module": "i18next-resources-to-backend",
+				"isDefault": true
+			}
+		],
+		"i18nConfig": [
+			{
+				"name": "i18nConfig",
+				"module": "@/i18nConfig",
+				"isDefault": true
+			}
+		],
+		"LocaleOptions": [
+			{
+				"name": "LocaleOptions",
+				"module": "@/constants",
+				"isDefault": false
+			},
+			{
+				"name": "LocaleOptions",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/locales.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"recoleta": [
+			{
+				"name": "recoleta",
+				"module": "@/lib/fonts",
+				"isDefault": false
+			},
+			{
+				"name": "recoleta",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/lib/fonts.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"brand": [
+			{
+				"name": "brand",
+				"module": "@/lib/fonts",
+				"isDefault": false
+			},
+			{
+				"name": "brand",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/lib/fonts.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"zenOldMincho": [
+			{
+				"name": "zenOldMincho",
+				"module": "@/lib/fonts",
+				"isDefault": false
+			},
+			{
+				"name": "zenOldMincho",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/lib/fonts.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"basisGrotesque": [
+			{
+				"name": "basisGrotesque",
+				"module": "@/lib/fonts",
+				"isDefault": false
+			},
+			{
+				"name": "basisGrotesque",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/lib/fonts.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"notoSanJapanese": [
+			{
+				"name": "notoSanJapanese",
+				"module": "@/lib/fonts",
+				"isDefault": false
+			},
+			{
+				"name": "notoSanJapanese",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/lib/fonts.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"localFont": [
+			{
+				"name": "localFont",
+				"module": "next/font/local",
+				"isDefault": true
+			}
+		],
+		"Zen_Kaku_Gothic_New": [
+			{
+				"name": "Zen_Kaku_Gothic_New",
+				"module": "next/font/google",
+				"isDefault": false
+			}
+		],
+		"Zen_Old_Mincho": [
+			{
+				"name": "Zen_Old_Mincho",
+				"module": "next/font/google",
+				"isDefault": false
+			}
+		],
+		"defineConfig": [
+			{
+				"name": "defineConfig",
+				"module": "sanity",
+				"isDefault": false
+			},
+			{
+				"name": "defineConfig",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.config.ts",
+				"isDefault": true
+			}
+		],
+		"visionTool": [
+			{
+				"name": "visionTool",
+				"module": "@sanity/vision",
+				"isDefault": false
+			}
+		],
+		"structureTool": [
+			{
+				"name": "structureTool",
+				"module": "sanity/structure",
+				"isDefault": false
+			}
+		],
+		"documentInternationalization": [
+			{
+				"name": "documentInternationalization",
+				"module": "@sanity/document-internationalization",
+				"isDefault": false
+			}
+		],
+		"assist": [
+			{
+				"name": "assist",
+				"module": "@sanity/assist",
+				"isDefault": false
+			}
+		],
+		"default": [
+			{
+				"name": "default",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/tailwind.config.ts",
+				"isDefault": false
+			}
+		],
+		"type { Config": [
+			{
+				"name": "type { Config",
+				"module": "tailwindcss",
+				"isDefault": true
+			}
+		],
+		"defineCliConfig": [
+			{
+				"name": "defineCliConfig",
+				"module": "sanity/cli",
+				"isDefault": false
+			},
+			{
+				"name": "defineCliConfig",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity.cli.ts",
+				"isDefault": true
+			}
+		],
+		"BlogSection": [
+			{
+				"name": "BlogSection",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/BlogSection.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "BlogSection",
+				"module": "@/components/home/BlogSection",
+				"isDefault": true
+			}
+		],
+		"DownloadAppModal": [
+			{
+				"name": "DownloadAppModal",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/DownloadAppModal.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "DownloadAppModal",
+				"module": "@/components/home/DownloadAppModal",
+				"isDefault": true
+			}
+		],
+		"FeaturesSection": [
+			{
+				"name": "FeaturesSection",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/FeaturesSection.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "FeaturesSection",
+				"module": "@/components/home/FeaturesSection",
+				"isDefault": true
+			}
+		],
+		"HomeHero": [
+			{
+				"name": "HomeHero",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/HomeHero.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "HomeHero",
+				"module": "@/components/home/HomeHero",
+				"isDefault": true
+			}
+		],
+		"SectionTitle": [
+			{
+				"name": "SectionTitle",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/SectionTitle.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "SectionTitle",
+				"module": "@/components/home/SectionTitle",
+				"isDefault": true
+			}
+		],
+		"initTranslations": [
+			{
+				"name": "initTranslations",
+				"module": "@/lib/i18n",
+				"isDefault": true
+			}
+		],
+		"setI18n": [
+			{
+				"name": "setI18n",
+				"module": "@/serverContexts",
+				"isDefault": false
+			}
+		],
+		"setLocale": [
+			{
+				"name": "setLocale",
+				"module": "@/serverContexts",
+				"isDefault": false
+			}
+		],
+		"generateStaticParams": [
+			{
+				"name": "generateStaticParams",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/[locale]/layout.tsx",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"dir": [
+			{
+				"name": "dir",
+				"module": "i18next",
+				"isDefault": false
+			}
+		],
+		"TranslationsProvider": [
+			{
+				"name": "TranslationsProvider",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/locale/TranslationsProvider.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "TranslationsProvider",
+				"module": "@/components/locale/TranslationsProvider",
+				"isDefault": true
+			}
+		],
+		"Navbar": [
+			{
+				"name": "Navbar",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/Navbar.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "Navbar",
+				"module": "@/components/layout",
+				"isDefault": false
+			}
+		],
+		"Footer": [
+			{
+				"name": "Footer",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/Footer.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "Footer",
+				"module": "@/components/layout/Footer",
+				"isDefault": true
+			}
+		],
+		"PortableText": [
+			{
+				"name": "PortableText",
+				"module": "next-sanity",
+				"isDefault": false
+			}
+		],
+		"getPost": [
+			{
+				"name": "getPost",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/repo/post.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getPost",
+				"module": "@/sanity/lib/repo/post",
+				"isDefault": false
+			}
+		],
+		"getPostSlugs": [
+			{
+				"name": "getPostSlugs",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/repo/post.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getPostSlugs",
+				"module": "@/sanity/lib/repo/post",
+				"isDefault": false
+			}
+		],
+		"decodeAssetId": [
+			{
+				"name": "decodeAssetId",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/image.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "decodeAssetId",
+				"module": "@/sanity/lib/image",
+				"isDefault": false
+			}
+		],
+		"getImageUrlFor": [
+			{
+				"name": "getImageUrlFor",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/image.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getImageUrlFor",
+				"module": "@/sanity/lib/image",
+				"isDefault": false
+			}
+		],
+		"SanityComponents": [
+			{
+				"name": "SanityComponents",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/components/SanityComponents.tsx",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "SanityComponents",
+				"module": "@/sanity/lib/components/SanityComponents",
+				"isDefault": false
+			}
+		],
+		"BackButton": [
+			{
+				"name": "BackButton",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/BackButton.tsx",
+				"isDefault": true
+			},
+			{
+				"name": "BackButton",
+				"module": "@/components/layout/BackButton",
+				"isDefault": true
+			}
+		],
+		"HiArrowLongLeft": [
+			{
+				"name": "HiArrowLongLeft",
+				"module": "react-icons/hi2",
+				"isDefault": false
+			}
+		],
+		"Image": [
+			{
+				"name": "Image",
+				"module": "next/image",
+				"isDefault": true
+			}
+		],
+		"ActionButtonGroup": [
+			{
+				"name": "ActionButtonGroup",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/blog/ActionButtonGroup.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "ActionButtonGroup",
+				"module": "@/components/blog/ActionButtonGroup",
+				"isDefault": true
+			}
+		],
+		"BlogGrid": [
+			{
+				"name": "BlogGrid",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/BlogGrid.tsx",
+				"type": "const",
+				"isDefault": true
+			},
+			{
+				"name": "BlogGrid",
+				"module": "@/components/shared/BlogGrid",
+				"isDefault": true
+			}
+		],
+		"getPosts": [
+			{
+				"name": "getPosts",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/repo/post.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getPosts",
+				"module": "@/sanity/lib/repo/post",
+				"isDefault": false
+			}
+		],
+		"PageLayout": [
+			{
+				"name": "PageLayout",
+				"module": "@/components/layout/PageLayout",
+				"isDefault": true
+			},
+			{
+				"name": "PageLayout",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/PageLayout.tsx",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"openInstagramLink": [
+			{
+				"name": "openInstagramLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/utils/instagramLink.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"openInstagramUser": [
+			{
+				"name": "openInstagramUser",
+				"module": "@/utils/instagramLink",
+				"isDefault": false
+			},
+			{
+				"name": "openInstagramUser",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/utils/instagramLink.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"openInstagramPost": [
+			{
+				"name": "openInstagramPost",
+				"module": "@/utils/instagramLink",
+				"isDefault": false
+			},
+			{
+				"name": "openInstagramPost",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/utils/instagramLink.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"[getI18n": [
+			{
+				"name": "[getI18n",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/serverContexts/locale.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"[getLocale": [
+			{
+				"name": "[getLocale",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/serverContexts/locale.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"DEFAULT_LOCALE": [
+			{
+				"name": "DEFAULT_LOCALE",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/locales.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "DEFAULT_LOCALE",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"serverContext": [
+			{
+				"name": "serverContext",
+				"module": "server-only-context",
+				"isDefault": true
+			}
+		],
+		"dynamic": [
+			{
+				"name": "dynamic",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/admin/[[...tool]]/page.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"StudioPage": [
+			{
+				"name": "StudioPage",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/admin/[[...tool]]/page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"NextStudio": [
+			{
+				"name": "NextStudio",
+				"module": "next-sanity/studio",
+				"isDefault": false
+			}
+		],
+		"metadata": [
+			{
+				"name": "metadata",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/admin/[[...tool]]/layout.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"RootLayout": [
+			{
+				"name": "RootLayout",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/admin/[[...tool]]/layout.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"getLatestToc": [
+			{
+				"name": "getLatestToc",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/repo/toc.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getLatestToc",
+				"module": "@/sanity/lib/repo/toc",
+				"isDefault": false
+			}
+		],
+		"getLatestPrivacy": [
+			{
+				"name": "getLatestPrivacy",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/repo/privacy.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getLatestPrivacy",
+				"module": "@/sanity/lib/repo/privacy",
+				"isDefault": false
+			}
+		],
+		"BlogPostCard": [
+			{
+				"name": "BlogPostCard",
+				"module": "@/types/post",
+				"isDefault": false
+			},
+			{
+				"name": "BlogPostCard",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/types/post.ts",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"ActionButtonGroupProps": [
+			{
+				"name": "ActionButtonGroupProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/blog/ActionButtonGroup.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"INSTAGRAM_SOUSCHEF_HANDLE": [
+			{
+				"name": "INSTAGRAM_SOUSCHEF_HANDLE",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/instagram.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "INSTAGRAM_SOUSCHEF_HANDLE",
+				"module": "@/constants/instagram",
+				"isDefault": false
+			}
+		],
+		"FC": [
+			{
+				"name": "FC",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"GoComment": [
+			{
+				"name": "GoComment",
+				"module": "react-icons/go",
+				"isDefault": false
+			}
+		],
+		"GoHeart": [
+			{
+				"name": "GoHeart",
+				"module": "react-icons/go",
+				"isDefault": false
+			}
+		],
+		"PiInstagramLogoFill": [
+			{
+				"name": "PiInstagramLogoFill",
+				"module": "react-icons/pi",
+				"isDefault": false
+			}
+		],
+		"SpinnerProps": [
+			{
+				"name": "SpinnerProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/Spinner.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"Spinner": [
+			{
+				"name": "Spinner",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/Spinner.tsx",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"AppDownloadButtons": [
+			{
+				"name": "AppDownloadButtons",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/AppDownloadButtons.tsx",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"androidDownloadLink": [
+			{
+				"name": "androidDownloadLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/appDownload.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "androidDownloadLink",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"iosDownloadLink": [
+			{
+				"name": "iosDownloadLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/appDownload.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "iosDownloadLink",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"Link": [
+			{
+				"name": "Link",
+				"module": "next/link",
+				"isDefault": true
+			}
+		],
+		"Modal": [
+			{
+				"name": "Modal",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/Modal.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"AnimatePresence": [
+			{
+				"name": "AnimatePresence",
+				"module": "framer-motion",
+				"isDefault": false
+			}
+		],
+		"motion": [
+			{
+				"name": "motion",
+				"module": "framer-motion",
+				"isDefault": false
+			}
+		],
+		"MouseEventHandler": [
+			{
+				"name": "MouseEventHandler",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"useEffect": [
+			{
+				"name": "useEffect",
+				"module": "react",
+				"isDefault": true
+			}
+		],
+		"useState": [
+			{
+				"name": "useState",
+				"module": "react",
+				"isDefault": true
+			}
+		],
+		"createPortal": [
+			{
+				"name": "createPortal",
+				"module": "react-dom",
+				"isDefault": false
+			}
+		],
+		"FiX": [
+			{
+				"name": "FiX",
+				"module": "react-icons/fi",
+				"isDefault": false
+			}
+		],
+		"BlogGridProps": [
+			{
+				"name": "BlogGridProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/BlogGrid.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"getI18n": [
+			{
+				"name": "getI18n",
+				"module": "@/serverContexts",
+				"isDefault": false
+			}
+		],
+		"AppDowloadQRProps": [
+			{
+				"name": "AppDowloadQRProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/AppDownloadQR.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"AppDowloadQR": [
+			{
+				"name": "AppDowloadQR",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/shared/AppDownloadQR.tsx",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"onelinkLink": [
+			{
+				"name": "onelinkLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/appDownload.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "onelinkLink",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"useQRCode": [
+			{
+				"name": "useQRCode",
+				"module": "next-qrcode",
+				"isDefault": false
+			}
+		],
+		"emailLink": [
+			{
+				"name": "emailLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/socials.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "emailLink",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"instagramProfileLink": [
+			{
+				"name": "instagramProfileLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/socials.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "instagramProfileLink",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"ImportRecipeForm": [
+			{
+				"name": "ImportRecipeForm",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/ImportRecipeForm.tsx",
+				"isDefault": true
+			}
+		],
+		"useTranslation": [
+			{
+				"name": "useTranslation",
+				"module": "react-i18next",
+				"isDefault": false
+			}
+		],
+		"PageLayoutProps": [
+			{
+				"name": "PageLayoutProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/PageLayout.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"MobileNavMenu": [
+			{
+				"name": "MobileNavMenu",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/layout/MobileNavMenu.tsx",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"FiMenu": [
+			{
+				"name": "FiMenu",
+				"module": "react-icons/fi",
+				"isDefault": false
+			}
+		],
+		"useRouter": [
+			{
+				"name": "useRouter",
+				"module": "next/navigation",
+				"isDefault": false
+			}
+		],
+		"I18nextProvider": [
+			{
+				"name": "I18nextProvider",
+				"module": "react-i18next",
+				"isDefault": false
+			}
+		],
+		"Resource": [
+			{
+				"name": "Resource",
+				"module": "i18next",
+				"isDefault": false
+			}
+		],
+		"LanguageChanger": [
+			{
+				"name": "LanguageChanger",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/locale/LanguageChanger.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"LOCALE_MAPPING": [
+			{
+				"name": "LOCALE_MAPPING",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/locales.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "LOCALE_MAPPING",
+				"module": "@/constants",
+				"isDefault": false
+			}
+		],
+		"usePathname": [
+			{
+				"name": "usePathname",
+				"module": "next/navigation",
+				"isDefault": false
+			}
+		],
+		"type { ResolvingMetadata": [
+			{
+				"name": "type { ResolvingMetadata",
+				"module": "next/dist/lib/metadata/types/metadata-interface.js",
+				"isDefault": true
+			}
+		],
+		"ResolvingViewport": [
+			{
+				"name": "ResolvingViewport",
+				"module": "next/dist/lib/metadata/types/metadata-interface.js",
+				"isDefault": true
+			}
+		],
+		"React": [
+			{
+				"name": "React",
+				"module": "react",
+				"isDefault": true
+			}
+		],
+		"{ useEffect": [
+			{
+				"name": "{ useEffect",
+				"module": "react",
+				"isDefault": true
+			}
+		],
+		"HiArrowLongDown": [
+			{
+				"name": "HiArrowLongDown",
+				"module": "react-icons/hi2",
+				"isDefault": false
+			}
+		],
+		"getLocale": [
+			{
+				"name": "getLocale",
+				"module": "@/serverContexts",
+				"isDefault": false
+			}
+		],
+		"Marquee": [
+			{
+				"name": "Marquee",
+				"module": "react-fast-marquee",
+				"isDefault": true
+			}
+		],
+		"SectionTitleProps": [
+			{
+				"name": "SectionTitleProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/SectionTitle.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"ImportAnimation": [
+			{
+				"name": "ImportAnimation",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/ImportAnimation.tsx",
+				"isDefault": true
+			}
+		],
+		"{ useState": [
+			{
+				"name": "{ useState",
+				"module": "react",
+				"isDefault": true
+			}
+		],
+		"Variants": [
+			{
+				"name": "Variants",
+				"module": "framer-motion",
+				"isDefault": false
+			}
+		],
+		"FeatureDescription": [
+			{
+				"name": "FeatureDescription",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/FeaturesSection.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"FeatureGraphic": [
+			{
+				"name": "FeatureGraphic",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/FeaturesSection.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"useCallback": [
+			{
+				"name": "useCallback",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"useMemo": [
+			{
+				"name": "useMemo",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"LiaFastForwardSolid": [
+			{
+				"name": "LiaFastForwardSolid",
+				"module": "react-icons/lia",
+				"isDefault": false
+			}
+		],
+		"LiaStepBackwardSolid": [
+			{
+				"name": "LiaStepBackwardSolid",
+				"module": "react-icons/lia",
+				"isDefault": false
+			}
+		],
+		"InstagramEmbedProps": [
+			{
+				"name": "InstagramEmbedProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/SocialSection.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"SocialSection": [
+			{
+				"name": "SocialSection",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/home/SocialSection.tsx",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"config": [
+			{
+				"name": "config",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/app/api/revalidate/route.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"isValidSignature": [
+			{
+				"name": "isValidSignature",
+				"module": "@sanity/webhook",
+				"isDefault": false
+			}
+		],
+		"SIGNATURE_HEADER_NAME": [
+			{
+				"name": "SIGNATURE_HEADER_NAME",
+				"module": "@sanity/webhook",
+				"isDefault": false
+			}
+		],
+		"revalidatePath": [
+			{
+				"name": "revalidatePath",
+				"module": "next/cache",
+				"isDefault": false
+			}
+		],
+		"NextRequest": [
+			{
+				"name": "NextRequest",
+				"module": "next/server",
+				"isDefault": false
+			}
+		],
+		"NextResponse": [
+			{
+				"name": "NextResponse",
+				"module": "next/server",
+				"isDefault": false
+			}
+		],
+		"tiktokProfileLink": [
+			{
+				"name": "tiktokProfileLink",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/socials.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"LOCALE_OPTIONS": [
+			{
+				"name": "LOCALE_OPTIONS",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/constants/locales.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"getFaqs": [
+			{
+				"name": "getFaqs",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/repo/faq.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "getFaqs",
+				"module": "@/sanity/lib/repo/faq",
+				"isDefault": false
+			}
+		],
+		"apiVersion": [
+			{
+				"name": "apiVersion",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/env.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"dataset": [
+			{
+				"name": "dataset",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/env.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"projectId": [
+			{
+				"name": "projectId",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/env.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"ConditionalWrap": [
+			{
+				"name": "ConditionalWrap",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/wrapper/ConditionalWrap.tsx",
+				"isDefault": true
+			}
+		],
+		"sanityClient": [
+			{
+				"name": "sanityClient",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/client.ts",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "sanityClient",
+				"module": "@/sanity/lib/client",
+				"isDefault": false
+			}
+		],
+		"defineQuery": [
+			{
+				"name": "defineQuery",
+				"module": "next-sanity",
+				"isDefault": false
+			}
+		],
+		"createClient": [
+			{
+				"name": "createClient",
+				"module": "next-sanity",
+				"isDefault": false
+			}
+		],
+		"InstagramPreview": [
+			{
+				"name": "InstagramPreview",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/previews/InstagramPost.tsx",
+				"type": "const",
+				"isDefault": false
+			},
+			{
+				"name": "InstagramPreview",
+				"module": "@/sanity/schemas/previews",
+				"isDefault": false
+			}
+		],
+		"PortableTextReactComponents": [
+			{
+				"name": "PortableTextReactComponents",
+				"module": "next-sanity",
+				"isDefault": false
+			}
+		],
+		"const": [
+			{
+				"name": "const",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/lib/live.ts",
+				"isDefault": false
+			}
+		],
+		"defineLive": [
+			{
+				"name": "defineLive",
+				"module": "next-sanity",
+				"isDefault": false
+			}
+		],
+		"createImageUrlBuilder": [
+			{
+				"name": "createImageUrlBuilder",
+				"module": "@sanity/image-url",
+				"isDefault": true
+			}
+		],
+		"SanityImageSource": [
+			{
+				"name": "SanityImageSource",
+				"module": "@sanity/image-url/lib/types/types",
+				"isDefault": false
+			}
+		],
+		"tocType": [
+			{
+				"name": "tocType",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/documents/tocType.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"defineField": [
+			{
+				"name": "defineField",
+				"module": "sanity",
+				"isDefault": false
+			}
+		],
+		"defineType": [
+			{
+				"name": "defineType",
+				"module": "sanity",
+				"isDefault": false
+			}
+		],
+		"blogpostType": [
+			{
+				"name": "blogpostType",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/documents/blogpostType.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"SlugValidationContext": [
+			{
+				"name": "SlugValidationContext",
+				"module": "sanity",
+				"isDefault": false
+			}
+		],
+		"privacyType": [
+			{
+				"name": "privacyType",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/documents/privacyType.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"faqType": [
+			{
+				"name": "faqType",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/documents/faqType.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"schema": [
+			{
+				"name": "schema",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/schema.ts",
+				"type": "const",
+				"isDefault": true
+			}
+		],
+		"InstagramEmbed": [
+			{
+				"name": "InstagramEmbed",
+				"module": "react-social-media-embed",
+				"isDefault": false
+			}
+		],
+		"instagramObject": [
+			{
+				"name": "instagramObject",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/sanity/schemas/objects/instagramPost.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"PrivacyPolicyContent": [
+			{
+				"name": "PrivacyPolicyContent",
+				"module": "@/components/privacy/PrivacyPolicyContent",
+				"isDefault": false
+			},
+			{
+				"name": "PrivacyPolicyContent",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/components/privacy/PrivacyPolicyContent.tsx",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"unstable_cacheLife": [
+			{
+				"name": "unstable_cacheLife",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/.next/types/cache-life.d.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"PageProps": [
+			{
+				"name": "PageProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/.next/types/app/[locale]/toc/page.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"LayoutProps": [
+			{
+				"name": "LayoutProps",
+				"path": "/Users/arisashiraishi/Desktop/Souschef App/souschef-homepage/.next/types/app/[locale]/toc/page.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"type { NextRequest": [
+			{
+				"name": "type { NextRequest",
+				"module": "next/server.js",
+				"isDefault": true
+			}
+		]
+	}
+}
