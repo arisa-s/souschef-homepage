@@ -27,7 +27,7 @@ export default async function Home({ params }: HomeProps) {
         <SectionTitle>{t('featureSectionTitle')}</SectionTitle>
         <FeaturesSection />
         <BlogSection />
-        <SocialSection />
+        {/* <SocialSection /> */}
       </div>
       <DownloadAppModal />
     </div>
