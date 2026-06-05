@@ -18,9 +18,9 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode
-  params: Promise<{ locale: LocaleOptions }>
+  params: Promise<{ locale: string }>
 }>) {
-  const locale = (await params).locale
+  const locale = (await params).locale as LocaleOptions
   const { i18n, resources } = await initTranslations(locale, i18nNamespaces)
   setI18n(i18n)
   setLocale(locale)
@@ -49,9 +49,10 @@ export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: LocaleOptions }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const { t } = await initTranslations(locale, ['layout'])
+  const typedLocale = locale as LocaleOptions
+  const { t } = await initTranslations(typedLocale, ['layout'])
   return {
     title: t('layout:appName'),
     description: t('layout:appDescription'),
