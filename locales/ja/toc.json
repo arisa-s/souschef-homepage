@@ -1,1 +1,1033 @@
-{"pageTitle":"シェフノテ利用規約"}
+{
+  "pageTitle": "シェフノテ利用規約",
+  "lastUpdated": "2026-07-21",
+  "intro": [
+    "**Effective date: July 21, 2026**",
+    "These Terms of Service (“Terms”) govern your access to and use of Souschef, including the Souschef mobile applications, websites, shared recipe pages, help center, and related services collectively referred to as the “Services.”",
+    "The Services are operated by Nekonote LLC, a Delaware limited liability company (“Nekonote,” “Souschef,” “we,” “us,” or “our”).",
+    "Please read these Terms carefully. By downloading, accessing, or using the Services, creating an account, or purchasing a subscription, you agree to these Terms and our Privacy Policy.",
+    "If you do not agree, do not use the Services."
+  ],
+  "sections": [
+    {
+      "title": "1. Eligibility",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You must be at least 13 years old to use Souschef."
+        },
+        {
+          "type": "paragraph",
+          "text": "If the law where you live requires you to be older before you may enter into an online agreement or consent to the processing of personal information, you may use Souschef only with the permission of a parent or legal guardian."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you use Souschef on behalf of a company or other organization, you represent that you have authority to bind that organization to these Terms."
+        }
+      ]
+    },
+    {
+      "title": "2. What Souschef Provides",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef is a recipe organization and cooking tool. Depending on your device, location, plan, and the currently available features, Souschef may allow you to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Create and organize recipes",
+            "Import recipes from websites and third-party platforms",
+            "Import recipes from photographs, screenshots, or pasted text",
+            "Extract recipe information from captions, audio transcripts, and other available source material",
+            "Translate, tag, search, and organize recipes using artificial intelligence",
+            "Generate estimated nutrition information",
+            "Adjust serving sizes and convert measurements",
+            "Use cooking instructions, preparation checklists, and timers",
+            "Create pantry and shopping lists",
+            "Print recipes",
+            "Create links through which other people can view recipes",
+            "Use other cooking and recipe-management features"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Some features may be marked as beta, preview, experimental, or otherwise under development. These features may be less reliable and may change or be removed without notice."
+        }
+      ]
+    },
+    {
+      "title": "3. Accounts",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You may need a Souschef account to use certain features."
+        },
+        {
+          "type": "paragraph",
+          "text": "You agree to provide accurate information and keep your information current. You are responsible for maintaining the confidentiality and security of your account credentials and for activity conducted through your account."
+        },
+        {
+          "type": "paragraph",
+          "text": "You must notify us promptly at [support@nekonote.co](mailto:support@nekonote.co) if you believe your account has been accessed without authorization."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may not:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Share account credentials in a way that compromises account security",
+            "Create accounts through automated means",
+            "Impersonate another person or organization",
+            "Create an account for someone else without permission",
+            "Use multiple accounts to evade import limits, suspensions, or other restrictions"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may require you to verify your identity or account ownership before making certain account changes."
+        }
+      ]
+    },
+    {
+      "title": "4. License to Use Souschef",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Subject to these Terms, Nekonote grants you a limited, personal, revocable, non-exclusive, non-transferable, and non-sublicensable license to access and use the Services for lawful personal purposes."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may also use Souschef in connection with ordinary professional cooking, food-content creation, or other small-business activities, provided that you do not:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Resell, sublicense, rent, or commercially distribute the Services",
+            "Operate Souschef as a service bureau for third parties",
+            "Use automated systems to extract or reproduce substantial portions of the Services",
+            "Represent that Souschef or Nekonote sponsors or endorses your business",
+            "Violate these Terms or the rights of another person"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "No rights are granted except those expressly stated in these Terms."
+        }
+      ]
+    },
+    {
+      "title": "5. Your Recipes and Other Content",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“User Content” means recipes, photographs, screenshots, text, notes, tags, shopping lists, pantry information, prompts, translations, and other material you submit, create, save, import, or share through Souschef."
+        },
+        {
+          "type": "heading",
+          "text": "You retain your rights"
+        },
+        {
+          "type": "paragraph",
+          "text": "You retain any ownership rights you already have in your original User Content. Nekonote does not claim ownership of your original recipes, photographs, or other original material."
+        },
+        {
+          "type": "paragraph",
+          "text": "Importing or saving material created by someone else does not transfer ownership of that material to you. References in the Services or Help Center to recipes being “yours to keep” mean that saved recipes remain accessible in your account subject to these Terms; they do not transfer another person’s copyright or other intellectual-property rights to you."
+        },
+        {
+          "type": "heading",
+          "text": "License needed to operate the Services"
+        },
+        {
+          "type": "paragraph",
+          "text": "You grant Nekonote a non-exclusive, worldwide, royalty-free license to host, store, reproduce, format, process, translate, modify, transmit, and display your User Content only as reasonably necessary to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide the features you request",
+            "Synchronize content across your devices",
+            "Generate recipe information and AI-assisted results",
+            "Create recipe printouts or shared pages",
+            "Maintain, secure, troubleshoot, and operate the Services",
+            "Comply with law and enforce these Terms"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This license permits us to provide User Content to service providers that process it on our behalf."
+        },
+        {
+          "type": "paragraph",
+          "text": "This license ends when the relevant User Content is deleted from our active systems, except where limited retention is reasonably necessary for backups, security, legal compliance, dispute resolution, or other purposes described in our Privacy Policy."
+        },
+        {
+          "type": "paragraph",
+          "text": "We will not use your private recipes or photographs in public marketing materials without your permission."
+        },
+        {
+          "type": "heading",
+          "text": "Your responsibilities"
+        },
+        {
+          "type": "paragraph",
+          "text": "You represent that:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You have the rights or permission necessary to submit your User Content",
+            "Your User Content and use of it through Souschef do not violate applicable law",
+            "Your User Content does not infringe another person’s copyright, trademark, privacy, publicity, or other rights",
+            "Your User Content does not contain malicious software or harmful code"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Importing Third-Party Recipes and Content",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef can help you import or extract information from third-party websites, social media platforms, videos, photographs, cookbooks, recipe cards, and other sources."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are responsible for ensuring that your importing, storing, editing, printing, and sharing of third-party material is lawful and consistent with any applicable third-party terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "You should use imported material primarily for personal reference unless you have permission or another lawful basis to reproduce, publish, distribute, or commercially use it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Souschef may preserve or display source links and attribution information. You may not use Souschef to intentionally remove attribution, evade access restrictions, bypass paywalls, defeat technological protection measures, or systematically copy content from another service."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekonote is not affiliated with or endorsed by Instagram, TikTok, Facebook, YouTube, Pinterest, or other third-party platforms unless expressly stated."
+        },
+        {
+          "type": "paragraph",
+          "text": "Third-party platforms may change their websites, systems, access rules, or APIs at any time. As a result, an import feature may stop working temporarily or permanently. We do not guarantee that Souschef will always be able to access or import from a particular source."
+        }
+      ]
+    },
+    {
+      "title": "7. Shared Recipe Links",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef may allow you to create a link through which other people can view a recipe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anyone who receives or obtains a shared link may be able to access the information displayed on that page. Do not include confidential, sensitive, or private information in a recipe you intend to share."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are responsible for the recipes you choose to share and for ensuring that you have the right to share their contents."
+        },
+        {
+          "type": "paragraph",
+          "text": "People who receive a shared recipe may save, copy, photograph, print, or further distribute it outside Souschef. We cannot control copies made by other people after you share content."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may disable a shared link when:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You delete the relevant content or account",
+            "We receive a valid legal or intellectual-property complaint",
+            "The link creates a security or operational risk",
+            "The shared content violates these Terms"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Artificial Intelligence Features",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef uses artificial intelligence and automated systems for features such as:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Recipe extraction",
+            "Image and text scanning",
+            "Recipe translation",
+            "Suggested tags",
+            "Nutrition estimates",
+            "Recipe discovery and search",
+            "Ingredient and instruction formatting",
+            "Other recipe-related assistance"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your inputs may be transmitted to third-party AI providers as described in our Privacy Policy."
+        },
+        {
+          "type": "paragraph",
+          "text": "AI-generated or AI-assisted results may be incomplete, inaccurate, outdated, mistranslated, misleading, or unsuitable for your circumstances. Artificial intelligence may omit ingredients, misunderstand measurements, produce incorrect cooking times, or incorrectly identify dietary or allergen information."
+        },
+        {
+          "type": "paragraph",
+          "text": "You must review and verify all AI-assisted results before relying on them."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may edit AI-generated results before saving or using them. You are responsible for deciding whether a result is appropriate, accurate, and lawful to use."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not guarantee that AI-generated material is unique or that the same or similar material will not be generated for another user."
+        }
+      ]
+    },
+    {
+      "title": "9. Food Safety, Allergens, and Nutrition",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef is a recipe-management tool and is not a medical, nutritional, dietary, or food-safety service."
+        },
+        {
+          "type": "paragraph",
+          "text": "Recipes, imported instructions, AI-generated information, cooking times, temperatures, serving calculations, unit conversions, substitutions, and nutrition values may be inaccurate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nutrition information generated by Souschef is an estimate and may differ materially from the actual nutritional content of a meal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before preparing or consuming food, you are responsible for:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reviewing all ingredients and instructions",
+            "Checking for allergens and dietary restrictions",
+            "Confirming measurements and serving calculations",
+            "Following appropriate food-handling practices",
+            "Confirming safe internal cooking temperatures",
+            "Determining whether ingredients are safe for you and others",
+            "Seeking qualified medical or dietary advice when appropriate"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Do not rely on Souschef to identify allergens or determine whether a recipe is safe for someone with an allergy, intolerance, medical condition, pregnancy-related restriction, or special diet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Timers and notifications are provided as conveniences only. You remain responsible for monitoring food and cooking appliances."
+        }
+      ]
+    },
+    {
+      "title": "10. Free Plan",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef may offer a free plan supported in part by advertising and subject to usage limits."
+        },
+        {
+          "type": "paragraph",
+          "text": "The number of recipe imports, the method for calculating an import period, the features included, and other free-plan conditions are displayed in the app or Help Center."
+        },
+        {
+          "type": "paragraph",
+          "text": "A failed or unsupported import may be treated differently from a successful import, as explained in the current product documentation."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may reasonably modify free-plan limits, advertising, or available features. When a change materially reduces an existing feature, we will provide notice when reasonably practicable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Recipes already saved to your account will not ordinarily be removed merely because you reach an import limit."
+        }
+      ]
+    },
+    {
+      "title": "11. Souschef Plus and Subscriptions",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef Plus is an optional, automatically renewing subscription. The current benefits, subscription periods, prices, trial availability, and other purchase terms are shown before you complete a purchase."
+        },
+        {
+          "type": "paragraph",
+          "text": "Souschef Plus may include benefits such as:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Unlimited or increased recipe imports",
+            "Removal of advertising from the recipe-import experience",
+            "Other benefits identified at the time of purchase"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "An “ad-free import experience” applies to advertisements controlled by Souschef within the covered import flow. It does not necessarily remove third-party content, source branding, app-store messages, or material included in imported recipes."
+        },
+        {
+          "type": "heading",
+          "text": "Billing"
+        },
+        {
+          "type": "paragraph",
+          "text": "Subscriptions purchased through the Apple App Store are billed and managed by Apple. Subscriptions purchased through Google Play are billed and managed by Google."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prices may vary by country, currency, platform, taxes, and app-store pricing rules. The price displayed by the applicable app store at checkout is the price that applies to your purchase."
+        },
+        {
+          "type": "paragraph",
+          "text": "By purchasing an automatically renewing subscription, you authorize the applicable app store to charge the payment method associated with your account at the beginning of each billing period until you cancel."
+        },
+        {
+          "type": "heading",
+          "text": "Free trials"
+        },
+        {
+          "type": "paragraph",
+          "text": "When a free trial is offered, its duration and eligibility requirements will be shown before you subscribe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unless you cancel before the trial ends, the subscription will automatically convert to a paid subscription and the applicable app store will charge you the displayed price."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple or Google may restrict trial eligibility based on prior subscriptions or other platform rules."
+        },
+        {
+          "type": "heading",
+          "text": "Renewal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Subscriptions automatically renew for the same subscription period unless canceled before the renewal date, subject to the applicable app store’s terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "The app store may notify you of price changes and may require your consent where applicable."
+        },
+        {
+          "type": "heading",
+          "text": "Cancellation"
+        },
+        {
+          "type": "paragraph",
+          "text": "You may cancel Souschef Plus through the subscription settings of the Apple App Store or Google Play."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deleting Souschef, signing out, or deleting your Souschef account does not automatically cancel an active subscription."
+        },
+        {
+          "type": "paragraph",
+          "text": "After cancellation, you will generally retain Souschef Plus benefits until the end of the period for which you have already paid. Your account will then return to the free plan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unless otherwise stated, cancellation prevents future renewals and does not retroactively reverse a completed charge."
+        },
+        {
+          "type": "heading",
+          "text": "Refunds"
+        },
+        {
+          "type": "paragraph",
+          "text": "Refunds for subscriptions purchased through the Apple App Store or Google Play are governed by the applicable platform’s refund policies and applicable law."
+        },
+        {
+          "type": "paragraph",
+          "text": "Refund requests should normally be submitted to the platform through which the subscription was purchased. Apple or Google will determine eligibility under its policies."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nothing in these Terms limits any refund, cancellation, withdrawal, or other consumer right that cannot legally be limited."
+        }
+      ]
+    },
+    {
+      "title": "12. Advertising",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Users of the free plan may see advertisements, including advertisements during recipe imports."
+        },
+        {
+          "type": "paragraph",
+          "text": "Advertising may be delivered or measured by third-party advertising providers. Their collection and use of information are described in our Privacy Policy and may also be governed by their own terms and privacy policies."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may be presented with privacy choices relating to personalized advertising where required by law."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekonote does not endorse every product or service shown in an advertisement. Any interaction or transaction between you and an advertiser is between you and that advertiser."
+        }
+      ]
+    },
+    {
+      "title": "13. Acceptable Use",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You may not use the Services to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Violate any law or regulation",
+            "Infringe or misappropriate intellectual-property rights",
+            "Upload unlawful, fraudulent, defamatory, threatening, or abusive material",
+            "Upload malware, viruses, or harmful code",
+            "Interfere with the operation or security of the Services",
+            "Access another user’s account without authorization",
+            "Probe, scan, or test vulnerabilities without written permission",
+            "Reverse engineer the Services, except where applicable law expressly permits it",
+            "Circumvent usage limits, subscription controls, or security measures",
+            "Use bots, scrapers, or automated tools to access the Services without permission",
+            "Overload or disrupt our infrastructure",
+            "Use the Services to train or develop a competing model, application, or dataset through systematic extraction",
+            "Misrepresent AI-generated or imported content as your original work when doing so would be misleading or unlawful",
+            "Use the Services in a way that exposes Nekonote or another person to legal liability"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may investigate suspected misuse and may restrict or suspend access when reasonably necessary to protect users, third parties, or the Services."
+        }
+      ]
+    },
+    {
+      "title": "14. Souschef Intellectual Property",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Services—including the software, design, interfaces, branding, mascots, illustrations, logos, text, and technology created by Nekonote—are owned by Nekonote or its licensors and are protected by intellectual-property laws."
+        },
+        {
+          "type": "paragraph",
+          "text": "Except for the limited license granted in these Terms, you may not copy, modify, distribute, sell, lease, publicly display, create derivative works from, or exploit any part of the Services without written permission."
+        },
+        {
+          "type": "paragraph",
+          "text": "Third-party recipes, photographs, trademarks, videos, and other source material remain the property of their respective owners."
+        }
+      ]
+    },
+    {
+      "title": "15. Feedback",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You may voluntarily send us suggestions, ideas, feature requests, or other feedback."
+        },
+        {
+          "type": "paragraph",
+          "text": "You grant Nekonote a perpetual, worldwide, irrevocable, royalty-free right to use, modify, and incorporate that feedback into its products and services without compensation or obligation to you."
+        },
+        {
+          "type": "paragraph",
+          "text": "This section applies to feedback about Souschef, not to your private recipes or other User Content."
+        }
+      ]
+    },
+    {
+      "title": "16. Copyright and Other Rights Complaints",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We respect intellectual-property rights."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you believe content made available through Souschef infringes your rights, send a notice to [support@nekonote.co](mailto:support@nekonote.co) with:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your name and contact information",
+            "Identification of the protected work",
+            "Identification or location of the allegedly infringing content",
+            "An explanation of why you believe the use is unauthorized",
+            "A statement that your report is accurate and made in good faith",
+            "Your physical or electronic signature"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may remove or restrict access to disputed content while reviewing a complaint. We may also notify the affected user and permit them to respond."
+        },
+        {
+          "type": "paragraph",
+          "text": "Knowingly submitting a false or misleading complaint may have legal consequences."
+        }
+      ]
+    },
+    {
+      "title": "17. Privacy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Our Privacy Policy explains how we collect, use, retain, and share information."
+        },
+        {
+          "type": "paragraph",
+          "text": "By using Souschef, you acknowledge that your information will be handled as described in the Privacy Policy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Privacy Policy is incorporated into these Terms by reference."
+        }
+      ]
+    },
+    {
+      "title": "18. Third-Party Services",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef relies on third-party services, which may include app stores, cloud hosting providers, authentication providers, artificial-intelligence providers, email providers, advertising providers, analytics providers, and services from which recipes are imported."
+        },
+        {
+          "type": "paragraph",
+          "text": "Third-party services may be governed by separate terms and privacy policies. You are responsible for complying with applicable third-party terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not control and are not responsible for the independent conduct, content, security, availability, or policies of third-party services."
+        }
+      ]
+    },
+    {
+      "title": "19. Service Availability and Changes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We work to keep Souschef available, but we do not guarantee uninterrupted or error-free operation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Services may be unavailable because of:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Maintenance",
+            "Software defects",
+            "Internet or hosting failures",
+            "Third-party platform changes",
+            "Security incidents",
+            "Legal or regulatory requirements",
+            "Events beyond our reasonable control"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may add, modify, limit, suspend, or discontinue a feature or part of the Services."
+        },
+        {
+          "type": "paragraph",
+          "text": "When reasonably practicable, we will provide advance notice before discontinuing a material paid feature. We may make immediate changes when necessary for security, legal compliance, technical integrity, or protection of users."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are responsible for maintaining copies of recipes or other content that you cannot afford to lose. Souschef should not be treated as the only permanent copy of important material."
+        }
+      ]
+    },
+    {
+      "title": "20. Suspension and Termination",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You may stop using Souschef at any time."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may delete your account through the app or by contacting support, subject to the account-deletion process described in our Privacy Policy and Help Center."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may suspend, restrict, or terminate your access if:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You materially or repeatedly violate these Terms",
+            "Your use creates a security, legal, or operational risk",
+            "We reasonably suspect fraud or unauthorized activity",
+            "Payment for a paid service is reversed or cannot be verified",
+            "We are required to do so by law",
+            "We discontinue the Services"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "When appropriate, we will provide notice and an opportunity to correct the issue before termination. We may act immediately in urgent or serious circumstances."
+        },
+        {
+          "type": "paragraph",
+          "text": "Termination does not cancel an App Store or Google Play subscription. You must separately cancel an active subscription through the applicable platform."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sections that by their nature should survive termination—including intellectual property, disclaimers, limitations of liability, dispute provisions, and payment obligations—will survive."
+        }
+      ]
+    },
+    {
+      "title": "21. Disclaimers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To the maximum extent permitted by law, the Services are provided “as is” and “as available.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekonote disclaims all warranties not expressly stated in these Terms, including implied warranties of merchantability, fitness for a particular purpose, title, non-infringement, accuracy, quiet enjoyment, and availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not warrant that:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The Services will always be available, secure, or error-free",
+            "Imported or generated recipes will be accurate or complete",
+            "Nutrition, allergen, measurement, timing, or food-safety information will be correct",
+            "Every third-party recipe or platform will remain supported",
+            "AI-generated results will be accurate, unique, or suitable for your needs",
+            "Stored content will never be lost or corrupted",
+            "Defects will always be corrected"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Some jurisdictions do not permit certain warranty exclusions. In those jurisdictions, these exclusions apply only to the extent permitted by law."
+        }
+      ]
+    },
+    {
+      "title": "22. Limitation of Liability",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To the maximum extent permitted by law, Nekonote and its owners, officers, employees, contractors, affiliates, and service providers will not be liable for indirect, incidental, special, exemplary, consequential, or punitive damages, or for loss of profits, revenue, data, goodwill, business opportunities, or use."
+        },
+        {
+          "type": "paragraph",
+          "text": "This limitation includes losses arising from:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reliance on recipes or AI-generated information",
+            "Allergic reactions, dietary issues, foodborne illness, burns, fires, or other cooking-related injury",
+            "Incorrect measurements, temperatures, timers, translations, or nutrition information",
+            "Loss or corruption of recipes or account information",
+            "Third-party content, services, advertising, or platforms",
+            "Unauthorized account access",
+            "Service interruptions or discontinued features"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "To the maximum extent permitted by law, Nekonote’s total aggregate liability for all claims relating to the Services will not exceed the greater of:"
+        },
+        {
+          "type": "orderedList",
+          "items": [
+            "The amount you paid to Nekonote through the applicable app store for Souschef during the 12 months before the event giving rise to the claim; or",
+            "US $100."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "These limitations apply regardless of the legal theory and even if a remedy fails of its essential purpose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nothing in these Terms excludes or limits liability that cannot lawfully be excluded, including liability for fraud, fraudulent misrepresentation, willful misconduct, or death or personal injury caused by negligence where such exclusion is prohibited."
+        }
+      ]
+    },
+    {
+      "title": "23. Indemnification",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To the extent permitted by law, you agree to defend, indemnify, and hold harmless Nekonote and its owners, officers, employees, contractors, and affiliates from third-party claims, damages, liabilities, and reasonable legal expenses arising from:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "User Content you submit or share",
+            "Your unlawful use of the Services",
+            "Your material violation of these Terms",
+            "Your infringement of another person’s rights"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This obligation does not apply to the extent a claim results from Nekonote’s own unlawful conduct, negligence, or breach of these Terms."
+        }
+      ]
+    },
+    {
+      "title": "24. Informal Dispute Resolution",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Before filing a legal claim, you and Nekonote agree to try in good faith to resolve the dispute informally."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may send a written description of the dispute and the resolution you are requesting to [support@nekonote.co](mailto:support@nekonote.co)."
+        },
+        {
+          "type": "paragraph",
+          "text": "We will attempt to resolve the dispute within 30 days after receiving sufficient information."
+        },
+        {
+          "type": "paragraph",
+          "text": "This requirement does not prevent either party from:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Bringing an eligible claim in small-claims court",
+            "Seeking urgent injunctive or equitable relief",
+            "Reporting a matter to a regulator or law-enforcement authority",
+            "Exercising a right that cannot legally be restricted"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "25. Governing Law and Courts",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "These Terms and disputes arising from them are governed by the laws of the State of Delaware, without regard to conflict-of-law principles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Subject to the consumer-rights section below, any legal proceeding that is not eligible for small-claims court must be brought in a state or federal court located in Delaware, and you and Nekonote consent to the jurisdiction of those courts."
+        },
+        {
+          "type": "paragraph",
+          "text": "These Terms do not require binding arbitration."
+        }
+      ]
+    },
+    {
+      "title": "26. Consumer Rights",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nothing in these Terms limits rights you have under mandatory consumer-protection laws."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you live in the European Economic Area, United Kingdom, Switzerland, New Zealand, Australia, Japan, or another jurisdiction with mandatory consumer protections, you may be entitled to bring a claim in your local courts and rely on the mandatory laws of your country or region."
+        },
+        {
+          "type": "paragraph",
+          "text": "Any governing-law, warranty, refund, venue, indemnity, or liability provision in these Terms applies only to the extent permitted by the law that applies to you."
+        }
+      ]
+    },
+    {
+      "title": "27. Changes to These Terms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may update these Terms to reflect changes to the Services, our business, platform requirements, or applicable law."
+        },
+        {
+          "type": "paragraph",
+          "text": "For material changes, we will provide reasonable notice through the app, website, email, or another appropriate method before the updated Terms take effect, when required or reasonably practicable."
+        },
+        {
+          "type": "paragraph",
+          "text": "The notice will identify the effective date of the updated Terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your continued use of the Services after the updated Terms take effect constitutes acceptance of the updated Terms. If you do not agree to an update, you must stop using the Services and may delete your account."
+        },
+        {
+          "type": "paragraph",
+          "text": "Changes will not retroactively reduce rights you have already accrued unless permitted by law."
+        }
+      ]
+    },
+    {
+      "title": "28. Apple App Store Terms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The following terms apply when you download or use Souschef through Apple’s App Store:"
+        },
+        {
+          "type": "orderedList",
+          "items": [
+            "These Terms are between you and Nekonote, not Apple. Nekonote, not Apple, is responsible for Souschef and its content.",
+            "Your license is limited to a non-transferable license to use Souschef on Apple-branded products that you own or control, as permitted by Apple’s usage rules, including applicable Family Sharing or volume-purchasing rules.",
+            "Nekonote is responsible for maintenance and support for Souschef. Apple has no obligation to provide maintenance or support.",
+            "To the extent any warranty applies and Souschef fails to conform to it, you may notify Apple, and Apple may refund any applicable purchase price for the application. To the maximum extent permitted by law, Apple has no other warranty obligation relating to Souschef.",
+            "Nekonote, not Apple, is responsible for addressing claims relating to Souschef, including product-liability, legal-compliance, consumer-protection, and privacy claims.",
+            "If a third party claims that Souschef infringes its intellectual-property rights, Nekonote, not Apple, is responsible for investigating, defending, settling, and resolving that claim.",
+            "You represent that you are not located in a country or region subject to a United States government embargo or designated as supporting terrorism, and that you are not listed on a United States government prohibited or restricted-party list.",
+            "You must comply with applicable third-party terms when using Souschef, including your wireless-data agreement and Apple’s terms.",
+            "Apple and its subsidiaries are third-party beneficiaries of these Terms. Upon your acceptance, Apple has the right to enforce these Terms against you as a third-party beneficiary."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "29. Google Play Terms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The following terms apply when you download or use Souschef through Google Play:"
+        },
+        {
+          "type": "orderedList",
+          "items": [
+            "These Terms are between you and Nekonote, not Google.",
+            "Google is not responsible for Souschef, its content, maintenance, support, warranties, or claims relating to Souschef.",
+            "Your use of Souschef must comply with the Google Play Terms of Service and other applicable Google terms.",
+            "If these Terms conflict with mandatory Google Play terms governing your acquisition or use of Souschef, the applicable Google Play terms will control to the extent of the conflict."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "30. Electronic Communications",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You consent to receive agreements, notices, receipts, transactional messages, and other communications electronically."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may communicate with you through the app, by email, or by posting information on our website."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may unsubscribe from optional marketing messages, but you may still receive essential account, security, legal, and subscription-related communications."
+        }
+      ]
+    },
+    {
+      "title": "31. General Terms",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Entire agreement"
+        },
+        {
+          "type": "paragraph",
+          "text": "These Terms and the Privacy Policy constitute the agreement between you and Nekonote concerning the Services, except where additional terms are presented for a specific feature."
+        },
+        {
+          "type": "heading",
+          "text": "Severability"
+        },
+        {
+          "type": "paragraph",
+          "text": "If any provision is found unenforceable, it will be enforced to the maximum extent permitted, and the remaining provisions will remain effective."
+        },
+        {
+          "type": "heading",
+          "text": "No waiver"
+        },
+        {
+          "type": "paragraph",
+          "text": "A failure to enforce a provision is not a waiver of the right to enforce it later."
+        },
+        {
+          "type": "heading",
+          "text": "Assignment"
+        },
+        {
+          "type": "paragraph",
+          "text": "You may not assign these Terms without our written permission."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekonote may assign these Terms in connection with a merger, acquisition, reorganization, financing, sale of assets, or transfer of the Services, subject to applicable law."
+        },
+        {
+          "type": "heading",
+          "text": "No agency"
+        },
+        {
+          "type": "paragraph",
+          "text": "These Terms do not create an employment, partnership, joint-venture, franchise, or agency relationship between you and Nekonote."
+        },
+        {
+          "type": "heading",
+          "text": "Headings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Section headings are included for convenience and do not affect interpretation."
+        },
+        {
+          "type": "heading",
+          "text": "Language"
+        },
+        {
+          "type": "paragraph",
+          "text": "Translations of these Terms may be provided for convenience. Unless prohibited by applicable law, the English version controls if there is a conflict between translations."
+        },
+        {
+          "type": "heading",
+          "text": "No general third-party beneficiaries"
+        },
+        {
+          "type": "paragraph",
+          "text": "Except for Apple and its subsidiaries as stated above, these Terms do not create rights for third parties."
+        }
+      ]
+    },
+    {
+      "title": "32. Contact Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Questions, complaints, legal notices, or claims concerning Souschef may be directed to:"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nekonote LLC**"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Email:** [support@nekonote.co](mailto:support@nekonote.co)"
+        }
+      ]
+    }
+  ]
+}

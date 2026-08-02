@@ -27,6 +27,14 @@ export const MobileNavMenu = ({}) => {
           className="absolute left-0 right-0 top-12 z-20 h-screen w-full flex-col items-center bg-surface-primary p-6"
         >
           <div className="divide-y" onClick={() => setIsOpen(false)}>
+            <MenuItem
+              href="https://nekonote-llc.mintlify.app/getting-started/what-is-souschef"
+              label={t('layout:gettingStarted')}
+            />
+            <MenuItem
+              href="https://nekonote-llc.mintlify.app/importing/supported-sources"
+              label={t('layout:importingGuide')}
+            />
             <MenuItem href="/blog" label={t('layout:blog')} />
             <MenuItem href={onelinkLink} label={t('home:downloadNow')} />
             <MenuItem href={emailLink} label="Email" />

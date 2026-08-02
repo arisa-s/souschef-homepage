@@ -3,7 +3,13 @@ import { dir } from 'i18next'
 import i18nConfig from '@/i18nConfig'
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
-import { basisGrotesque, brand, notoSanJapanese, recoleta, zenOldMincho } from '@/lib/fonts'
+import {
+  basisGrotesque,
+  brand,
+  notoSanJapanese,
+  recoleta,
+  zenOldMincho,
+} from '@/lib/fonts'
 
 import '../globals.css'
 import { setI18n, setLocale } from '@/serverContexts'
@@ -21,23 +27,36 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }>) {
   const locale = (await params).locale as LocaleOptions
-  const { i18n, resources } = await initTranslations(locale, i18nNamespaces)
+  const { i18n, resources } = await initTranslations(
+    locale,
+    i18nNamespaces,
+  )
+
   setI18n(i18n)
   setLocale(locale)
 
   return (
     <html lang={locale} dir={dir(locale)}>
-      <TranslationsProvider namespaces={i18nNamespaces} locale={locale} resources={resources}>
+      <TranslationsProvider
+        namespaces={i18nNamespaces}
+        locale={locale}
+        resources={resources}
+      >
         <body
-          className={`${
-            locale == 'ja'
+          className={`flex min-h-dvh flex-col overflow-x-clip ${
+            locale === 'ja'
               ? `${zenOldMincho.variable} ${notoSanJapanese.variable}`
               : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
           } ${brand.variable}`}
         >
-          <div id="modal-root"></div>
+          <div id="modal-root" />
+
           <Navbar />
-          {children}
+
+          <main className="flex min-h-0 w-full flex-1 flex-col">
+            {children}
+          </main>
+
           <Footer />
         </body>
       </TranslationsProvider>
@@ -49,10 +68,15 @@ export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
   const { locale } = await params
   const typedLocale = locale as LocaleOptions
   const { t } = await initTranslations(typedLocale, ['layout'])
+
   return {
     title: t('layout:appName'),
     description: t('layout:appDescription'),

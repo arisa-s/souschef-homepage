@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 export const AppDownloadButtons = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center space-y-2 text-lg sm:flex-row sm:space-x-12 sm:space-x-6 sm:space-y-0">
-      <Link href={iosDownloadLink} className="max-w-44" target="_blank">
+    <div className="flex w-full items-center justify-center lg:justify-start text-lg sm:flex-row space-x-5">
+      <Link href={iosDownloadLink} className="max-w-36" target="_blank">
         <Image
           src="/images/app-store-download-light.png"
           alt="adjustIngredients"
@@ -13,7 +13,7 @@ export const AppDownloadButtons = () => {
           height={500}
         />
       </Link>
-      <Link href={androidDownloadLink} className="max-w-44" target="_blank">
+      <Link href={androidDownloadLink} className="max-w-36" target="_blank">
         <Image
           src="/images/google-play-download-light.png"
           alt="adjustIngredients"

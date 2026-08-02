@@ -2,15 +2,19 @@ import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
 import { setI18n } from '@/serverContexts'
 import i18nConfig from '@/i18nConfig'
-import PageLayout from '@/components/layout/PageLayout'
+import LegalPageLayout from '@/components/layout/LegalPageLayout'
 import { PrivacyPolicyContent } from '@/components/privacy/PrivacyPolicyContent'
 
 type PrivacyProps = { params: Promise<{ locale: LocaleOptions }> }
 
+type PrivacyBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'heading'; text: string }
+  | { type: 'list'; items: string[] }
+
 type PrivacySection = {
   title: string
-  paragraphs?: string[]
-  listItems?: string[]
+  blocks: PrivacyBlock[]
 }
 
 export async function generateStaticParams() {
@@ -23,25 +27,22 @@ export default async function Privacy({ params }: PrivacyProps) {
   const { i18n, t } = await initTranslations(locale, ['privacy'])
   setI18n(i18n)
 
+  const intro = t('intro', { returnObjects: true }) as string[]
   const sections = t('sections', { returnObjects: true }) as PrivacySection[]
   const lastUpdated = t('lastUpdated')
+  const lastUpdatedLabel = `${t('common:lastUpdatedAt')}${new Date(lastUpdated).toLocaleDateString(
+    locale,
+    {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }
+  )}`
 
   return (
-    <PageLayout title={t('pageTitle')}>
-      <div className="w-full">
-        <div className="container mx-auto flex min-h-screen max-w-4xl flex-col gap-4 p-6 sm:border-x sm:p-12">
-          <PrivacyPolicyContent intro={t('intro')} sections={sections} />
-          <p className="ml-auto text-text-secondary md:pt-6 md:text-xl">
-            {t('common:lastUpdatedAt')}{' '}
-            {new Date(lastUpdated).toLocaleDateString(locale, {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            })}
-          </p>
-        </div>
-      </div>
-    </PageLayout>
+    <LegalPageLayout title={t('pageTitle')} lastUpdated={lastUpdatedLabel}>
+      <PrivacyPolicyContent intro={intro} sections={sections} />
+    </LegalPageLayout>
   )
 }
 

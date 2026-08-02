@@ -2,12 +2,21 @@ import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
 import { setI18n } from '@/serverContexts'
 import i18nConfig from '@/i18nConfig'
-import { getLatestToc } from '@/sanity/lib/repo/toc'
-import { PortableText } from 'next-sanity'
-import PageLayout from '@/components/layout/PageLayout'
-import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
+import LegalPageLayout from '@/components/layout/LegalPageLayout'
+import { PrivacyPolicyContent } from '@/components/privacy/PrivacyPolicyContent'
 
 type TocProps = { params: Promise<{ locale: LocaleOptions }> }
+
+type TocBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'heading'; text: string }
+  | { type: 'list'; items: string[] }
+  | { type: 'orderedList'; items: string[] }
+
+type TocSection = {
+  title: string
+  blocks: TocBlock[]
+}
 
 export async function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }))
@@ -15,28 +24,26 @@ export async function generateStaticParams() {
 
 export default async function Toc({ params }: TocProps) {
   const { locale } = await params
-  const toc = await getLatestToc(locale)
 
   const { i18n, t } = await initTranslations(locale, ['toc'])
   setI18n(i18n)
 
-  if (!toc) {
-    // todo: redirect to error page
-    return null
-  }
+  const intro = t('intro', { returnObjects: true }) as string[]
+  const sections = t('sections', { returnObjects: true }) as TocSection[]
+  const lastUpdated = t('lastUpdated')
+  const lastUpdatedLabel = `${t('common:lastUpdatedAt')}${new Date(lastUpdated).toLocaleDateString(
+    locale,
+    {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }
+  )}`
+
   return (
-    <PageLayout title={t('pageTitle')}>
-      <div className="w-full">
-        <div className="container mx-auto flex min-h-screen max-w-4xl flex-col gap-4 p-6 sm:border-x sm:p-12">
-          {Array.isArray(toc.body) && (
-            <PortableText value={toc.body} components={SanityComponents} />
-          )}
-          <p className="ml-auto text-text-secondary md:pt-6 md:text-xl">
-            {t('common:lastUpdatedAt')} {new Date(toc._updatedAt).toDateString()}
-          </p>
-        </div>
-      </div>
-    </PageLayout>
+    <LegalPageLayout title={t('pageTitle')} lastUpdated={lastUpdatedLabel}>
+      <PrivacyPolicyContent intro={intro} sections={sections} />
+    </LegalPageLayout>
   )
 }
 

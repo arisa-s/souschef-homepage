@@ -3,48 +3,50 @@ import Link from 'next/link'
 import { getI18n } from '@/serverContexts'
 
 import LanguageChanger from '../locale/LanguageChanger'
-import AppDowloadQR from '../shared/AppDownloadQR'
 import MobileNavMenu from './MobileNavMenu'
-import ImportRecipeForm from './ImportRecipeForm'
+import SiteContainer from './SiteContainer'
+
+const GUIDE_LINK = 'https://nekonote-llc.mintlify.app/getting-started/what-is-souschef'
+const IMPORTING_GUIDE_LINK =
+  'https://nekonote-llc.mintlify.app/importing/supported-sources'
+
+const navLinkClassName =
+  'text-sm text-black/70 transition-colors hover:text-black hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
 
 export const Navbar: FC = async ({}) => {
   const { t } = getI18n()
 
   return (
-    <nav className="max-w-8xl mx-auto flex items-center justify-between border-b">
-      <div className="flex flex-grow divide-x">
-        <div className="flex flex-grow flex-col divide-y">
-          <div className="flex justify-between px-4 py-3 md:px-6">
-            <Link href="/">
-              <h1 className="font-accent text-xl font-bold md:text-3xl">{t('layout:appName')}</h1>
-            </Link>
-            <div className="hidden md:flex">
-              <LanguageChanger />
-            </div>
-            <div className="flex md:hidden">
-              <MobileNavMenu />
-            </div>
-          </div>
-          <div className="flex flex-grow divide-x">
-            <div className="ml-4">
-              <ImportRecipeForm />
-            </div>
-
-            <div className="ml-auto hidden divide-x md:flex">
-              <Link href="/blog" className="flex items-center px-4 hover:bg-surface-hover">
-                {t('layout:blog')}
-              </Link>
-
-              <Link href="/faq" className="flex items-center px-4 hover:bg-surface-hover">
-                {t('layout:faq')}
-              </Link>
-            </div>
-          </div>
+    <nav className="w-full">
+      <SiteContainer className="flex items-center justify-between py-4">
+        <Link href="/">
+          <h1 className="font-accent text-2xl font-bold md:text-3xl">
+            {t('layout:appName')}
+          </h1>
+        </Link>
+        <div className="hidden items-center gap-6 md:flex">
+          <Link
+            href={GUIDE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={navLinkClassName}
+          >
+            {t('layout:gettingStarted')}
+          </Link>
+          <Link
+            href={IMPORTING_GUIDE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={navLinkClassName}
+          >
+            {t('layout:importingGuide')}
+          </Link>
+          <LanguageChanger />
         </div>
-        <div className="hidden py-2 pl-2 pr-6 md:block">
-          <AppDowloadQR />
+        <div className="flex md:hidden">
+          <MobileNavMenu />
         </div>
-      </div>
+      </SiteContainer>
     </nav>
   )
 }

@@ -1,81 +1,529 @@
 {
   "pageTitle": "Privacy Policy for Souschef",
-  "lastUpdated": "2026-06-05",
-  "intro": "Welcome to Souschef, the AI-powered cooking assistant app (\"Souschef\", \"we\", \"us\", or \"our\"). Souschef is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application.",
+  "lastUpdated": "2026-07-21",
+  "intro": [
+    "This Privacy Policy explains how Nekonote LLC (“Nekonote,” “Souschef,” “we,” “us,” or “our”) collects, uses, stores, and shares information when you use the Souschef mobile application, website, shared recipe pages, help center, and related services collectively referred to as the “Services.”",
+    "Nekonote LLC is the operator of Souschef and is responsible for the processing of personal information described in this Privacy Policy."
+  ],
   "sections": [
     {
       "title": "1. Information We Collect",
-      "paragraphs": [
-        "We collect personal information that you voluntarily provide to us when you register and use our app. This information includes:"
-      ],
-      "listItems": ["First and Last Name", "Email Address"]
-    },
-    {
-      "title": "2. Purpose of Data Collection",
-      "paragraphs": [
-        "Your data is collected to enhance your experience with Souschef. We use this information to:"
-      ],
-      "listItems": [
-        "Personalize and improve the services offered by Souschef.",
-        "Enable user login and authentication.",
-        "Send optional email communications you choose to receive, as described in Section 3."
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The information we collect depends on how you use Souschef."
+        },
+        {
+          "type": "heading",
+          "text": "Account information"
+        },
+        {
+          "type": "paragraph",
+          "text": "When you create or manage a Souschef account, we may collect:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your first and last name",
+            "Your email address",
+            "Authentication information and account identifiers",
+            "Your language and communication preferences",
+            "The date your account was created and your latest account activity"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not directly collect or store your full payment card information."
+        },
+        {
+          "type": "heading",
+          "text": "Recipes and other content you provide"
+        },
+        {
+          "type": "paragraph",
+          "text": "Souschef stores content you create, upload, save, import, or generate through the Services. This may include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Recipe titles, ingredients, instructions, servings, notes, tags, and nutrition information",
+            "Recipe source links and information extracted from websites or social media posts",
+            "Captions, transcripts, and other publicly available source content used to import recipes",
+            "Photos, screenshots, cookbook pages, and printed recipe cards",
+            "Receipt photos and pantry or refrigerator photos",
+            "Pantry items and shopping-list items",
+            "AI Discovery prompts and search requests",
+            "Recipe translations, AI-generated tags, nutrition estimates, and other AI-generated results",
+            "Content you include in support requests or feedback"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Photos and receipts can unintentionally contain names, faces, addresses, loyalty numbers, partial payment details, or other personal information. Please crop or remove unrelated personal information before uploading an image to Souschef."
+        },
+        {
+          "type": "heading",
+          "text": "Information collected automatically"
+        },
+        {
+          "type": "paragraph",
+          "text": "When you use the Services, we and our service providers may automatically collect technical and usage information such as:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Device type and model",
+            "Operating system and app version",
+            "IP address",
+            "Language, country, and approximate general location inferred from an IP address",
+            "Device, installation, or advertising identifiers",
+            "App launch times, feature interactions, and timestamps",
+            "Crash reports, error logs, performance information, and other technical diagnostics",
+            "Advertising impressions, interactions, and clicks",
+            "Network and request information used to operate and secure the Services"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not request precise GPS location for Souschef’s core features. However, advertising providers may estimate a general location from an IP address."
+        },
+        {
+          "type": "heading",
+          "text": "Subscription and purchase information"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you subscribe to Souschef Plus, we may receive information from Apple, Google, and RevenueCat, including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An app or subscription user identifier",
+            "The product or subscription selected",
+            "Purchase, renewal, cancellation, expiration, and trial status",
+            "Transaction identifiers, receipts, or purchase tokens",
+            "The storefront, platform, and currency associated with the purchase",
+            "Limited device and technical information related to the transaction"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple and Google process your payment information under their own privacy policies. Souschef does not receive your full payment card number."
+        },
+        {
+          "type": "heading",
+          "text": "Communications"
+        },
+        {
+          "type": "paragraph",
+          "text": "When you contact us or choose to receive emails, we may collect:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your name and email address",
+            "The content of your message",
+            "Your survey and marketing preferences",
+            "Email delivery, bounce, unsubscribe, and complaint information",
+            "Email opening or link-interaction information, where this measurement is enabled"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Essential messages, such as password resets, account notices, security messages, and subscription-related communications, may still be sent when necessary."
+        },
+        {
+          "type": "heading",
+          "text": "Device permissions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Depending on the features you use, Souschef may request permission to access:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your camera, when you choose to photograph a recipe, receipt, pantry, or refrigerator",
+            "Selected photos from your photo library",
+            "Notifications, including timer or app notifications"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You can manage these permissions through your device settings."
+        }
       ]
     },
     {
-      "title": "3. Email Communications",
-      "paragraphs": [
-        "If you opt in during sign-up or later in the app under Email preferences, we may send you:",
-        "You can change these preferences at any time in the app or through unsubscribe links in our emails. Transactional emails such as account or security messages may still be sent when needed."
-      ],
-      "listItems": [
-        "Survey emails: occasional user research questions that help us improve Souschef.",
-        "Marketing emails: product news, announcements, and updates about the app."
+      "title": "2. How We Use Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use information to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Create, authenticate, and maintain your account",
+            "Store and synchronize your recipes across devices",
+            "Import recipes from websites, social media, photos, screenshots, and text",
+            "Extract and organize recipe ingredients and instructions",
+            "Provide AI tagging, translation, nutrition estimates, and recipe discovery",
+            "Maintain your pantry, shopping lists, timers, and cooking tools",
+            "Process and verify Souschef Plus subscriptions",
+            "Display and measure advertising in the free version of Souschef",
+            "Send transactional, survey, and marketing communications",
+            "Respond to support requests and feedback",
+            "Diagnose crashes and technical problems",
+            "Monitor performance and improve the Services",
+            "Detect fraud, abuse, security incidents, and violations of our terms",
+            "Comply with legal obligations and protect our legal rights"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may also create aggregated or de-identified information that cannot reasonably identify an individual and use it for analytics, research, and service improvement."
+        }
       ]
     },
     {
-      "title": "4. Data Storage and Security",
-      "paragraphs": [
-        "We store your data securely using Supabase, which provides robust security measures including:"
-      ],
-      "listItems": [
-        "Encryption of data at rest.",
-        "Compliance with SOC2 Type 2 standards.",
-        "Isolated storage on private servers, typically AWS EC2 instances.",
-        "Data may be stored on servers located in the United States or other countries."
+      "title": "3. Artificial Intelligence Processing",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef uses artificial intelligence to provide features such as recipe importing, photo scanning, AI tagging, recipe translation, nutrition estimates, and AI Discovery."
+        },
+        {
+          "type": "paragraph",
+          "text": "When you use one of these features, the content needed to complete your request may be sent to OpenRouter and to the AI model provider selected to process the request. Depending on the feature, this may include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Recipe text",
+            "Ingredients and instructions",
+            "Photos or screenshots",
+            "Receipt or pantry images",
+            "Source captions or transcripts",
+            "Search prompts",
+            "Pantry information included in a search",
+            "The language into which you request a translation"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not intentionally include your name or email address in an AI request unless you place that information inside the content you submit."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenRouter may route requests to different AI model providers. Retention and training practices can vary depending on the selected model, provider, and routing configuration. Providers may temporarily retain inputs and outputs for service operation, safety monitoring, abuse prevention, or legal compliance."
+        },
+        {
+          "type": "paragraph",
+          "text": "Do not submit confidential information, account passwords, financial information, medical records, or other highly sensitive personal information through Souschef’s AI features."
+        },
+        {
+          "type": "paragraph",
+          "text": "AI-generated results that you save, such as translated recipes, tags, and nutrition estimates, may remain in your Souschef account until you edit or delete them or delete your account."
+        }
       ]
     },
     {
-      "title": "5. Data Sharing and Disclosure",
-      "paragraphs": [
-        "We do not sell your personal data. We do not share your personal data with third parties except as needed to operate the app, deliver emails you have opted into, comply with law, or protect our rights."
+      "title": "4. Advertising",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Free users may see advertisements during the recipe-import process. Souschef Plus removes advertising from the import experience."
+        },
+        {
+          "type": "paragraph",
+          "text": "We use Google AdMob to deliver, limit, secure, and measure advertisements. Google AdMob may automatically process information such as:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "IP address and general location inferred from it",
+            "Device and advertising identifiers",
+            "App launches, taps, video views, and other interactions",
+            "Advertisements shown and interactions with those advertisements",
+            "Crash, performance, and diagnostic information",
+            "Information used to prevent advertising fraud and abuse"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Depending on your location, consent choices, device settings, and our advertising configuration, advertisements may be personalized or non-personalized."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may be able to manage advertising choices through a privacy-options message presented in the app and through the privacy and advertising settings on your device. Resetting or limiting your advertising identifier may affect ad personalization but may not prevent all advertising data processing."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not sell your recipes, photos, account information, or other user-created content to advertisers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some privacy laws define certain disclosures for personalized or cross-context behavioral advertising as a “sale,” “sharing,” or “targeted advertising,” even when no money is exchanged. Where those laws apply, you may have the right to opt out of that processing."
+        }
       ]
     },
     {
-      "title": "6. User Rights and Choices",
-      "paragraphs": [
-        "As a user of Souschef, you have the right to access, update, or delete your personal information. You can manage your data directly within the app or contact us for assistance.",
-        "You can also manage survey and marketing email preferences in the app at any time."
+      "title": "5. Service Providers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use third-party service providers to operate Souschef. These providers process information only for the relevant service or as otherwise described in their own terms and privacy documentation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Current providers include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Supabase:** Authentication, database services, and cloud file storage. Supabase may process account information, saved recipes, uploaded files, and other stored user content.",
+            "**Railway:** Backend application hosting and processing. Railway may process information transmitted through Souschef’s servers, as well as server logs and operational information.",
+            "**OpenRouter and downstream AI providers:** AI processing for recipe extraction, images, tagging, translation, nutrition, discovery, and related features.",
+            "**Sentry:** Crash reporting, performance monitoring, and technical diagnostics. We configure Sentry to receive technical diagnostic information rather than recipe or photo content.",
+            "**RevenueCat:** Subscription management and purchase verification. RevenueCat may receive app user identifiers, device information, purchase history, subscription status, Apple receipts, and Google purchase tokens.",
+            "**Resend:** Transactional, survey, and marketing email delivery. Resend may process names, email addresses, message content, communication preferences, and delivery information.",
+            "**Google AdMob:** Advertising delivery, measurement, analytics, and fraud prevention.",
+            "**Apple App Store and Google Play:** App distribution, payment processing, subscription management, and purchase records."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may replace or add providers as the Services evolve. Any provider is permitted to process information only for the purposes for which it was engaged, subject to applicable agreements and law."
+        }
       ]
     },
     {
-      "title": "7. Cookies and Tracking Technologies",
-      "paragraphs": ["Souschef does not use cookies or similar tracking technologies."]
-    },
-    {
-      "title": "8. Changes to This Privacy Policy",
-      "paragraphs": [
-        "We may update this Privacy Policy from time to time. Users will be notified of any significant changes as needed."
+      "title": "6. When We Share Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may disclose information:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "To service providers that help us operate Souschef",
+            "When you direct us to share information",
+            "When you create or share a recipe link",
+            "To comply with a legal requirement, court order, or lawful government request",
+            "To investigate fraud, security incidents, abuse, or violations of our terms",
+            "To protect the rights, property, and safety of Nekonote, our users, or others",
+            "In connection with a merger, financing, acquisition, reorganization, bankruptcy, or sale of some or all of our business",
+            "With your consent"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "When you create or send a shared recipe link, anyone who receives or accesses that link may be able to view the recipe information included on the shared page. Do not include private information in recipes you intend to share."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not sell personal information for monetary payment. As described above, advertising-related disclosures may nevertheless be legally considered “sharing,” “sale,” or “targeted advertising” in certain jurisdictions."
+        }
       ]
     },
     {
-      "title": "9. Contact Us",
-      "paragraphs": [
-        "If you have any questions or concerns about this Privacy Policy or your data privacy, please contact us at compliance@nekonote.co."
+      "title": "7. Legal Bases for Processing",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Where the European Economic Area, United Kingdom, or similar laws apply, we rely on the following legal bases:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Performance of a contract:** To create your account, store recipes, provide requested features, and manage subscriptions.",
+            "**Legitimate interests:** To secure, maintain, troubleshoot, and improve Souschef, prevent fraud, and understand service performance.",
+            "**Consent:** For optional marketing communications, device permissions, and personalized advertising where consent is required.",
+            "**Legal obligations:** To retain required business records, respond to lawful requests, and comply with applicable law."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You may withdraw consent at any time. Withdrawal does not affect processing that occurred before consent was withdrawn."
+        }
       ]
     },
     {
-      "title": "10. Compliance with Legal Standards",
-      "paragraphs": ["Souschef adheres to the General Data Protection Regulation (GDPR) standards."]
+      "title": "8. Data Retention",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We generally retain account information and saved user content for as long as your account remains active or as needed to provide the Services."
+        },
+        {
+          "type": "paragraph",
+          "text": "When you delete your account, we will begin deleting your account information and saved content from our active systems. Limited information may remain temporarily:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In encrypted backups until those backups are overwritten",
+            "In security, fraud-prevention, or diagnostic logs",
+            "Where required to comply with tax, accounting, legal, or regulatory obligations",
+            "Where necessary to establish, exercise, or defend legal claims",
+            "In systems operated independently by Apple, Google, or other third parties"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "AI providers, advertising providers, email providers, and other service providers may retain information according to their applicable retention practices."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deleting your Souschef account does not automatically cancel an App Store or Google Play subscription. You should cancel an active subscription through Apple or Google before deleting your account."
+        }
+      ]
+    },
+    {
+      "title": "9. Account Deletion",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You may delete your Souschef account through the account or settings section of the app."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may also request deletion by emailing [compliance@nekonote.co](mailto:compliance@nekonote.co) or [support@nekonote.co](mailto:support@nekonote.co) from the email address associated with your account."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may need to verify your identity before completing a privacy request. Certain information may be retained where permitted or required by law."
+        }
+      ]
+    },
+    {
+      "title": "10. Security",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use reasonable administrative, technical, and organizational measures intended to protect personal information. These measures may include encryption in transit, encryption at rest where supported, authentication controls, access restrictions, logging, and security monitoring."
+        },
+        {
+          "type": "paragraph",
+          "text": "No electronic transmission or storage system is completely secure. We therefore cannot guarantee that information will never be accessed, disclosed, altered, or lost without authorization."
+        }
+      ]
+    },
+    {
+      "title": "11. International Data Transfers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nekonote and its service providers may process information in the United States and other countries that may have different privacy laws from your country."
+        },
+        {
+          "type": "paragraph",
+          "text": "Where required, we use appropriate safeguards for international transfers, such as contractual data-protection terms or other legally recognized transfer mechanisms."
+        }
+      ]
+    },
+    {
+      "title": "12. Your Rights and Choices",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Depending on where you live, you may have the right to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Access personal information we hold about you",
+            "Correct inaccurate information",
+            "Request deletion of your information",
+            "Receive a portable copy of certain information",
+            "Restrict or object to certain processing",
+            "Withdraw consent",
+            "Opt out of marketing communications",
+            "Opt out of certain targeted advertising, sale, or sharing",
+            "Appeal a decision concerning a privacy request",
+            "Lodge a complaint with a privacy or data-protection authority",
+            "Exercise your rights without discriminatory treatment"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You can update certain information and delete your account inside the app. You can unsubscribe from optional emails through the email-preferences settings or the unsubscribe link in an email."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may submit other privacy requests to [compliance@nekonote.co](mailto:compliance@nekonote.co)."
+        }
+      ]
+    },
+    {
+      "title": "13. Children’s Privacy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef is not directed to children under 13, and we do not knowingly collect personal information from children under 13."
+        },
+        {
+          "type": "paragraph",
+          "text": "Where local law requires a higher minimum age to consent to online data processing, users below that age should use Souschef only with authorization from a parent or legal guardian."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you believe a child has provided personal information without appropriate authorization, contact us at [compliance@nekonote.co](mailto:compliance@nekonote.co) so we can investigate and delete the information where required."
+        }
+      ]
+    },
+    {
+      "title": "14. Third-Party Content and Services",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Souschef lets users import content from third-party websites and platforms. Those websites and platforms are governed by their own terms and privacy policies."
+        },
+        {
+          "type": "paragraph",
+          "text": "This Privacy Policy does not govern information collected directly by third parties when you visit their websites, use their apps, purchase through an app store, or interact with an advertisement."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are responsible for ensuring that you have the right to upload, import, store, or share content through Souschef."
+        }
+      ]
+    },
+    {
+      "title": "15. Changes to This Privacy Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may update this Privacy Policy as Souschef changes or as required by law."
+        },
+        {
+          "type": "paragraph",
+          "text": "When we make material changes, we may provide notice through the app, by email, or by updating the date at the top of this policy. Your continued use of the Services after an updated policy becomes effective is subject to the updated policy, to the extent permitted by law."
+        }
+      ]
+    },
+    {
+      "title": "16. Contact Us",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Questions, requests, or concerns about this Privacy Policy may be sent to:"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nekonote LLC**"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Email:** [compliance@nekonote.co](mailto:compliance@nekonote.co)"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Support:** [support@nekonote.co](mailto:support@nekonote.co)"
+        }
+      ]
     }
   ]
 }

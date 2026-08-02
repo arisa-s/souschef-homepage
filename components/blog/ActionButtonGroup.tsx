@@ -11,11 +11,11 @@ export interface ActionButtonGroupProps {
 
 export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId }) => {
   return (
-    <div className="mx-auto grid w-full max-w-3xl grid-cols-6 divide-x border-x border-t text-2xl">
+    <div className="mx-auto grid w-full max-w-3xl grid-cols-6  border-x border-t text-2xl">
       {instagramPostId ? (
         <>
           <button
-            className="col-span-1 place-items-center px-6 py-4 hover:opacity-80"
+            className="col-span-1 place-items-center px-6 py-4 hover:opacity-80 border-x "
             onClick={() => openInstagramPost(instagramPostId)}
           >
             <GoHeart />
@@ -36,7 +36,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = ({ instagramPostId 
       >
         <div className="flex space-x-4">
           <PiInstagramLogoFill />
-          <span className={`text-sm md:text-lg ${!instagramPostId && 'border-r'}`}>
+          <span className={`text-sm md:text-lg ${!instagramPostId && ''}`}>
             Follow us for updates!
           </span>
         </div>

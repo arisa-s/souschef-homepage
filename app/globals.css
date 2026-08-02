@@ -24,7 +24,7 @@
 
   /* Text colors */
   --text-primary: var(--neutral-900);
-  --text-secondary: var(--neutral-800);
+  --text-secondary: #555b54;
   --text-ternary: var(--neutral-500);
   --text-invert: var(--neutral-100);
   --text-error: #e02200;
@@ -64,7 +64,7 @@
 
     /* Text colors */
     --text-primary: var(--neutral-900);
-    --text-secondary: var(--neutral-800);
+    --text-secondary: #858d84;
     --text-ternary: var(--neutral-500);
     --text-invert: var(--neutral-100);
     --text-error: #ec6262;
@@ -87,6 +87,10 @@ body {
   background: var(--background);
   font-family: var(--font-base);
   border-color: var(--border-primary);
+}
+
+.legal-document > h2:first-child {
+  margin-top: 0;
 }
 
 input {
