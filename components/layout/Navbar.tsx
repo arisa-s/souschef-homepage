@@ -6,9 +6,9 @@ import LanguageChanger from '../locale/LanguageChanger'
 import MobileNavMenu from './MobileNavMenu'
 import SiteContainer from './SiteContainer'
 
-const GUIDE_LINK = 'https://nekonote-llc.mintlify.app/getting-started/what-is-souschef'
+const GUIDE_LINK = 'https://docs.trysouschef.com/getting-started/what-is-souschef'
 const IMPORTING_GUIDE_LINK =
-  'https://nekonote-llc.mintlify.app/importing/supported-sources'
+  'https://docs.trysouschef.com/importing/supported-sources'
 
 const navLinkClassName =
   'text-sm text-black/70 transition-colors hover:text-black hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'

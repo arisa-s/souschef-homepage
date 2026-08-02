@@ -28,11 +28,11 @@ export const MobileNavMenu = ({}) => {
         >
           <div className="divide-y" onClick={() => setIsOpen(false)}>
             <MenuItem
-              href="https://nekonote-llc.mintlify.app/getting-started/what-is-souschef"
+              href="https://docs.trysouschef.com/getting-started/what-is-souschef"
               label={t('layout:gettingStarted')}
             />
             <MenuItem
-              href="https://nekonote-llc.mintlify.app/importing/supported-sources"
+              href="https://docs.trysouschef.com/importing/supported-sources"
               label={t('layout:importingGuide')}
             />
             <MenuItem href="/blog" label={t('layout:blog')} />

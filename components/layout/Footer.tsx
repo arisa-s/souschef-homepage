@@ -5,7 +5,7 @@ import { FC } from 'react'
 import { FiInstagram, FiMail } from 'react-icons/fi'
 import SiteContainer from './SiteContainer'
 
-const PRICING_LINK = 'https://nekonote-llc.mintlify.app/billing/free-plan'
+const PRICING_LINK = 'https://docs.trysouschef.com/billing/free-plan'
 
 const linkClassName =
   'text-sm text-text-primary no-underline transition-colors hover:text-black hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
