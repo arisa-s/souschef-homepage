@@ -7,7 +7,16 @@ const nextConfig: NextConfig = {
                 hostname: 'cdn.sanity.io'
             }
         ]
-    }
+    },
+    async redirects() {
+        return [
+            {
+                source: '/support',
+                destination: 'https://docs.trysouschef.com/troubleshooting/contact-support',
+                permanent: true,
+            },
+        ]
+    },
 };
 
 export default nextConfig;
