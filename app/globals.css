@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light theme colors */
 :root {
   --background: #fcfdfc;
   --foreground: #141e12;
@@ -39,47 +38,6 @@
 
   /* Border colors */
   --border-primary: var(--neutral-600);
-}
-
-/* Dark theme colors */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #262925;
-    --foreground: #eceeec;
-    --brand-primary: #eeecee;
-    --brand-secondary: #d1d6d1;
-
-    /* Neutral colors */
-    --neutral-0: #151715;
-    --neutral-50: #1a1d19;
-    --neutral-100: #4c514b;
-    --neutral-200: #262925;
-    --neutral-300: #2b2f2a;
-    --neutral-400: #e0e4e0;
-    --neutral-500: #4c514b;
-    --neutral-600: #687366;
-    --neutral-700: #778175;
-    --neutral-800: #9aa299;
-    --neutral-900: #eceeec;
-
-    /* Text colors */
-    --text-primary: var(--neutral-900);
-    --text-secondary: #858d84;
-    --text-ternary: var(--neutral-500);
-    --text-invert: var(--neutral-100);
-    --text-error: #ec6262;
-
-    /* Surface colors */
-    --surface-primary: var(--neutral-200);
-    --surface-secondary: var(--neutral-100);
-    --surface-component: var(--brand-primary);
-    --surface-component-secondary: var(--neutral-500);
-    --surface-component-hover: var(--neutral-800);
-    --surface-hover: var(--neutral-300);
-
-    /* Border colors */
-    --border-primary: var(--neutral-600);
-  }
 }
 
 body {
