@@ -1,6 +1,7 @@
 import { LocaleOptions } from '@/constants'
 import BlogGrid from '@/components/shared/BlogGrid'
 import initTranslations from '@/lib/i18n'
+import { pageAlternates } from '@/lib/seo'
 import { setI18n } from '@/serverContexts'
 import { getPosts } from '@/sanity/lib/repo/post'
 import i18nConfig from '@/i18nConfig'
@@ -40,5 +41,6 @@ export async function generateMetadata({ params }: BlogProps) {
   return {
     title: t('blog:pageTitle'),
     description: t('blog:pageDescription'),
+    alternates: pageAlternates(locale, '/blog'),
   }
 }

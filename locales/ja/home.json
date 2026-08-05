@@ -3,7 +3,52 @@
   "downloadDisclaimer": "Souschef（シェフノテ）は無料でダウンロードして使えます。",
   "downloadDisclaimerSubscription": "すべての料理ツールは無料。無料アカウントでは週3回までレシピをインポートできます。",
   "heroAlt": "シェフノテアプリ — Instagram、TikTok、YouTube、Pinterestなどからレシピを保存",
-  "header": "Instagram、TikTok、YouTube、ウェブサイトからレシピを取り込み、整理・買い物・手順どおりの調理まで。",
+  "header": "Instagram、TikTok、YouTube、ChatGPT、Claude、ウェブサイトからレシピを取り込み、整理・買い物・手順どおりの調理まで。",
+  "importGuide": {
+    "description": "リンク、写真、貼り付けたテキスト、AIが作ったアイデアから始められます。Souschef（シェフノテ）が、編集・整理・買い物・調理に使いやすいレシピに整えます。",
+    "eyebrow": "インポート方法",
+    "guideLabel": "使い方:",
+    "options": {
+      "browse": {
+        "description": "レシピサイト、ブログ、SNS投稿のURLを貼り付けて取り込めます。",
+        "guide": "Browseを選ぶかURL欄にリンクを貼り付け、そのままインポートします。",
+        "title": "Browse"
+      },
+      "chatgpt": {
+        "description": "手元の食材に合わせたレシピや献立アイデアをChatGPTに作ってもらえます。",
+        "guide": "ChatGPTの回答をコピーし、Textインポートを開いて貼り付けると、整ったレシピとして保存できます。",
+        "title": "ChatGPT"
+      },
+      "claude": {
+        "description": "メモ、食事制限、余りものをClaudeに渡して、使いやすいレシピにできます。",
+        "guide": "Claudeが作ったレシピ本文をコピーし、SouschefのTextインポートに貼り付けて取り込みます。",
+        "title": "Claude"
+      },
+      "create": {
+        "description": "頭の中にあるレシピを、最初から自分で登録できます。",
+        "guide": "Createを選び、タイトル・材料・手順を入力します。あとからいつでも調整できます。",
+        "title": "Create"
+      },
+      "scan": {
+        "description": "料理本、手書きメモ、レシピカード、スクリーンショットから取り込めます。",
+        "guide": "Scanを選び、見やすい写真を撮るかアップロードして、抽出された内容を確認します。",
+        "title": "Scan"
+      },
+      "text": {
+        "description": "別アプリ、メモ、メッセージ、ドキュメントからコピーしたレシピ本文を貼り付けられます。",
+        "guide": "Textを選び、レシピ全文を貼り付けると、材料と手順をSouschefが整理します。",
+        "title": "Text"
+      }
+    },
+    "promptDescription": "AIアシスタントに具体的にお願いして、できたレシピをSouschefにコピー＆ペーストしましょう。",
+    "promptIdeas": {
+      "diet": "「ひよこ豆とほうれん草を使って、2人分の高たんぱくなベジタリアン夕食を作って。」",
+      "expiring": "「卵、トマト、にんじんがもうすぐ期限切れです。この3つを使い、追加の食材をできるだけ少なくした簡単レシピを作って。」",
+      "minimal": "「鶏もも肉、米、ブロッコリーを使って、追加食材5つ以内の平日向け夕食を考えて。」"
+    },
+    "promptTitle": "ChatGPTやClaudeに聞くこと",
+    "title": "どこからでもレシピを取り込めます"
+  },
   "qrCodeDownloadTitle": "アプリで調理を始めよう！",
   "recipeToTable": "保存したレシピを、<italic>ちゃんと</italic>作ろう。"
 }

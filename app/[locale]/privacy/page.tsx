@@ -1,5 +1,6 @@
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
+import { pageAlternates } from '@/lib/seo'
 import { setI18n } from '@/serverContexts'
 import i18nConfig from '@/i18nConfig'
 import LegalPageLayout from '@/components/layout/LegalPageLayout'
@@ -51,5 +52,6 @@ export async function generateMetadata({ params }: PrivacyProps) {
   const { t } = await initTranslations(locale, ['privacy', 'layout'])
   return {
     title: t('privacy:pageTitle'),
+    alternates: pageAlternates(locale, '/privacy'),
   }
 }

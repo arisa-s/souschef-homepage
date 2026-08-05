@@ -1,9 +1,54 @@
 {
-  "downloadNow": "Free Download",
+  "downloadNow": "Free",
   "downloadDisclaimer": "Souschef is free to download and use.",
   "downloadDisclaimerSubscription": "All cooking tools are free. Free accounts include 3 recipe imports per week.",
   "heroAlt": "Souschef app — save recipes from Instagram, TikTok, YouTube, Pinterest, and more",
-  "header": "Import recipes from Instagram, TikTok, YouTube, and websites—then organize, shop, and cook step by step.",
+  "header": "Import recipes from Instagram, TikTok, YouTube, ChatGPT, Claude, and websites—then organize, shop, and cook step by step.",
+  "importGuide": {
+    "description": "Start with a link, photo, pasted text, or an AI-generated idea. Souschef turns it into a clean recipe you can edit, organize, shop from, and cook.",
+    "eyebrow": "Import options",
+    "guideLabel": "Import guide:",
+    "options": {
+      "browse": {
+        "description": "Paste a recipe URL from a website, blog, or social post.",
+        "guide": "Choose Browse or paste the link in the URL field, then import it directly.",
+        "title": "Browse"
+      },
+      "chatgpt": {
+        "description": "Ask ChatGPT for a recipe, meal plan, or idea based on what you already have.",
+        "guide": "Copy ChatGPT's answer, open Text import, paste it in, and save the cleaned-up recipe.",
+        "title": "ChatGPT"
+      },
+      "claude": {
+        "description": "Use Claude to turn pantry notes, dietary needs, or leftovers into a usable recipe.",
+        "guide": "Copy Claude's recipe text, select Text import in Souschef, paste it, and import.",
+        "title": "Claude"
+      },
+      "create": {
+        "description": "Build a recipe from scratch when it lives mostly in your head.",
+        "guide": "Choose Create, add the title, ingredients, and steps, then adjust anytime.",
+        "title": "Create"
+      },
+      "scan": {
+        "description": "Import from cookbooks, handwritten notes, recipe cards, or screenshots.",
+        "guide": "Choose Scan, take or upload a clear photo, then review the extracted recipe.",
+        "title": "Scan"
+      },
+      "text": {
+        "description": "Paste recipe text copied from another app, note, message, or document.",
+        "guide": "Choose Text, paste the full recipe, and let Souschef structure the ingredients and steps.",
+        "title": "Text"
+      }
+    },
+    "promptDescription": "Ask your AI assistant for something specific, then copy and paste the recipe into Souschef.",
+    "promptIdeas": {
+      "diet": "\"Make a high-protein vegetarian dinner for two that uses chickpeas and spinach.\"",
+      "expiring": "\"I have eggs, tomatoes, and carrots expiring soon. Make a quick recipe using these and keep extra ingredients minimal.\"",
+      "minimal": "\"Create a weeknight dinner from chicken thighs, rice, and broccoli with no more than five additional ingredients.\""
+    },
+    "promptTitle": "What to ask ChatGPT or Claude",
+    "title": "Bring recipes in from anywhere"
+  },
   "qrCodeDownloadTitle": "Start cooking on the app!",
   "recipeToTable": "<italic>Actually</italic> cook the recipes you save."
 }

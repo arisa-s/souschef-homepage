@@ -3,6 +3,7 @@ import { dir } from 'i18next'
 import i18nConfig from '@/i18nConfig'
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
+import { SITE_URL } from '@/lib/site'
 import {
   basisGrotesque,
   brand,
@@ -78,15 +79,9 @@ export async function generateMetadata({
   const { t } = await initTranslations(typedLocale, ['layout'])
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: t('layout:appName'),
     description: t('layout:appDescription'),
-    alternates: {
-      canonical: 'https://www.trysouschef.com',
-      languages: {
-        en: 'https://www.trysouschef.com/en',
-        ja: 'https://www.trysouschef.com/ja',
-      },
-    },
     itunes: {
       appId: 6468939420,
     },

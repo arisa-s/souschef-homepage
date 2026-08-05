@@ -13,13 +13,13 @@ const faqsEn: FaqItem[] = [
     id: 'import-sources',
     question: 'Where can I import recipes from?',
     answer:
-      'Souschef can import recipes from Instagram, TikTok, YouTube, Facebook, Pinterest, recipe websites, photos, screenshots, and pasted text. You can even create your own recipes from scratch.',
+      'Souschef can import recipes from Instagram, TikTok, YouTube, Facebook, Pinterest, recipe websites, photos, screenshots, pasted text, ChatGPT, and Claude. Ask AI for a recipe, copy the result, and paste it into Text import.',
   },
   {
     id: 'save-recipe',
     question: 'How do I save a recipe to Souschef?',
     answer:
-      'Simply tap Share from Instagram, TikTok, YouTube, your browser, or another supported app and select Souschef. You can also paste a recipe link or text directly into the app, or scan a photo or screenshot.',
+      'Simply tap Share from Instagram, TikTok, YouTube, your browser, or another supported app and select Souschef. You can also paste a recipe link or text directly into the app, copy recipes from ChatGPT or Claude, or scan a photo or screenshot.',
   },
   {
     id: 'is-free',
@@ -73,13 +73,13 @@ const faqsJa: FaqItem[] = [
     id: 'import-sources',
     question: 'どこからレシピを取り込めますか？',
     answer:
-      'Souschef（シェフノテ）は、Instagram、TikTok、YouTube、Facebook、Pinterest、レシピサイト、写真、スクリーンショット、貼り付けたテキストからレシピを取り込めます。ゼロから自分でレシピを作成することもできます。',
+      'Souschef（シェフノテ）は、Instagram、TikTok、YouTube、Facebook、Pinterest、レシピサイト、写真、スクリーンショット、貼り付けたテキスト、ChatGPT、Claudeからレシピを取り込めます。AIにレシピを作ってもらい、その回答をコピーしてTextインポートに貼り付けられます。',
   },
   {
     id: 'save-recipe',
     question: 'レシピをSouschefに保存するにはどうすればよいですか？',
     answer:
-      'Instagram、TikTok、YouTube、ブラウザ、その他対応アプリから「共有」をタップし、Souschefを選択するだけです。アプリ内にレシピリンクやテキストを貼り付けたり、写真やスクリーンショットをスキャンしたりすることもできます。',
+      'Instagram、TikTok、YouTube、ブラウザ、その他対応アプリから「共有」をタップし、Souschefを選択するだけです。アプリ内にレシピリンクやテキストを貼り付けたり、ChatGPTやClaudeのレシピをコピーしたり、写真やスクリーンショットをスキャンしたりすることもできます。',
   },
   {
     id: 'is-free',

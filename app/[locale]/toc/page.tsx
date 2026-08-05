@@ -1,5 +1,6 @@
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
+import { pageAlternates } from '@/lib/seo'
 import { setI18n } from '@/serverContexts'
 import i18nConfig from '@/i18nConfig'
 import LegalPageLayout from '@/components/layout/LegalPageLayout'
@@ -52,5 +53,6 @@ export async function generateMetadata({ params }: TocProps) {
   const { t } = await initTranslations(locale, ['toc', 'layout'])
   return {
     title: t('toc:pageTitle'),
+    alternates: pageAlternates(locale, '/toc'),
   }
 }

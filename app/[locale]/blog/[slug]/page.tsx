@@ -3,6 +3,7 @@ import { LocaleOptions } from '@/constants'
 import { getPost, getPostSlugs } from '@/sanity/lib/repo/post'
 import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
 import initTranslations from '@/lib/i18n'
+import { pageAlternates } from '@/lib/seo'
 import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
 import BackButton from '@/components/layout/BackButton'
 import { HiArrowLongLeft } from 'react-icons/hi2'
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: BlogpostProps) {
     title: post.title,
     description: post.description,
     image: postImageUrl,
+    alternates: pageAlternates(locale, `/blog/${slug}`),
   }
 }
 
