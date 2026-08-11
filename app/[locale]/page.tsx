@@ -92,7 +92,7 @@ export default async function Home({ params }: HomeProps) {
         className="grid flex-1 grid-cols-1 items-center py-6 sm:py-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:py-0"
       >
         {/* Photo first below lg; photo left / copy right at lg+ */}
-        <div className="mx-auto w-full max-w-[14rem] sm:max-w-[16rem] md:max-w-[18rem] lg:max-w-[20rem] xl:max-w-[22rem] -mt-8 lg:-mt-0">
+        <div className="mx-auto -mt-8 w-full max-w-[14rem] sm:max-w-[16rem] md:max-w-[18rem] lg:-mt-0 lg:max-w-[20rem] xl:max-w-[22rem]">
           <Image
             src="/images/home/hero.webp"
             alt={t('heroAlt')}
@@ -111,89 +111,26 @@ export default async function Home({ params }: HomeProps) {
               t={t}
               i18nKey="recipeToTable"
               components={{
-                italic: <span className="italic mr-[0.2em]" />,
+                italic: <span className="mr-[0.2em] italic" />,
               }}
             />
           </h1>
 
-          <p className="mx-auto mt-4 max-w-[42rem] text leading-7 text-text-secondary sm:text-xl sm:leading-8 lg:mx-0 lg:text-2xl lg:leading-[1.4]">
+          <p className="text mx-auto mt-4 max-w-[42rem] leading-7 text-text-secondary sm:text-xl sm:leading-8 lg:mx-0 lg:text-2xl lg:leading-[1.4]">
             {t('header')}
           </p>
 
-          <div className="mt-6 sm:mt-8 flex flex-col items-center lg:items-start">
+          <div className="mt-6 flex flex-col items-center sm:mt-8 lg:items-start">
             <div className="flex justify-center lg:justify-start">
               <AppDownloadButtons />
             </div>
 
             <p className="mt-4 max-w-[40rem] text-center text-sm leading-6 text-text-secondary lg:text-left">
-              {t(
-                isSubscriptionEnabled
-                  ? 'downloadDisclaimerSubscription'
-                  : 'downloadDisclaimer',
-              )}
+              {t(isSubscriptionEnabled ? 'downloadDisclaimerSubscription' : 'downloadDisclaimer')}
             </p>
           </div>
         </div>
       </SiteContainer>
-
-      <SiteContainer as="section" className="pb-20 pt-8 sm:pb-28 sm:pt-12">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-secondary">
-            {t('importGuide.eyebrow')}
-          </p>
-          <h2 className="mt-3 font-accent text-3xl font-bold tracking-tight sm:text-5xl">
-            {t('importGuide.title')}
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-text-secondary sm:text-lg sm:leading-8">
-            {t('importGuide.description')}
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {importOptions.map((option) => (
-            <article
-              key={option.title}
-              className="flex h-full flex-col rounded-3xl border border-neutral-400 bg-surface-primary p-6 shadow-sm"
-            >
-              <div className="flex size-12 items-center justify-center rounded-2xl bg-surface-secondary text-2xl text-brand-primary">
-                {option.icon}
-              </div>
-              <h3 className="mt-5 font-accent text-2xl font-bold">
-                {option.title}
-              </h3>
-              <p className="mt-3 text-base leading-7 text-text-secondary">
-                {option.description}
-              </p>
-              <p className="mt-5 border-t border-neutral-400 pt-4 text-sm leading-6 text-text-primary">
-                <span className="font-semibold">
-                  {t('importGuide.guideLabel')}
-                </span>{' '}
-                {option.guide}
-              </p>
-            </article>
-          ))}
-        </div>
-
-        <div className="mx-auto mt-8 max-w-4xl rounded-3xl bg-surface-secondary p-6 sm:p-8">
-          <h3 className="font-accent text-2xl font-bold">
-            {t('importGuide.promptTitle')}
-          </h3>
-          <p className="mt-3 text-base leading-7 text-text-secondary">
-            {t('importGuide.promptDescription')}
-          </p>
-          <div className="mt-5 grid gap-3 md:grid-cols-3">
-            {promptIdeas.map((idea) => (
-              <p
-                key={idea}
-                className="rounded-2xl border border-neutral-400 bg-surface-primary p-4 text-sm leading-6 text-text-primary"
-              >
-                {idea}
-              </p>
-            ))}
-          </div>
-        </div>
-      </SiteContainer>
-
       <DownloadAppModal />
     </div>
   )
