@@ -105,7 +105,7 @@ export default async function Home({ params }: HomeProps) {
         </div>
 
         <div className="mx-auto w-full max-w-[46rem] text-center lg:mx-0 lg:text-left">
-          <h1 className="font-accent text-[1.3rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem]">
+          <h1 className="font-accent text-[1.3rem] font-bold leading-[1.08] tracking-[-0.02em] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem]">
             <Trans
               i18n={i18n}
               t={t}
