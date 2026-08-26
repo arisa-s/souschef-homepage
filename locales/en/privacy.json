@@ -1,6 +1,6 @@
 {
   "pageTitle": "Privacy Policy for Souschef",
-  "lastUpdated": "2026-07-21",
+  "lastUpdated": "2026-08-26",
   "intro": [
     "This Privacy Policy explains how Nekonote LLC (“Nekonote,” “Souschef,” “we,” “us,” or “our”) collects, uses, stores, and shares information when you use the Souschef mobile application, website, shared recipe pages, help center, and related services collectively referred to as the “Services.”",
     "Nekonote LLC is the operator of Souschef and is responsible for the processing of personal information described in this Privacy Policy."
@@ -76,16 +76,15 @@
             "Operating system and app version",
             "IP address",
             "Language, country, and approximate general location inferred from an IP address",
-            "Device, installation, or advertising identifiers",
+            "Device or installation identifiers",
             "App launch times, feature interactions, and timestamps",
             "Crash reports, error logs, performance information, and other technical diagnostics",
-            "Advertising impressions, interactions, and clicks",
             "Network and request information used to operate and secure the Services"
           ]
         },
         {
           "type": "paragraph",
-          "text": "We do not request precise GPS location for Souschef’s core features. However, advertising providers may estimate a general location from an IP address."
+          "text": "We do not request precise GPS location for Souschef’s core features."
         },
         {
           "type": "heading",
@@ -171,7 +170,6 @@
             "Provide AI tagging, translation, nutrition estimates, and recipe discovery",
             "Maintain your pantry, shopping lists, timers, and cooking tools",
             "Process and verify Souschef Plus subscriptions",
-            "Display and measure advertising in the free version of Souschef",
             "Send transactional, survey, and marketing communications",
             "Respond to support requests and feedback",
             "Diagnose crashes and technical problems",
@@ -229,47 +227,7 @@
       ]
     },
     {
-      "title": "4. Advertising",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Free users may see advertisements during the recipe-import process. Souschef Plus removes advertising from the import experience."
-        },
-        {
-          "type": "paragraph",
-          "text": "We use Google AdMob to deliver, limit, secure, and measure advertisements. Google AdMob may automatically process information such as:"
-        },
-        {
-          "type": "list",
-          "items": [
-            "IP address and general location inferred from it",
-            "Device and advertising identifiers",
-            "App launches, taps, video views, and other interactions",
-            "Advertisements shown and interactions with those advertisements",
-            "Crash, performance, and diagnostic information",
-            "Information used to prevent advertising fraud and abuse"
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Depending on your location, consent choices, device settings, and our advertising configuration, advertisements may be personalized or non-personalized."
-        },
-        {
-          "type": "paragraph",
-          "text": "You may be able to manage advertising choices through a privacy-options message presented in the app and through the privacy and advertising settings on your device. Resetting or limiting your advertising identifier may affect ad personalization but may not prevent all advertising data processing."
-        },
-        {
-          "type": "paragraph",
-          "text": "We do not sell your recipes, photos, account information, or other user-created content to advertisers."
-        },
-        {
-          "type": "paragraph",
-          "text": "Some privacy laws define certain disclosures for personalized or cross-context behavioral advertising as a “sale,” “sharing,” or “targeted advertising,” even when no money is exchanged. Where those laws apply, you may have the right to opt out of that processing."
-        }
-      ]
-    },
-    {
-      "title": "5. Service Providers",
+      "title": "4. Service Providers",
       "blocks": [
         {
           "type": "paragraph",
@@ -288,7 +246,6 @@
             "**Sentry:** Crash reporting, performance monitoring, and technical diagnostics. We configure Sentry to receive technical diagnostic information rather than recipe or photo content.",
             "**RevenueCat:** Subscription management and purchase verification. RevenueCat may receive app user identifiers, device information, purchase history, subscription status, Apple receipts, and Google purchase tokens.",
             "**Resend:** Transactional, survey, and marketing email delivery. Resend may process names, email addresses, message content, communication preferences, and delivery information.",
-            "**Google AdMob:** Advertising delivery, measurement, analytics, and fraud prevention.",
             "**Apple App Store and Google Play:** App distribution, payment processing, subscription management, and purchase records."
           ]
         },
@@ -299,7 +256,7 @@
       ]
     },
     {
-      "title": "6. When We Share Information",
+      "title": "5. When We Share Information",
       "blocks": [
         {
           "type": "paragraph",
@@ -324,12 +281,12 @@
         },
         {
           "type": "paragraph",
-          "text": "We do not sell personal information for monetary payment. As described above, advertising-related disclosures may nevertheless be legally considered “sharing,” “sale,” or “targeted advertising” in certain jurisdictions."
+          "text": "We do not sell personal information."
         }
       ]
     },
     {
-      "title": "7. Legal Bases for Processing",
+      "title": "6. Legal Bases for Processing",
       "blocks": [
         {
           "type": "paragraph",
@@ -340,7 +297,7 @@
           "items": [
             "**Performance of a contract:** To create your account, store recipes, provide requested features, and manage subscriptions.",
             "**Legitimate interests:** To secure, maintain, troubleshoot, and improve Souschef, prevent fraud, and understand service performance.",
-            "**Consent:** For optional marketing communications, device permissions, and personalized advertising where consent is required.",
+            "**Consent:** For optional marketing communications and device permissions where consent is required.",
             "**Legal obligations:** To retain required business records, respond to lawful requests, and comply with applicable law."
           ]
         },
@@ -351,7 +308,7 @@
       ]
     },
     {
-      "title": "8. Data Retention",
+      "title": "7. Data Retention",
       "blocks": [
         {
           "type": "paragraph",
@@ -373,7 +330,7 @@
         },
         {
           "type": "paragraph",
-          "text": "AI providers, advertising providers, email providers, and other service providers may retain information according to their applicable retention practices."
+          "text": "AI providers, email providers, and other service providers may retain information according to their applicable retention practices."
         },
         {
           "type": "paragraph",
@@ -382,7 +339,7 @@
       ]
     },
     {
-      "title": "9. Account Deletion",
+      "title": "8. Account Deletion",
       "blocks": [
         {
           "type": "paragraph",
@@ -399,7 +356,7 @@
       ]
     },
     {
-      "title": "10. Security",
+      "title": "9. Security",
       "blocks": [
         {
           "type": "paragraph",
@@ -412,7 +369,7 @@
       ]
     },
     {
-      "title": "11. International Data Transfers",
+      "title": "10. International Data Transfers",
       "blocks": [
         {
           "type": "paragraph",
@@ -425,7 +382,7 @@
       ]
     },
     {
-      "title": "12. Your Rights and Choices",
+      "title": "11. Your Rights and Choices",
       "blocks": [
         {
           "type": "paragraph",
@@ -441,7 +398,6 @@
             "Restrict or object to certain processing",
             "Withdraw consent",
             "Opt out of marketing communications",
-            "Opt out of certain targeted advertising, sale, or sharing",
             "Appeal a decision concerning a privacy request",
             "Lodge a complaint with a privacy or data-protection authority",
             "Exercise your rights without discriminatory treatment"
@@ -458,7 +414,7 @@
       ]
     },
     {
-      "title": "13. Children’s Privacy",
+      "title": "12. Children’s Privacy",
       "blocks": [
         {
           "type": "paragraph",
@@ -475,7 +431,7 @@
       ]
     },
     {
-      "title": "14. Third-Party Content and Services",
+      "title": "13. Third-Party Content and Services",
       "blocks": [
         {
           "type": "paragraph",
@@ -483,7 +439,7 @@
         },
         {
           "type": "paragraph",
-          "text": "This Privacy Policy does not govern information collected directly by third parties when you visit their websites, use their apps, purchase through an app store, or interact with an advertisement."
+          "text": "This Privacy Policy does not govern information collected directly by third parties when you visit their websites, use their apps, or purchase through an app store."
         },
         {
           "type": "paragraph",
@@ -492,7 +448,7 @@
       ]
     },
     {
-      "title": "15. Changes to This Privacy Policy",
+      "title": "14. Changes to This Privacy Policy",
       "blocks": [
         {
           "type": "paragraph",
@@ -505,7 +461,7 @@
       ]
     },
     {
-      "title": "16. Contact Us",
+      "title": "15. Contact Us",
       "blocks": [
         {
           "type": "paragraph",

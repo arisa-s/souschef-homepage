@@ -1,8 +1,8 @@
 {
   "pageTitle": "シェフノテ利用規約",
-  "lastUpdated": "2026-07-21",
+  "lastUpdated": "2026-08-26",
   "intro": [
-    "**Effective date: July 21, 2026**",
+    "**Effective date: August 26, 2026**",
     "These Terms of Service (“Terms”) govern your access to and use of Souschef, including the Souschef mobile applications, websites, shared recipe pages, help center, and related services collectively referred to as the “Services.”",
     "The Services are operated by Nekonote LLC, a Delaware limited liability company (“Nekonote,” “Souschef,” “we,” “us,” or “our”).",
     "Please read these Terms carefully. By downloading, accessing, or using the Services, creating an account, or purchasing a subscription, you agree to these Terms and our Privacy Policy.",
@@ -338,7 +338,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Souschef may offer a free plan supported in part by advertising and subject to usage limits."
+          "text": "Souschef may offer a free plan subject to usage limits."
         },
         {
           "type": "paragraph",
@@ -350,7 +350,7 @@
         },
         {
           "type": "paragraph",
-          "text": "We may reasonably modify free-plan limits, advertising, or available features. When a change materially reduces an existing feature, we will provide notice when reasonably practicable."
+          "text": "We may reasonably modify free-plan limits or available features. When a change materially reduces an existing feature, we will provide notice when reasonably practicable."
         },
         {
           "type": "paragraph",
@@ -373,13 +373,8 @@
           "type": "list",
           "items": [
             "Unlimited or increased recipe imports",
-            "Removal of advertising from the recipe-import experience",
             "Other benefits identified at the time of purchase"
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "An “ad-free import experience” applies to advertisements controlled by Souschef within the covered import flow. It does not necessarily remove third-party content, source branding, app-store messages, or material included in imported recipes."
         },
         {
           "type": "heading",
@@ -464,28 +459,7 @@
       ]
     },
     {
-      "title": "12. Advertising",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Users of the free plan may see advertisements, including advertisements during recipe imports."
-        },
-        {
-          "type": "paragraph",
-          "text": "Advertising may be delivered or measured by third-party advertising providers. Their collection and use of information are described in our Privacy Policy and may also be governed by their own terms and privacy policies."
-        },
-        {
-          "type": "paragraph",
-          "text": "You may be presented with privacy choices relating to personalized advertising where required by law."
-        },
-        {
-          "type": "paragraph",
-          "text": "Nekonote does not endorse every product or service shown in an advertisement. Any interaction or transaction between you and an advertiser is between you and that advertiser."
-        }
-      ]
-    },
-    {
-      "title": "13. Acceptable Use",
+      "title": "12. Acceptable Use",
       "blocks": [
         {
           "type": "paragraph",
@@ -517,7 +491,7 @@
       ]
     },
     {
-      "title": "14. Souschef Intellectual Property",
+      "title": "13. Souschef Intellectual Property",
       "blocks": [
         {
           "type": "paragraph",
@@ -534,7 +508,7 @@
       ]
     },
     {
-      "title": "15. Feedback",
+      "title": "14. Feedback",
       "blocks": [
         {
           "type": "paragraph",
@@ -551,7 +525,7 @@
       ]
     },
     {
-      "title": "16. Copyright and Other Rights Complaints",
+      "title": "15. Copyright and Other Rights Complaints",
       "blocks": [
         {
           "type": "paragraph",
@@ -583,7 +557,7 @@
       ]
     },
     {
-      "title": "17. Privacy",
+      "title": "16. Privacy",
       "blocks": [
         {
           "type": "paragraph",
@@ -600,11 +574,11 @@
       ]
     },
     {
-      "title": "18. Third-Party Services",
+      "title": "17. Third-Party Services",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Souschef relies on third-party services, which may include app stores, cloud hosting providers, authentication providers, artificial-intelligence providers, email providers, advertising providers, analytics providers, and services from which recipes are imported."
+          "text": "Souschef relies on third-party services, which may include app stores, cloud hosting providers, authentication providers, artificial-intelligence providers, email providers, analytics providers, and services from which recipes are imported."
         },
         {
           "type": "paragraph",
@@ -617,7 +591,7 @@
       ]
     },
     {
-      "title": "19. Service Availability and Changes",
+      "title": "18. Service Availability and Changes",
       "blocks": [
         {
           "type": "paragraph",
@@ -654,7 +628,7 @@
       ]
     },
     {
-      "title": "20. Suspension and Termination",
+      "title": "19. Suspension and Termination",
       "blocks": [
         {
           "type": "paragraph",
@@ -694,7 +668,7 @@
       ]
     },
     {
-      "title": "21. Disclaimers",
+      "title": "20. Disclaimers",
       "blocks": [
         {
           "type": "paragraph",
@@ -727,7 +701,7 @@
       ]
     },
     {
-      "title": "22. Limitation of Liability",
+      "title": "21. Limitation of Liability",
       "blocks": [
         {
           "type": "paragraph",
@@ -744,7 +718,7 @@
             "Allergic reactions, dietary issues, foodborne illness, burns, fires, or other cooking-related injury",
             "Incorrect measurements, temperatures, timers, translations, or nutrition information",
             "Loss or corruption of recipes or account information",
-            "Third-party content, services, advertising, or platforms",
+            "Third-party content, services, or platforms",
             "Unauthorized account access",
             "Service interruptions or discontinued features"
           ]
@@ -771,7 +745,7 @@
       ]
     },
     {
-      "title": "23. Indemnification",
+      "title": "22. Indemnification",
       "blocks": [
         {
           "type": "paragraph",
@@ -793,7 +767,7 @@
       ]
     },
     {
-      "title": "24. Informal Dispute Resolution",
+      "title": "23. Informal Dispute Resolution",
       "blocks": [
         {
           "type": "paragraph",
@@ -823,7 +797,7 @@
       ]
     },
     {
-      "title": "25. Governing Law and Courts",
+      "title": "24. Governing Law and Courts",
       "blocks": [
         {
           "type": "paragraph",
@@ -840,7 +814,7 @@
       ]
     },
     {
-      "title": "26. Consumer Rights",
+      "title": "25. Consumer Rights",
       "blocks": [
         {
           "type": "paragraph",
@@ -857,7 +831,7 @@
       ]
     },
     {
-      "title": "27. Changes to These Terms",
+      "title": "26. Changes to These Terms",
       "blocks": [
         {
           "type": "paragraph",
@@ -882,7 +856,7 @@
       ]
     },
     {
-      "title": "28. Apple App Store Terms",
+      "title": "27. Apple App Store Terms",
       "blocks": [
         {
           "type": "paragraph",
@@ -905,7 +879,7 @@
       ]
     },
     {
-      "title": "29. Google Play Terms",
+      "title": "28. Google Play Terms",
       "blocks": [
         {
           "type": "paragraph",
@@ -923,7 +897,7 @@
       ]
     },
     {
-      "title": "30. Electronic Communications",
+      "title": "29. Electronic Communications",
       "blocks": [
         {
           "type": "paragraph",
@@ -940,7 +914,7 @@
       ]
     },
     {
-      "title": "31. General Terms",
+      "title": "30. General Terms",
       "blocks": [
         {
           "type": "heading",
@@ -1013,7 +987,7 @@
       ]
     },
     {
-      "title": "32. Contact Information",
+      "title": "31. Contact Information",
       "blocks": [
         {
           "type": "paragraph",
