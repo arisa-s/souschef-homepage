@@ -22,28 +22,17 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }>) {
   const locale = (await params).locale as LocaleOptions
-  const { i18n, resources } = await initTranslations(
-    locale,
-    i18nNamespaces,
-  )
+  const { i18n, resources } = await initTranslations(locale, i18nNamespaces)
 
   setI18n(i18n)
   setLocale(locale)
 
   return (
-    <html
-      lang={locale}
-      dir={dir(locale)}
-      style={getFontStyle(locale)}
-    >
+    <html lang={locale} dir={dir(locale)} style={getFontStyle(locale)}>
       <head>
         <LocaleFonts locale={locale} />
       </head>
-      <TranslationsProvider
-        namespaces={i18nNamespaces}
-        locale={locale}
-        resources={resources}
-      >
+      <TranslationsProvider namespaces={i18nNamespaces} locale={locale} resources={resources}>
         <body
           className={
             locale === 'ja'
@@ -55,9 +44,7 @@ export default async function RootLayout({
 
           <Navbar />
 
-          <main className="flex min-h-0 w-full flex-1 flex-col">
-            {children}
-          </main>
+          <main className="flex min-h-0 w-full flex-1 flex-col">{children}</main>
 
           <Footer />
         </body>
@@ -70,18 +57,14 @@ export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const typedLocale = locale as LocaleOptions
   const { t } = await initTranslations(typedLocale, ['layout'])
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: t('layout:appName'),
+    title: t('layout:appTitle'),
     description: t('layout:appDescription'),
     itunes: {
       appId: 6468939420,

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: HomeProps) {
 
   return {
     alternates: pageAlternates(locale),
-    title: t('layout:appName'),
+    title: t('layout:appTitle'),
     description: t('layout:appDescription'),
   }
 }
