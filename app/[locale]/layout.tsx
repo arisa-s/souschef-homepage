@@ -4,13 +4,7 @@ import i18nConfig from '@/i18nConfig'
 import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
 import { SITE_URL } from '@/lib/site'
-import {
-  basisGrotesque,
-  brand,
-  notoSanJapanese,
-  recoleta,
-  zenOldMincho,
-} from '@/lib/fonts'
+import { LocaleFonts, getFontStyle } from '@/lib/fonts'
 
 import '../globals.css'
 import { setI18n, setLocale } from '@/serverContexts'
@@ -37,18 +31,25 @@ export default async function RootLayout({
   setLocale(locale)
 
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html
+      lang={locale}
+      dir={dir(locale)}
+      style={getFontStyle(locale)}
+    >
+      <head>
+        <LocaleFonts locale={locale} />
+      </head>
       <TranslationsProvider
         namespaces={i18nNamespaces}
         locale={locale}
         resources={resources}
       >
         <body
-          className={`flex min-h-dvh flex-col overflow-x-clip ${
+          className={
             locale === 'ja'
-              ? `${zenOldMincho.variable} ${notoSanJapanese.variable}`
-              : `${basisGrotesque.variable} ${recoleta.variable} antialiased`
-          } ${brand.variable}`}
+              ? 'flex min-h-dvh flex-col overflow-x-clip'
+              : 'flex min-h-dvh flex-col overflow-x-clip antialiased'
+          }
         >
           <div id="modal-root" />
 

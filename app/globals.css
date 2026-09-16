@@ -45,6 +45,7 @@ body {
   background: var(--background);
   font-family: var(--font-base);
   border-color: var(--border-primary);
+  --font-brand: var(--font-accent);
 }
 
 .legal-document > h2:first-child {
