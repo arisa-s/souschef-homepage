@@ -1,3 +1,4 @@
+import AppStoreRating from '@/components/home/AppStoreRating'
 import DownloadAppModal from '@/components/home/DownloadAppModal'
 import AppDownloadButtons from '@/components/shared/AppDownloadButtons'
 import SiteContainer from '@/components/layout/SiteContainer'
@@ -105,6 +106,8 @@ export default async function Home({ params }: HomeProps) {
         </div>
 
         <div className="mx-auto w-full max-w-[46rem] text-center lg:mx-0 lg:text-left">
+          <AppStoreRating rating={t('appStoreRating')} lovedBy={t('appStoreLovedBy')} />
+
           <h1 className="font-accent text-[1.3rem] font-bold leading-[1.08] tracking-[-0.02em] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem]">
             <Trans
               i18n={i18n}

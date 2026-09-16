@@ -1,9 +1,11 @@
 {
   "downloadNow": "無料ダウンロード",
   "downloadDisclaimer": "Souschef（シェフノテ）は無料でダウンロードして使えます。",
-  "downloadDisclaimerSubscription": "すべての料理ツールは無料。無料アカウントでは週3回までレシピをインポートできます。",
+  "downloadDisclaimerSubscription": "すべての料理機能は無料。無料アカウントでは週5回までレシピをインポートできます。",
   "heroAlt": "シェフノテアプリ — Instagram、TikTok、YouTube、Pinterestなどからレシピを保存",
   "header": "Instagram、TikTok、YouTube、ChatGPT、Claude、ウェブサイトからレシピを取り込み、整理・買い物・手順どおりの調理まで。",
+  "appStoreRating": "App Storeで4.8★",
+  "appStoreLovedBy": "4,000人以上の家庭料理人に愛されています",
   "importGuide": {
     "description": "リンク、写真、貼り付けたテキスト、AIが作ったアイデアから始められます。Souschef（シェフノテ）が、編集・整理・買い物・調理に使いやすいレシピに整えます。",
     "eyebrow": "インポート方法",
