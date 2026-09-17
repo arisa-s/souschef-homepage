@@ -1,7 +1,7 @@
 'use client'
 
 import { LOCALE_MAPPING } from '@/constants'
-import i18nConfig from '@/i18nConfig'
+import { localePath, stripLocalePrefix } from '@/lib/seo'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
@@ -23,12 +23,8 @@ export default function LanguageChanger() {
     const expires = date.toUTCString()
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`
 
-    // redirect to the new locale path
-    if (currentLocale === i18nConfig.defaultLocale && !i18nConfig.defaultLocale) {
-      router.push('/' + newLocale + currentPathname)
-    } else {
-      router.push(currentPathname.replace(`/${currentLocale}`, `/${newLocale}`))
-    }
+    const path = stripLocalePrefix(currentPathname, currentLocale)
+    router.push(localePath(newLocale, path))
 
     router.refresh()
   }
