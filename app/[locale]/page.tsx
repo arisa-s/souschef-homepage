@@ -3,7 +3,7 @@ import DownloadAppModal from '@/components/home/DownloadAppModal'
 import HeroPhone from '@/components/home/HeroPhone'
 import AppDownloadButtons from '@/components/shared/AppDownloadButtons'
 import SiteContainer from '@/components/layout/SiteContainer'
-import { isSubscriptionEnabled, LocaleOptions } from '@/constants'
+import { LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
 import { pageAlternates } from '@/lib/seo'
 import { setI18n, setLocale } from '@/serverContexts'
@@ -121,7 +121,7 @@ export default async function Home({ params }: HomeProps) {
             </div>
 
             <p className="mt-4 max-w-[40rem] text-center text-sm leading-6 text-text-secondary lg:text-left">
-              {t(isSubscriptionEnabled ? 'downloadDisclaimerSubscription' : 'downloadDisclaimer')}
+              {t('downloadDisclaimer')}
             </p>
           </div>
         </div>

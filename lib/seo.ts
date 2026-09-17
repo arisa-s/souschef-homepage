@@ -46,6 +46,25 @@ export function pageAlternates(locale: string, path = '') {
   }
 }
 
+/** Hreflang only for locales that actually publish this blog slug. */
+export function blogPostAlternates(locale: string, slug: string, availableLocales: string[]) {
+  const path = `/blog/${slug}`
+  const locales = availableLocales.length ? availableLocales : [locale]
+  const languages: Record<string, string> = {}
+
+  for (const loc of locales) {
+    languages[loc] = localePath(loc, path)
+  }
+
+  const defaultLocale = locales.includes(DEFAULT_LOCALE) ? DEFAULT_LOCALE : locales[0]
+  languages['x-default'] = localePath(defaultLocale, path)
+
+  return {
+    canonical: localePath(locale, path),
+    languages,
+  }
+}
+
 export function ogLocale(locale: string) {
   return locale === 'ja' ? 'ja_JP' : 'en_US'
 }
@@ -117,6 +136,7 @@ type BlogPostMetadataInput = {
   publishedAt: string
   author: string
   tags?: string[] | null
+  availableLocales?: string[]
 }
 
 export function blogPostMetadata({
@@ -130,6 +150,7 @@ export function blogPostMetadata({
   publishedAt,
   author,
   tags,
+  availableLocales,
 }: BlogPostMetadataInput): Metadata {
   const url = canonicalUrl(locale, `/blog/${slug}`)
   const images = imageUrl
@@ -147,7 +168,7 @@ export function blogPostMetadata({
     title: `${title}: ${appTitle}`,
     description,
     authors: [{ name: author }],
-    alternates: pageAlternates(locale, `/blog/${slug}`),
+    alternates: blogPostAlternates(locale, slug, availableLocales ?? [locale]),
     openGraph: {
       type: 'article',
       title,

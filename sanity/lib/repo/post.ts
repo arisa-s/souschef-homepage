@@ -31,6 +31,15 @@ export const getPost = async (language: LocaleOptions, slug: string) => {
   return post
 }
 
+const POST_LOCALES_QUERY = defineQuery(
+  `*[_type == 'blogpost' && slug.current == $slug].language`
+)
+
+export const getPostLocales = async (slug: string): Promise<LocaleOptions[]> => {
+  const languages = await sanityClient.fetch(POST_LOCALES_QUERY, { slug })
+  return (languages ?? []) as LocaleOptions[]
+}
+
 const POST_SLUGS_QUERY = defineQuery(`*[
     _type == "blogpost" && defined(slug.current)
   ]|order(publishedAt desc){_id, slug, language}`)

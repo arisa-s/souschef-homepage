@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
                 destination: 'https://docs.trysouschef.com/troubleshooting/contact-support',
                 permanent: true,
             },
+            {
+                source: '/blog/save-instagram-recipe',
+                destination: '/blog/save-instagram-recipes',
+                permanent: true,
+            },
+            {
+                source: '/ja/blog/save-instagram-recipe',
+                destination: '/blog/save-instagram-recipes',
+                permanent: true,
+            },
         ]
     },
 };

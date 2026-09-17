@@ -1,9 +1,10 @@
 import { PortableText } from 'next-sanity'
+import { notFound, redirect } from 'next/navigation'
 import { LocaleOptions } from '@/constants'
-import { getPost, getPostSlugs } from '@/sanity/lib/repo/post'
+import { getPost, getPostLocales, getPostSlugs } from '@/sanity/lib/repo/post'
 import { getImageUrlFor } from '@/sanity/lib/image'
 import initTranslations from '@/lib/i18n'
-import { blogPostingJsonLd, blogPostMetadata } from '@/lib/seo'
+import { blogPostingJsonLd, blogPostMetadata, localePath } from '@/lib/seo'
 import { estimateReadMinutes, portableTextToPlain } from '@/lib/readingTime'
 import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
 import BackButton from '@/components/layout/BackButton'
@@ -13,6 +14,21 @@ import { JsonLd } from '@/components/blog/JsonLd'
 
 type BlogpostProps = {
   params: Promise<{ locale: LocaleOptions; slug: string }>
+}
+
+async function resolvePost(locale: LocaleOptions, slug: string) {
+  const post = await getPost(locale, slug)
+  if (post) {
+    return post
+  }
+
+  const availableLocales = await getPostLocales(slug)
+  const otherLocale = availableLocales.find((available) => available !== locale)
+  if (otherLocale) {
+    redirect(localePath(otherLocale, `/blog/${slug}`))
+  }
+
+  notFound()
 }
 
 export async function generateStaticParams() {
@@ -25,12 +41,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogpostProps) {
   const { locale, slug } = await params
-  const post = await getPost(locale, slug)
-
-  if (!post) {
-    // todo: redirect to 404
-    return null
-  }
+  const post = await resolvePost(locale, slug)
+  const availableLocales = await getPostLocales(slug)
 
   const { t } = await initTranslations(locale, ['blog', 'layout'])
   const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(1200).height(630).url() : null
@@ -47,18 +59,14 @@ export async function generateMetadata({ params }: BlogpostProps) {
     publishedAt: post.publishedAt,
     author: t('blog:author'),
     tags: tagLabels,
+    availableLocales,
   })
 }
 
 export default async function PostPage({ params }: BlogpostProps) {
   const { locale, slug } = await params
   const { t } = await initTranslations(locale, ['blog', 'layout'])
-  const post = await getPost(locale, slug)
-
-  if (!post) {
-    // todo: redirect to 404
-    return null
-  }
+  const post = await resolvePost(locale, slug)
 
   const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(1400).url() : null
   const minutes = estimateReadMinutes(portableTextToPlain(post.body), locale)
