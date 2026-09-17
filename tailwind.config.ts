@@ -51,6 +51,15 @@ export default {
         base: ['var(--font-base)'],
         brand: ['var(--font-brand)'],
       },
+      keyframes: {
+        'hero-icon-breathe': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.14)' },
+        },
+      },
+      animation: {
+        'hero-icon-breathe': 'hero-icon-breathe 3.8s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

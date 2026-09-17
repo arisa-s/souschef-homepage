@@ -25,7 +25,7 @@ const faqsEn: FaqItem[] = [
     id: 'is-free',
     question: 'Is Souschef free?',
     answer: isSubscriptionEnabled
-      ? 'Yes. Souschef is free to download, and almost every feature is included in the free plan—including Cooking Mode, serving adjustments, measurement conversion, shopping lists, recipe translation, and more. Free users can import up to three recipes every seven days.'
+      ? 'Yes. Souschef is free to download, and almost every feature is included in the free plan—including Cooking Mode, serving adjustments, measurement conversion, shopping lists, recipe translation, and more. Free users can import up to five recipes every seven days.'
       : 'Yes. Souschef is free to download and use—including Cooking Mode, serving adjustments, measurement conversion, shopping lists, recipe translation, and more.',
   },
   {
@@ -85,7 +85,7 @@ const faqsJa: FaqItem[] = [
     id: 'is-free',
     question: 'Souschefは無料ですか？',
     answer: isSubscriptionEnabled
-      ? 'はい。Souschefは無料でダウンロードでき、クッキングモード、人数調整、単位変換、買い物リスト、レシピ翻訳など、ほぼすべての機能が無料プランに含まれています。無料ユーザーは7日ごとに最大3件までレシピを取り込めます。'
+      ? 'はい。Souschefは無料でダウンロードでき、クッキングモード、人数調整、単位変換、買い物リスト、レシピ翻訳など、ほぼすべての機能が無料プランに含まれています。無料ユーザーは週5回までレシピを取り込めます。'
       : 'はい。Souschefは無料でダウンロードして使え、クッキングモード、人数調整、単位変換、買い物リスト、レシピ翻訳など、すべての機能を利用できます。',
   },
   {

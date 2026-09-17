@@ -8,14 +8,15 @@ const POSTS_QUERY = defineQuery(`*[
   && language == $language
   && defined(slug.current)
 ] | order(publishedAt desc) {
-  _id, title, slug, publishedAt, image, tags, summary
+  _id, title, slug, publishedAt, image, tags, summary,
+  "plainText": pt::text(body)
 }`)
 
 export const getPosts = async (language: LocaleOptions): Promise<POSTS_QUERYResult> => {
   const posts = await sanityClient.fetch(POSTS_QUERY, {
     language,
   })
-  return posts
+  return posts as POSTS_QUERYResult
 }
 
 const POST_QUERY = defineQuery(

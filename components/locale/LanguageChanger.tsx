@@ -1,7 +1,7 @@
 'use client'
 
 import { LOCALE_MAPPING } from '@/constants'
-import { localePath, stripLocalePrefix } from '@/lib/seo'
+import { isBlogPath, localePath, stripLocalePrefix } from '@/lib/seo'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
@@ -12,6 +12,10 @@ export default function LanguageChanger() {
   const currentLocale = i18n.language
   const router = useRouter()
   const currentPathname = usePathname()
+
+  if (isBlogPath(currentPathname, currentLocale)) {
+    return null
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value

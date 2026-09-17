@@ -3,13 +3,17 @@ import { useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import LanguageChanger from '../locale/LanguageChanger'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { emailLink, instagramProfileLink, onelinkLink } from '@/constants'
+import { isBlogPath } from '@/lib/seo'
 import { motion } from 'framer-motion'
 
 export const MobileNavMenu = ({}) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { t } = useTranslation()
+  const pathname = usePathname()
+  const { t, i18n } = useTranslation()
+  const showLanguageChanger = !isBlogPath(pathname, i18n.language)
 
   const variants = {
     open: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -40,9 +44,11 @@ export const MobileNavMenu = ({}) => {
             <MenuItem href={emailLink} label="Email" />
             <MenuItem href={instagramProfileLink} label="Instagram" />
           </div>
-          <div className="mt-12 flex w-full justify-end">
-            <LanguageChanger />
-          </div>
+          {showLanguageChanger ? (
+            <div className="mt-12 flex w-full justify-end">
+              <LanguageChanger />
+            </div>
+          ) : null}
           <div />
         </motion.div>
       ) : null}

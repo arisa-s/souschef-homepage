@@ -547,6 +547,7 @@ export type POSTS_QUERYResult = Array<{
   }
   tags: Array<'howTo' | 'newFeature'> | null
   summary: string | null
+  plainText: string | null
 }>
 // Variable: POST_QUERY
 // Query: *[_type == 'blogpost' && slug.current == $slug && language == $locale] [0]
@@ -686,7 +687,7 @@ import '@sanity/client'
 declare module '@sanity/client' {
   interface SanityQueries {
     "*[\n        _type == 'faq'\n        && language == $language\n        && defined(question)\n        && defined(answer)\n    ] | order(order asc) {\n        _id, question, answer\n    }": FAQS_QUERYResult
-    "*[\n  _type == 'blogpost'\n  && language == $language\n  && defined(slug.current)\n] | order(publishedAt desc) [0...12] {\n  _id, title, slug, publishedAt, image, tags, summary\n}": POSTS_QUERYResult
+    "*[\n  _type == 'blogpost'\n  && language == $language\n  && defined(slug.current)\n] | order(publishedAt desc) {\n  _id, title, slug, publishedAt, image, tags, summary,\n  \"plainText\": pt::text(body)\n}": POSTS_QUERYResult
     "*[_type == 'blogpost' && slug.current == $slug && language == $locale] [0]": POST_QUERYResult
     '*[\n    _type == "blogpost" && defined(slug.current)\n  ]|order(publishedAt desc)[0...12]{_id, slug, language}': POST_SLUGS_QUERYResult
     "*[_type == 'privacy' && language == $language] | order(_publishedAt desc) [0]": LATEST_PRIVACY_QUERYResult

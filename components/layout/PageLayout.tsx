@@ -5,20 +5,25 @@ import BackButton from './BackButton'
 export interface PageLayoutProps {
   children: React.ReactElement
   title: string
+  description?: string
 }
 
-export const PageLayout: FC<PageLayoutProps> = ({ children, title }) => {
+export const PageLayout: FC<PageLayoutProps> = ({ children, title, description }) => {
   return (
-    <div className="max-w-8xl relative mx-auto flex min-h-screen">
-      <main className="flex w-full flex-col divide-y">
-        <div className="flex flex-col items-start justify-center space-y-4 p-6 sm:mx-auto sm:items-center">
-          <BackButton className="text-2xl sm:absolute sm:left-6 sm:text-5xl">
-            <HiArrowLongLeft />
-          </BackButton>
-          <h1 className="font-accent text-2xl font-medium sm:text-5xl">{title}</h1>
-        </div>
-        {children}
-      </main>
+    <div className="relative mx-auto w-full max-w-[1080px] px-5 pb-20 pt-4 sm:px-8 sm:pt-8">
+      <div className="mx-auto mb-8 flex w-full max-w-[680px] flex-col items-center sm:mb-12">
+        <BackButton className="mb-6 text-2xl text-text-secondary sm:text-3xl">
+          <HiArrowLongLeft />
+        </BackButton>
+
+        <h1 className="text-center font-accent text-2xl font-bold tracking-tight sm:text-3xl">
+          {title}
+        </h1>
+        {description ? (
+          <h2 className="mt-6 text-center text-base text-text-secondary">{description}</h2>
+        ) : null}
+      </div>
+      {children}
     </div>
   )
 }

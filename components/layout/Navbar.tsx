@@ -20,9 +20,9 @@ export const Navbar: FC = async ({}) => {
     <nav className="w-full">
       <SiteContainer className="flex items-center justify-between py-4">
         <Link href="/">
-          <h1 className="font-accent text-2xl font-bold md:text-3xl">
+          <span className="font-accent text-2xl font-bold md:text-3xl">
             {t('layout:appName')}
-          </h1>
+          </span>
         </Link>
         <div className="hidden items-center gap-6 md:flex">
           <Link

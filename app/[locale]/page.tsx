@@ -1,12 +1,12 @@
 import AppStoreRating from '@/components/home/AppStoreRating'
 import DownloadAppModal from '@/components/home/DownloadAppModal'
+import HeroPhone from '@/components/home/HeroPhone'
 import AppDownloadButtons from '@/components/shared/AppDownloadButtons'
 import SiteContainer from '@/components/layout/SiteContainer'
 import { isSubscriptionEnabled, LocaleOptions } from '@/constants'
 import initTranslations from '@/lib/i18n'
 import { pageAlternates } from '@/lib/seo'
 import { setI18n, setLocale } from '@/serverContexts'
-import Image from 'next/image'
 import { Trans } from 'react-i18next/TransWithoutContext'
 import {
   FiCamera,
@@ -93,19 +93,11 @@ export default async function Home({ params }: HomeProps) {
         className="grid flex-1 grid-cols-1 items-center py-6 sm:py-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:py-0"
       >
         {/* Photo first below lg; photo left / copy right at lg+ */}
-        <div className="mx-auto -mt-8 w-full max-w-[14rem] sm:max-w-[16rem] md:max-w-[18rem] lg:-mt-0 lg:max-w-[20rem] xl:max-w-[22rem]">
-          <Image
-            src="/images/home/hero.webp"
-            alt={t('heroAlt')}
-            width={572}
-            height={1024}
-            priority
-            sizes="(max-width: 640px) 18rem, (max-width: 1024px) 23rem, 27rem"
-            className="h-auto w-full"
-          />
+        <div className="mx-auto -mt-14 w-full max-w-[14rem] sm:max-w-[16rem] md:max-w-[18rem] lg:-mt-0 lg:max-w-[20rem] xl:max-w-[22rem]">
+          <HeroPhone alt={t('heroAlt')} />
         </div>
 
-        <div className="mx-auto w-full max-w-[46rem] text-center lg:mx-0 lg:text-left">
+        <div className="mx-auto mt-6 w-full max-w-[46rem] text-center lg:mx-0 lg:text-left">
           <AppStoreRating rating={t('appStoreRating')} lovedBy={t('appStoreLovedBy')} />
 
           <h1 className="font-accent text-[1.3rem] font-bold leading-[1.08] tracking-[-0.02em] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem]">

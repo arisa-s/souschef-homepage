@@ -1,8 +1,15 @@
 {
   "author": "Arisa Shiraishi",
+  "authorRole": "Solo builder of Souschef",
+  "backToBlog": "Back to Blog",
+  "commentAria": "Comment on Instagram",
+  "follow": "Follow us on instagram for updates!",
   "howToTag": "how-to",
+  "likeAria": "Like on Instagram",
+  "minRead": "{{count}} min read",
   "newFeatureTag": "new-feature",
   "pageDescription": "Welcome to the Souschef Blog! Dive into our latest posts where we explore new features, offer detailed guides on making the most of every tool, and share tips to enhance your cooking experience. Whether you're a beginner or a seasoned home cook, our blog is your go-to resource for all things Souschef, helping you navigate and maximize your culinary journey with ease. Souschef is a free alternative to ReciMe. ",
-  "pageTitle": "Souschef Blog",
+  "pageIntro": "Tips, comparisons, and stories about cooking with Souschef",
+  "pageTitle": "Blog",
   "published": "published: "
 }

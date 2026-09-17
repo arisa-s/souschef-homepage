@@ -1,11 +1,11 @@
 import { LocaleOptions } from '@/constants'
 import BlogGrid from '@/components/shared/BlogGrid'
+import { JsonLd } from '@/components/blog/JsonLd'
 import initTranslations from '@/lib/i18n'
-import { pageAlternates } from '@/lib/seo'
+import { blogCollectionJsonLd, blogIndexMetadata } from '@/lib/seo'
 import { setI18n } from '@/serverContexts'
 import { getPosts } from '@/sanity/lib/repo/post'
 import i18nConfig from '@/i18nConfig'
-import { POSTS_QUERYResult } from '@/sanity.types'
 import PageLayout from '@/components/layout/PageLayout'
 
 type BlogProps = { params: Promise<{ locale: LocaleOptions }> }
@@ -18,29 +18,36 @@ export default async function Blog({ params }: BlogProps) {
   const { locale } = await params
   const posts = await getPosts(locale)
 
-  const { i18n, t } = await initTranslations(locale, ['blog'])
+  const { i18n, t } = await initTranslations(locale, ['blog', 'layout'])
   setI18n(i18n)
 
-  const stripBlogpostData = (post: POSTS_QUERYResult[number]) => ({
-    title: post.title,
-    slug: post.slug,
-    image: post.image,
-    tags: post.tags,
-  })
-
   return (
-    <PageLayout title={t('pageTitle')}>
-      <BlogGrid posts={posts.map((p) => stripBlogpostData(p))} />
-    </PageLayout>
+    <>
+      <JsonLd
+        data={blogCollectionJsonLd({
+          locale,
+          title: t('pageTitle'),
+          description: t('pageDescription'),
+          items: posts.map((post) => ({
+            title: post.title,
+            slug: post.slug.current,
+          })),
+        })}
+      />
+      <PageLayout title={t('pageTitle')} description={t('pageIntro')}>
+        <BlogGrid posts={posts} />
+      </PageLayout>
+    </>
   )
 }
 
 export async function generateMetadata({ params }: BlogProps) {
   const { locale } = await params
   const { t } = await initTranslations(locale, ['blog', 'layout'])
-  return {
+  return blogIndexMetadata({
+    locale,
     title: t('blog:pageTitle'),
     description: t('blog:pageDescription'),
-    alternates: pageAlternates(locale, '/blog'),
-  }
+    siteName: t('layout:appName'),
+  })
 }

@@ -1,14 +1,15 @@
 import { PortableText } from 'next-sanity'
 import { LocaleOptions } from '@/constants'
 import { getPost, getPostSlugs } from '@/sanity/lib/repo/post'
-import { decodeAssetId, getImageUrlFor } from '@/sanity/lib/image'
+import { getImageUrlFor } from '@/sanity/lib/image'
 import initTranslations from '@/lib/i18n'
-import { pageAlternates } from '@/lib/seo'
+import { blogPostingJsonLd, blogPostMetadata } from '@/lib/seo'
+import { estimateReadMinutes, portableTextToPlain } from '@/lib/readingTime'
 import { SanityComponents } from '@/sanity/lib/components/SanityComponents'
 import BackButton from '@/components/layout/BackButton'
 import { HiArrowLongLeft } from 'react-icons/hi2'
-import Image from 'next/image'
-import ActionButtonGroup from '@/components/blog/ActionButtonGroup'
+import { BlogByline } from '@/components/blog/BlogByline'
+import { JsonLd } from '@/components/blog/JsonLd'
 
 type BlogpostProps = {
   params: Promise<{ locale: LocaleOptions; slug: string }>
@@ -30,19 +31,28 @@ export async function generateMetadata({ params }: BlogpostProps) {
     // todo: redirect to 404
     return null
   }
-  const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(550).height(310).url() : null
 
-  return {
+  const { t } = await initTranslations(locale, ['blog', 'layout'])
+  const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(1200).height(630).url() : null
+  const tagLabels = post.tags?.map((tag) => t(`blog:${tag}Tag`)).filter(Boolean) ?? []
+
+  return blogPostMetadata({
+    locale,
+    slug,
     title: post.title,
     description: post.description,
-    image: postImageUrl,
-    alternates: pageAlternates(locale, `/blog/${slug}`),
-  }
+    siteName: t('layout:appName'),
+    appTitle: t('layout:appTitle'),
+    imageUrl: postImageUrl,
+    publishedAt: post.publishedAt,
+    author: t('blog:author'),
+    tags: tagLabels,
+  })
 }
 
 export default async function PostPage({ params }: BlogpostProps) {
   const { locale, slug } = await params
-  const { t } = await initTranslations(locale, ['blog'])
+  const { t } = await initTranslations(locale, ['blog', 'layout'])
   const post = await getPost(locale, slug)
 
   if (!post) {
@@ -50,68 +60,57 @@ export default async function PostPage({ params }: BlogpostProps) {
     return null
   }
 
-  const {
-    dimensions: { height, width },
-  } = decodeAssetId(post.image.asset!._ref)
-  const postImageUrl = post.image
-    ? getImageUrlFor(post.image)?.width(width).height(height).url()
-    : null
+  const postImageUrl = post.image ? getImageUrlFor(post.image)?.width(1400).url() : null
+  const minutes = estimateReadMinutes(portableTextToPlain(post.body), locale)
 
   return (
-    <div className="max-w-8xl mx-auto min-h-screen">
-      <main className="w-full md:divide-y">
-        {/* hero */}
-        <div className="flex flex-col-reverse md:w-full md:flex-row md:p-6">
-          <div className="md:mx-auto md:flex md:w-1/2 md:px-12">
-            <div className="space-between flex max-w-md flex-col items-stretch space-y-6 md:mx-auto">
-              <BackButton className="hidden md:block md:text-5xl">
-                <HiArrowLongLeft />
-              </BackButton>
-              <div className="mx-4 space-y-2 md:mt-auto md:space-y-4">
-                <h1 className="font-accent text-2xl font-bold md:-rotate-6 md:pb-6 md:text-4xl">
-                  {post.title}
-                </h1>
-                <p className="hidden md:block md:text-lg">{post.summary}</p>
-                <div className="flex items-center space-x-4 py-2">
-                  <div className="flex items-center space-x-2">
-                    <Image
-                      src="/arisashiraishi.png"
-                      alt="author"
-                      className="h-12 w-12 rounded-full"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="text-text-secondary">
-                    <p className="text-text-secondary">{t('author')} </p>
-                    {t('published')} {new Date(post.publishedAt).toLocaleDateString()}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="m-auto flex w-full border-b md:m-0 md:w-1/2 md:border-b-0">
-            {postImageUrl && (
-              <Image
-                src={postImageUrl}
-                alt={post.title}
-                className="mx-auto h-48 w-48 border-x object-cover md:flex md:h-96 md:w-96 md:border-x-0"
-                width={width}
-                height={height}
+    <>
+      <JsonLd
+        data={blogPostingJsonLd({
+          locale,
+          slug,
+          title: post.title,
+          description: post.description,
+          imageUrl: postImageUrl,
+          publishedAt: post.publishedAt,
+          updatedAt: post._updatedAt,
+          author: t('author'),
+          homeName: t('layout:appName'),
+          blogName: t('pageTitle'),
+        })}
+      />
+      <div className="mx-auto w-full max-w-[680px] px-5 pb-12 pt-3 sm:px-0 sm:pt-6">
+        <BackButton className="mb-4 text-2xl text-text-secondary sm:text-3xl">
+          <HiArrowLongLeft />
+        </BackButton>
+        <article className="font-base">
+          <header>
+            <h1 className="font-base text-2xl font-bold tracking-tight text-text-primary sm:text-3xl sm:leading-tight">
+              {post.title}
+            </h1>
+            {post.summary ? (
+              <p className="mt-1.5 font-base text-base leading-7 text-text-secondary sm:mt-2 sm:text-lg sm:leading-8">
+                {post.summary}
+              </p>
+            ) : null}
+            <div className="mt-3">
+              <BlogByline
+                author={t('author')}
+                role={t('authorRole')}
+                publishedAt={post.publishedAt}
+                locale={locale}
+                minReadLabel={t('minRead', { count: minutes })}
+                size="md"
               />
-            )}
-          </div>
-        </div>
+            </div>
+            <hr className="my-4 border-neutral-300" />
+          </header>
 
-        <div className="w-full">
-          <article className="mx-auto max-w-3xl p-4 md:border-x md:p-12">
-            {Array.isArray(post.body) && (
-              <PortableText value={post.body} components={SanityComponents} />
-            )}
-          </article>
-        </div>
-        <ActionButtonGroup instagramPostId={post.instagramPostId} />
-      </main>
-    </div>
+          {Array.isArray(post.body) ? (
+            <PortableText value={post.body} components={SanityComponents} />
+          ) : null}
+        </article>
+      </div>
+    </>
   )
 }

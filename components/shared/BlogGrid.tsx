@@ -1,5 +1,7 @@
+import { BlogByline } from '@/components/blog/BlogByline'
+import { estimateReadMinutes } from '@/lib/readingTime'
 import { getImageUrlFor } from '@/sanity/lib/image'
-import { getI18n } from '@/serverContexts'
+import { getI18n, getLocale } from '@/serverContexts'
 import { BlogPostCard } from '@/types/post'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,61 +11,101 @@ export interface BlogGridProps {
   posts: BlogPostCard[]
 }
 
-export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
-  const totalPosts = posts.length
-  const lastRowIndexStart = totalPosts - (totalPosts % 3 || 3)
+function thumbUrl(post: BlogPostCard, width: number, height: number) {
+  return (
+    getImageUrlFor(post.image)?.width(width).height(height).url() || '/images/blog-fallback.png'
+  )
+}
+
+const BlogPostRow: FC<{ post: BlogPostCard; featured?: boolean }> = ({
+  post,
+  featured = false,
+}) => {
   const { t } = getI18n()
+  const locale = getLocale()
+  const minutes = estimateReadMinutes(post.plainText, locale)
+  const Heading = featured ? 'h2' : 'h3'
+  const imageUrl = featured ? thumbUrl(post, 1200, 750) : thumbUrl(post, 320, 320)
 
   return (
-    <div className="sm:px-40">
-      <div className="flex flex-col divide-y sm:grid sm:grid-cols-3 sm:divide-y-0">
-        {posts.map((post, index) => {
-          const isFirstColumn = index % 3 === 0
-          const isLastRow = index >= lastRowIndexStart
-          const borderClass = `${isFirstColumn ? 'sm:border-l' : ''} sm:border-r ${
-            isLastRow ? '' : 'sm:border-b'
-          }`
-          const imageUrl =
-            getImageUrlFor(post.image)?.width(500).height(500).url() || '/images/blog-fallback.png'
+    <article>
+      <Link
+        href={`/blog/${post.slug.current}`}
+        className={
+          featured
+            ? 'group grid grid-cols-[1fr_auto] items-start gap-4 py-6 sm:gap-8 sm:py-8 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-center md:gap-10 md:py-4'
+            : 'group flex items-start justify-between gap-4 py-6 sm:gap-8 sm:py-8'
+        }
+      >
+        <div className={featured ? 'min-w-0 md:col-start-2 md:row-start-1' : 'min-w-0 flex-1'}>
+          <Heading
+            className={
+              featured
+                ? 'text-lg font-bold leading-snug tracking-tight text-text-primary sm:text-2xl md:leading-tight'
+                : 'text-lg font-bold leading-snug tracking-tight text-text-primary sm:text-2xl'
+            }
+          >
+            {post.title}
+          </Heading>
+          {post.summary ? (
+            <p
+              className={
+                featured
+                  ? 'mt-1 line-clamp-2 text-sm leading-6 text-text-secondary sm:mt-2 sm:text-base md:mt-3 md:line-clamp-none md:text-lg md:leading-7'
+                  : 'mt-1 line-clamp-2 text-sm leading-6 text-text-secondary sm:mt-2 sm:text-base'
+              }
+            >
+              {post.summary}
+            </p>
+          ) : null}
+          <div className={featured ? 'mt-3 sm:mt-4 md:mt-6' : 'mt-3 sm:mt-4'}>
+            <BlogByline
+              author={t('author')}
+              role={t('authorRole')}
+              publishedAt={post.publishedAt}
+              locale={locale}
+              minReadLabel={t('minRead', { count: minutes })}
+              size={featured ? 'md' : 'sm'}
+            />
+          </div>
+        </div>
+        <div
+          className={
+            featured
+              ? 'relative size-[72px] shrink-0 overflow-hidden rounded sm:size-[112px] md:col-start-1 md:row-start-1 md:aspect-[16/10] md:size-auto md:w-full md:rounded-none'
+              : 'relative size-[72px] shrink-0 overflow-hidden rounded sm:size-[112px]'
+          }
+        >
+          <Image
+            src={imageUrl}
+            alt={post.title}
+            fill
+            priority={featured}
+            sizes={featured ? '(min-width: 768px) 352px, 112px' : '(min-width: 640px) 112px, 72px'}
+            className="object-cover"
+          />
+        </div>
+      </Link>
+    </article>
+  )
+}
 
-          return (
-            <Link href={`/blog/${post.slug.current}`} key={index} className="flex self-stretch">
-              <div
-                className={`flex w-full cursor-pointer flex-row p-4 hover:bg-surface-hover sm:flex-col sm:space-x-0 sm:space-y-4 sm:p-6 md:p-12 ${borderClass}`}
-              >
-                <div className="hidden sm:block">
-                  {post.tags?.map((tag, index) => (
-                    <p className="text-secondary font-accent uppercase sm:text-lg" key={index}>
-                      {t(`${tag}Tag`)}
-                    </p>
-                  ))}
-                </div>
+export const BlogGrid: FC<BlogGridProps> = ({ posts }) => {
+  if (posts.length === 0) return null
 
-                <div className="mr-6 w-1/3 sm:mr-0 sm:w-auto">
-                  <Image
-                    src={imageUrl}
-                    alt={`${post.title} head image`}
-                    width={500}
-                    height={500}
-                    layout="responsive"
-                  />
-                </div>
+  const [featured, ...rest] = posts
 
-                <div className="flex flex-col justify-center">
-                  <div className="sm:hidden">
-                    {post.tags?.map((tag, index) => (
-                      <p className="text-secondary font-accent uppercase" key={index}>
-                        {t(`${tag}Tag`)}
-                      </p>
-                    ))}
-                  </div>
-
-                  <label className="text-lg font-medium capitalize sm:text-xl">{post.title}</label>
-                </div>
-              </div>
-            </Link>
-          )
-        })}
+  return (
+    <div className="flex flex-col">
+      <div className="border-b border-neutral-300 md:pb-8">
+        <BlogPostRow post={featured} featured />
+      </div>
+      <div className="mx-auto w-full max-w-3xl">
+        {rest.map((post) => (
+          <div key={post._id} className="border-b border-neutral-300 last:border-b-0">
+            <BlogPostRow post={post} />
+          </div>
+        ))}
       </div>
     </div>
   )

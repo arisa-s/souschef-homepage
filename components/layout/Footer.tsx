@@ -24,6 +24,7 @@ export const Footer: FC = () => {
       ? [{ href: PRICING_LINK, label: t('layout:pricing'), external: true }]
       : []),
     { href: '/faq', label: t('layout:faq') },
+    { href: '/blog', label: t('layout:blog') },
   ]
 
   return (
