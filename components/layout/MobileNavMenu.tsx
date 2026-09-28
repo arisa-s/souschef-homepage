@@ -40,7 +40,7 @@ export const MobileNavMenu = ({}) => {
               label={t('layout:importingGuide')}
             />
             <MenuItem href="/blog" label={t('layout:blog')} />
-            <MenuItem href={onelinkLink} label={t('home:downloadNow')} />
+            <MenuItem href={onelinkLink('homepage_nav')} label={t('home:downloadNow')} />
             <MenuItem href={emailLink} label="Email" />
             <MenuItem href={instagramProfileLink} label="Instagram" />
           </div>

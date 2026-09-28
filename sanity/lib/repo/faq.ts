@@ -25,20 +25,27 @@ const faqsEn: FaqItem[] = [
     id: 'is-free',
     question: 'Is Souschef free?',
     answer:
-      'Yes. All cooking features are free—including Cooking Mode, serving adjustments, measurement conversion, shopping lists, recipe translation, and more. Free accounts can import up to 5 recipes per week.',
+      'Yes. All cooking and organization tools are free. Free users get 5 saved recipe imports per rolling 7 days. Souschef Plus is optional and adds unlimited imports.',
   },
   {
     id: 'plus',
     question: 'What does Souschef Plus include?',
     answer:
-      'Souschef Plus gives you unlimited recipe imports and removes ads from the import experience. All the tools you use to organize and cook your saved recipes are already included in the free plan.',
+      'Souschef Plus includes unlimited recipe imports. It does not unlock separate cooking tools; those are free.',
+    subscriptionOnly: true,
+  },
+  {
+    id: 'saved-without-paying',
+    question: 'Can I still use saved recipes if I do not pay?',
+    answer:
+      'Yes. Your saved recipes and cooking tools remain available. Existing saved recipes remain available even after you hit the import limit.',
     subscriptionOnly: true,
   },
   {
     id: 'import-limit',
     question: 'What happens when I reach the free import limit?',
     answer:
-      'You can continue viewing, editing, organizing, and cooking every recipe you have already saved. The limit only pauses new imports until your next import becomes available.',
+      'You can still view, cook, edit, organize, and use existing saved recipes. You just need to wait for imports to refresh or upgrade to Plus for unlimited imports. Free users can save 5 imported recipes per rolling 7 days.',
     subscriptionOnly: true,
   },
   {
@@ -84,20 +91,27 @@ const faqsJa: FaqItem[] = [
     id: 'is-free',
     question: 'Souschefは無料ですか？',
     answer:
-      'はい。クッキングモード、人数調整、単位変換、買い物リスト、レシピ翻訳など、すべての料理機能は無料です。無料アカウントでは週5回までレシピを取り込めます。',
+      'はい。調理と整理のツールはすべて無料です。無料ユーザーは、7日間のローリング期間で保存できるレシピの取り込みが5件までです。Souschef Plusは任意で、取り込みが無制限になります。',
   },
   {
     id: 'plus',
     question: 'Souschef Plusには何が含まれますか？',
     answer:
-      'Souschef Plusでは、レシピの取り込みが無制限になり、取り込み時の広告が非表示になります。保存したレシピの整理や料理に使うツールは、すべて無料プランに含まれています。',
+      'Souschef Plusに含まれるのは、無制限のレシピ取り込みです。別の調理ツールは解放しません。それらは無料です。',
+    subscriptionOnly: true,
+  },
+  {
+    id: 'saved-without-paying',
+    question: '支払わなくても、保存したレシピは使えますか？',
+    answer:
+      'はい。保存したレシピと調理ツールはそのまま使えます。取り込み上限に達したあとも、保存済みのレシピは残ります。',
     subscriptionOnly: true,
   },
   {
     id: 'import-limit',
     question: '無料の取り込み上限に達するとどうなりますか？',
     answer:
-      'すでに保存したレシピの閲覧、編集、整理、料理は引き続き行えます。上限は新しい取り込みだけを一時停止し、次の取り込み枠が使えるようになるまで続きます。',
+      '保存済みのレシピは、閲覧、調理、編集、整理に引き続き使えます。取り込み枠が戻るまで待つか、Plusにアップグレードすると取り込みが無制限になります。無料ユーザーは、7日間のローリング期間で取り込んだレシピを5件まで保存できます。',
     subscriptionOnly: true,
   },
   {

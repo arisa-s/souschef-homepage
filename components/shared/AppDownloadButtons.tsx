@@ -1,22 +1,38 @@
-import { androidDownloadLink, iosDownloadLink } from '@/constants'
+import { androidDownloadLink, DownloadContent, iosDownloadLink } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const AppDownloadButtons = () => {
+type AppDownloadButtonsProps = {
+  content?: DownloadContent
+}
+
+export const AppDownloadButtons = ({
+  content = 'homepage_hero',
+}: AppDownloadButtonsProps) => {
   return (
-    <div className="flex w-full items-center justify-center lg:justify-start text-lg sm:flex-row space-x-5">
-      <Link href={iosDownloadLink} className="max-w-36" target="_blank">
+    <div className="flex w-full items-center justify-center space-x-5 text-lg sm:flex-row lg:justify-start">
+      <Link
+        href={iosDownloadLink(content)}
+        className="max-w-36"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image
           src="/images/app-store-download-light.png"
-          alt="adjustIngredients"
+          alt="Download Souschef on the App Store"
           width={1000}
           height={500}
         />
       </Link>
-      <Link href={androidDownloadLink} className="max-w-36" target="_blank">
+      <Link
+        href={androidDownloadLink(content)}
+        className="max-w-36"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image
           src="/images/google-play-download-light.png"
-          alt="adjustIngredients"
+          alt="Get Souschef on Google Play"
           width={1000}
           height={500}
         />

@@ -1,0 +1,20 @@
+{
+  "free": {
+    "metaTitle": "Free Recipe Keeper App | Souschef",
+    "metaDescription": "Souschef is a free recipe keeper app for saving recipes from websites, Instagram, TikTok, YouTube, photos, and text. Cooking and organization tools are free. Plus only adds unlimited imports.",
+    "h1": "Recipe keeper that helps you actually cook",
+    "lead": "A free recipe keeper for saving recipes from websites, Instagram, TikTok, YouTube, photos, and text. Cooking and organization tools are free; Plus only adds unlimited imports.",
+    "disclaimer": "Free plan includes 5 saved recipe imports per rolling 7 days.",
+    "otherLink": "Recipe keeper",
+    "otherHref": "/recipe-keeper"
+  },
+  "recipe": {
+    "metaTitle": "Recipe Keeper | Souschef",
+    "metaDescription": "Souschef is a recipe keeper and recipe organizer for saving recipes from websites, videos, and social media. Cook, shop, and journal for free. Plus adds unlimited imports.",
+    "h1": "Recipe keeper that helps you actually cook",
+    "lead": "Save recipes from websites, videos, and social media, then organize and cook them in one place. Cooking and organization tools are free. Plus only adds unlimited imports.",
+    "disclaimer": "Free plan includes 5 saved recipe imports per rolling 7 days.",
+    "otherLink": "Free recipe keeper app",
+    "otherHref": "/free-recipe-keeper-app"
+  }
+}

@@ -79,6 +79,56 @@ export function canonicalUrl(locale: string, path = '') {
   return `${SITE_URL}${localized}`
 }
 
+type SoftwareAppJsonLdInput = {
+  locale: string
+  path?: string
+  name: string
+  description: string
+}
+
+/** Product facts for the current App Store positioning. */
+export function softwareAppJsonLd({
+  locale,
+  path = '',
+  name,
+  description,
+}: SoftwareAppJsonLdInput): JsonLd {
+  const url = canonicalUrl(locale, path)
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        name,
+        description,
+        url,
+        inLanguage: locale,
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'Souschef',
+          url: SITE_URL,
+        },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        name: 'Souschef',
+        applicationCategory: 'LifestyleApplication',
+        operatingSystem: 'iOS, Android',
+        description,
+        url,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD',
+          description:
+            'Free plan includes 5 saved recipe imports per rolling 7 days. Souschef Plus gives you unlimited recipe imports.',
+        },
+      },
+    ],
+  }
+}
+
 const FEED_SHARE_IMAGE = `${SITE_URL}/images/home/hero.webp`
 const PUBLISHER_LOGO = `${SITE_URL}/images/mascot.webp`
 

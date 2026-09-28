@@ -25,6 +25,16 @@ const nextConfig: NextConfig = {
                 destination: '/blog/save-instagram-recipes',
                 permanent: true,
             },
+            {
+                source: '/blog/paprika-alternative',
+                destination: '/blog/souschef-vs-paprika',
+                permanent: true,
+            },
+            {
+                source: '/ja/blog/paprika-alternative',
+                destination: '/blog/souschef-vs-paprika',
+                permanent: true,
+            },
         ]
     },
 };

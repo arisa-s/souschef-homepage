@@ -4,6 +4,8 @@ import { useQRCode } from 'next-qrcode'
 import Link from 'next/link'
 import { FC } from 'react'
 
+const modalDownloadLink = onelinkLink('homepage_modal')
+
 export interface AppDowloadQRProps {
   width?: number
 }
@@ -12,9 +14,9 @@ export const AppDowloadQR: FC<AppDowloadQRProps> = ({ width = 90 }) => {
   const { Canvas } = useQRCode()
 
   return (
-    <Link href={onelinkLink}>
+    <Link href={modalDownloadLink}>
       <Canvas
-        text={onelinkLink}
+        text={modalDownloadLink}
         options={{
           margin: 0,
           width,

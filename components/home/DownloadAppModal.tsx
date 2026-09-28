@@ -44,18 +44,28 @@ export const DownloadAppModal = () => {
           <AppDowloadQR width={120} />
         </div>
         <div className="flex w-full flex-col items-center justify-center space-y-2 text-lg sm:space-x-12 md:hidden">
-          <Link href={iosDownloadLink} className="max-w-44" target="_blank">
+          <Link
+            href={iosDownloadLink('homepage_modal')}
+            className="max-w-44"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/images/app-store-download-light.png"
-              alt="adjustIngredients"
+              alt="Download Souschef on the App Store"
               width={1000}
               height={500}
             />
           </Link>
-          <Link href={androidDownloadLink} className="max-w-44" target="_blank">
+          <Link
+            href={androidDownloadLink('homepage_modal')}
+            className="max-w-44"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/images/google-play-download-light.png"
-              alt="adjustIngredients"
+              alt="Get Souschef on Google Play"
               width={1000}
               height={500}
             />
