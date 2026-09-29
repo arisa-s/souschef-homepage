@@ -24,8 +24,6 @@ export const Footer: FC = () => {
       ? [{ href: PRICING_LINK, label: t('layout:pricing'), external: true }]
       : []),
     { href: '/faq', label: t('layout:faq') },
-    { href: '/recipe-keeper', label: t('layout:recipeKeeper') },
-    { href: '/free-recipe-keeper-app', label: t('layout:freeRecipeKeeper') },
     { href: '/blog', label: t('layout:blog') },
   ]
 
@@ -39,9 +37,7 @@ export const Footer: FC = () => {
                 <Link
                   href={href}
                   className={linkClassName}
-                  {...(external
-                    ? { target: '_blank', rel: 'noopener noreferrer' }
-                    : {})}
+                  {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 >
                   {label}
                 </Link>
@@ -50,10 +46,8 @@ export const Footer: FC = () => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4 mx-auto sm:mx-0">
-          <p className="text-sm text-text-secondary">
-            © {currentYear} Nekonote LLC
-          </p>
+        <div className="mx-auto flex items-center gap-4 sm:mx-0">
+          <p className="text-sm text-text-secondary">© {currentYear} Nekonote LLC</p>
           <ul className="flex items-center">
             <li>
               <Link
@@ -67,11 +61,7 @@ export const Footer: FC = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href={emailLink}
-                aria-label="Contact Souschef"
-                className={iconLinkClassName}
-              >
+              <Link href={emailLink} aria-label="Contact Souschef" className={iconLinkClassName}>
                 <FiMail className="size-5" aria-hidden="true" />
               </Link>
             </li>
